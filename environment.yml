@@ -1,0 +1,12 @@
+name: dsai
+channels:
+  - conda-forge
+dependencies:
+  - lightgbm
+  - numpy
+  - pandas
+  - pip
+  - pyarrow
+  - scikit-learn
+  - shap
+  - statsmodels
