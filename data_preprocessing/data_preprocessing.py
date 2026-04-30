@@ -30,7 +30,7 @@ for p in [DATASET_PATH, OUTPUT_PATH, ARTIFACTS_PATH]:
 
 logger = logging.getLogger(__name__)
 fm = logging.Formatter('[%(relativeCreated)d ms] %(levelname)s - %(funcName)s:%(lineno)d - %(message)s')
-fh = logging.FileHandler('data_preprocessing.log')
+fh = logging.FileHandler('data_preprocessing.log', mode='w')
 ch = logging.StreamHandler(sys.stdout)
 fh.setFormatter(fm)
 ch.setFormatter(fm)
