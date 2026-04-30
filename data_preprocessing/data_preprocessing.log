@@ -1,0 +1,227 @@
+2026-04-30 13:06:26,731 - INFO - audit:46 - Shape: (175341, 45)
+2026-04-30 13:06:26,735 - INFO - audit:47 - Null counts (Should be 0): 0
+2026-04-30 13:06:26,737 - INFO - audit:48 - attack_cat: 10
+2026-04-30 13:06:26,769 - INFO - process:67 - Spearman correlation: 0.906898 -> Drop: False
+2026-04-30 13:06:26,895 - INFO - select:114 - Low variance (<0.01): ['tcprtt', 'synack', 'ackdat', 'tcp_seq_one_sided', 'win_asymmetry']
+2026-04-30 13:06:28,589 - INFO - select:127 - Spearman pairs (>0.90): 63
+2026-04-30 13:06:28,589 - INFO - select:129 - spkts - dpkts: 0.910312
+2026-04-30 13:06:28,589 - INFO - select:129 - spkts - sbytes: 0.901268
+2026-04-30 13:06:28,589 - INFO - select:129 - spkts - sloss: 0.923744
+2026-04-30 13:06:28,589 - INFO - select:129 - spkts - dloss: 0.906646
+2026-04-30 13:06:28,589 - INFO - select:129 - dpkts - dbytes: 0.989853
+2026-04-30 13:06:28,589 - INFO - select:129 - dpkts - sloss: 0.932717
+2026-04-30 13:06:28,589 - INFO - select:129 - dpkts - dloss: 0.956419
+2026-04-30 13:06:28,589 - INFO - select:129 - dpkts - swin: 0.900488
+2026-04-30 13:06:28,589 - INFO - select:129 - dpkts - dwin: 0.910657
+2026-04-30 13:06:28,589 - INFO - select:129 - dpkts - bytes_per_pkt_dst: 0.954385
+2026-04-30 13:06:28,589 - INFO - select:129 - dpkts - synack_ratio: 0.908423
+2026-04-30 13:06:28,589 - INFO - select:129 - dbytes - sloss: 0.900808
+2026-04-30 13:06:28,589 - INFO - select:129 - dbytes - dloss: 0.946843
+2026-04-30 13:06:28,589 - INFO - select:129 - dbytes - bytes_per_pkt_dst: 0.981055
+2026-04-30 13:06:28,589 - INFO - select:129 - rate - sinpkt: 0.950215
+2026-04-30 13:06:28,589 - INFO - select:129 - dttl - dinpkt: 0.959559
+2026-04-30 13:06:28,589 - INFO - select:129 - dttl - tcprtt: 0.924091
+2026-04-30 13:06:28,589 - INFO - select:129 - dttl - synack: 0.923848
+2026-04-30 13:06:28,590 - INFO - select:129 - dttl - ackdat: 0.924208
+2026-04-30 13:06:28,590 - INFO - select:129 - dttl - ack_ratio: 0.920462
+2026-04-30 13:06:28,590 - INFO - select:129 - sloss - dloss: 0.954988
+2026-04-30 13:06:28,590 - INFO - select:129 - sloss - swin: 0.944651
+2026-04-30 13:06:28,590 - INFO - select:129 - sloss - dwin: 0.938721
+2026-04-30 13:06:28,590 - INFO - select:129 - sloss - synack_ratio: 0.923650
+2026-04-30 13:06:28,590 - INFO - select:129 - dloss - swin: 0.932627
+2026-04-30 13:06:28,590 - INFO - select:129 - dloss - dwin: 0.941848
+2026-04-30 13:06:28,590 - INFO - select:129 - dloss - synack_ratio: 0.937983
+2026-04-30 13:06:28,590 - INFO - select:129 - dinpkt - sjit: 0.916034
+2026-04-30 13:06:28,590 - INFO - select:129 - dinpkt - djit: 0.936986
+2026-04-30 13:06:28,590 - INFO - select:129 - dinpkt - tcprtt: 0.922512
+2026-04-30 13:06:28,590 - INFO - select:129 - dinpkt - synack: 0.920925
+2026-04-30 13:06:28,590 - INFO - select:129 - dinpkt - ackdat: 0.921404
+2026-04-30 13:06:28,590 - INFO - select:129 - dinpkt - ack_ratio: 0.901104
+2026-04-30 13:06:28,590 - INFO - select:129 - sjit - djit: 0.916434
+2026-04-30 13:06:28,590 - INFO - select:129 - sjit - tcprtt: 0.902464
+2026-04-30 13:06:28,590 - INFO - select:129 - sjit - synack: 0.900769
+2026-04-30 13:06:28,590 - INFO - select:129 - sjit - ackdat: 0.901180
+2026-04-30 13:06:28,590 - INFO - select:129 - djit - swin: 0.901115
+2026-04-30 13:06:28,590 - INFO - select:129 - djit - dwin: 0.910509
+2026-04-30 13:06:28,590 - INFO - select:129 - djit - ackdat: 0.900041
+2026-04-30 13:06:28,590 - INFO - select:129 - swin - dwin: 0.990180
+2026-04-30 13:06:28,590 - INFO - select:129 - swin - tcprtt: 0.933725
+2026-04-30 13:06:28,590 - INFO - select:129 - swin - synack: 0.933723
+2026-04-30 13:06:28,590 - INFO - select:129 - swin - ackdat: 0.933726
+2026-04-30 13:06:28,590 - INFO - select:129 - swin - synack_ratio: 0.933745
+2026-04-30 13:06:28,590 - INFO - select:129 - swin - ack_ratio: 0.933743
+2026-04-30 13:06:28,590 - INFO - select:129 - dwin - tcprtt: 0.942980
+2026-04-30 13:06:28,590 - INFO - select:129 - dwin - synack: 0.942986
+2026-04-30 13:06:28,590 - INFO - select:129 - dwin - ackdat: 0.942971
+2026-04-30 13:06:28,590 - INFO - select:129 - dwin - synack_ratio: 0.942999
+2026-04-30 13:06:28,590 - INFO - select:129 - dwin - ack_ratio: 0.942967
+2026-04-30 13:06:28,590 - INFO - select:129 - tcprtt - synack: 0.996785
+2026-04-30 13:06:28,590 - INFO - select:129 - tcprtt - ackdat: 0.993672
+2026-04-30 13:06:28,590 - INFO - select:129 - tcprtt - ack_ratio: 0.954123
+2026-04-30 13:06:28,590 - INFO - select:129 - synack - ackdat: 0.984360
+2026-04-30 13:06:28,590 - INFO - select:129 - synack - ack_ratio: 0.941579
+2026-04-30 13:06:28,590 - INFO - select:129 - ackdat - ack_ratio: 0.973229
+2026-04-30 13:06:28,590 - INFO - select:129 - trans_depth - ct_flw_http_mthd: 0.999620
+2026-04-30 13:06:28,590 - INFO - select:129 - ct_srv_src - ct_srv_dst: 0.920212
+2026-04-30 13:06:28,590 - INFO - select:129 - ct_state_ttl - bytes_per_pkt_dst: 0.901589
+2026-04-30 13:06:28,590 - INFO - select:129 - bytes_ratio - pkts_ratio: 0.922079
+2026-04-30 13:06:28,590 - INFO - select:129 - bytes_ratio - bytes_per_pkt_dst: 0.912655
+2026-04-30 13:06:28,590 - INFO - select:129 - pkts_ratio - bytes_per_pkt_dst: 0.906902
+[1301 ms] INFO - audit:46 - Shape: (175341, 45)
+[1306 ms] INFO - audit:47 - Null counts (Should be 0): 0
+[1308 ms] INFO - audit:48 - attack_cat: 10
+[1339 ms] INFO - process:67 - Spearman correlation: 0.906898 -> Drop: False
+[1465 ms] INFO - select:114 - Low variance (<0.01): ['tcprtt', 'synack', 'ackdat', 'tcp_seq_one_sided', 'win_asymmetry']
+[3158 ms] INFO - select:127 - Spearman pairs (>0.90): 63
+[3158 ms] INFO - select:129 - spkts - dpkts: 0.910312
+[3158 ms] INFO - select:129 - spkts - sbytes: 0.901268
+[3158 ms] INFO - select:129 - spkts - sloss: 0.923744
+[3158 ms] INFO - select:129 - spkts - dloss: 0.906646
+[3158 ms] INFO - select:129 - dpkts - dbytes: 0.989853
+[3158 ms] INFO - select:129 - dpkts - sloss: 0.932717
+[3158 ms] INFO - select:129 - dpkts - dloss: 0.956419
+[3158 ms] INFO - select:129 - dpkts - swin: 0.900488
+[3158 ms] INFO - select:129 - dpkts - dwin: 0.910657
+[3158 ms] INFO - select:129 - dpkts - bytes_per_pkt_dst: 0.954385
+[3158 ms] INFO - select:129 - dpkts - synack_ratio: 0.908423
+[3158 ms] INFO - select:129 - dbytes - sloss: 0.900808
+[3158 ms] INFO - select:129 - dbytes - dloss: 0.946843
+[3158 ms] INFO - select:129 - dbytes - bytes_per_pkt_dst: 0.981055
+[3158 ms] INFO - select:129 - rate - sinpkt: 0.950215
+[3158 ms] INFO - select:129 - dttl - dinpkt: 0.959559
+[3158 ms] INFO - select:129 - dttl - tcprtt: 0.924091
+[3158 ms] INFO - select:129 - dttl - synack: 0.923848
+[3158 ms] INFO - select:129 - dttl - ackdat: 0.924208
+[3158 ms] INFO - select:129 - dttl - ack_ratio: 0.920462
+[3158 ms] INFO - select:129 - sloss - dloss: 0.954988
+[3158 ms] INFO - select:129 - sloss - swin: 0.944651
+[3158 ms] INFO - select:129 - sloss - dwin: 0.938721
+[3158 ms] INFO - select:129 - sloss - synack_ratio: 0.923650
+[3158 ms] INFO - select:129 - dloss - swin: 0.932627
+[3158 ms] INFO - select:129 - dloss - dwin: 0.941848
+[3158 ms] INFO - select:129 - dloss - synack_ratio: 0.937983
+[3158 ms] INFO - select:129 - dinpkt - sjit: 0.916034
+[3158 ms] INFO - select:129 - dinpkt - djit: 0.936986
+[3158 ms] INFO - select:129 - dinpkt - tcprtt: 0.922512
+[3158 ms] INFO - select:129 - dinpkt - synack: 0.920925
+[3158 ms] INFO - select:129 - dinpkt - ackdat: 0.921404
+[3158 ms] INFO - select:129 - dinpkt - ack_ratio: 0.901104
+[3158 ms] INFO - select:129 - sjit - djit: 0.916434
+[3158 ms] INFO - select:129 - sjit - tcprtt: 0.902464
+[3158 ms] INFO - select:129 - sjit - synack: 0.900769
+[3158 ms] INFO - select:129 - sjit - ackdat: 0.901180
+[3158 ms] INFO - select:129 - djit - swin: 0.901115
+[3158 ms] INFO - select:129 - djit - dwin: 0.910509
+[3158 ms] INFO - select:129 - djit - ackdat: 0.900041
+[3158 ms] INFO - select:129 - swin - dwin: 0.990180
+[3158 ms] INFO - select:129 - swin - tcprtt: 0.933725
+[3158 ms] INFO - select:129 - swin - synack: 0.933723
+[3158 ms] INFO - select:129 - swin - ackdat: 0.933726
+[3158 ms] INFO - select:129 - swin - synack_ratio: 0.933745
+[3158 ms] INFO - select:129 - swin - ack_ratio: 0.933743
+[3158 ms] INFO - select:129 - dwin - tcprtt: 0.942980
+[3158 ms] INFO - select:129 - dwin - synack: 0.942986
+[3158 ms] INFO - select:129 - dwin - ackdat: 0.942971
+[3158 ms] INFO - select:129 - dwin - synack_ratio: 0.942999
+[3158 ms] INFO - select:129 - dwin - ack_ratio: 0.942967
+[3158 ms] INFO - select:129 - tcprtt - synack: 0.996785
+[3158 ms] INFO - select:129 - tcprtt - ackdat: 0.993672
+[3158 ms] INFO - select:129 - tcprtt - ack_ratio: 0.954123
+[3158 ms] INFO - select:129 - synack - ackdat: 0.984360
+[3158 ms] INFO - select:129 - synack - ack_ratio: 0.941579
+[3158 ms] INFO - select:129 - ackdat - ack_ratio: 0.973229
+[3158 ms] INFO - select:129 - trans_depth - ct_flw_http_mthd: 0.999620
+[3158 ms] INFO - select:129 - ct_srv_src - ct_srv_dst: 0.920212
+[3158 ms] INFO - select:129 - ct_state_ttl - bytes_per_pkt_dst: 0.901589
+[3158 ms] INFO - select:129 - bytes_ratio - pkts_ratio: 0.922079
+[3158 ms] INFO - select:129 - bytes_ratio - bytes_per_pkt_dst: 0.912655
+[3158 ms] INFO - select:129 - pkts_ratio - bytes_per_pkt_dst: 0.906902
+[22217 ms] INFO - select:137 - High VIF (>10): ['proto', 'state', 'spkts', 'dpkts', 'sbytes', 'dbytes', 'sttl', 'dttl', 'sloss', 'dloss', 'sinpkt', 'dinpkt', 'sjit', 'djit', 'swin', 'dwin', 'tcprtt', 'synack', 'ackdat', 'ct_srv_src', 'ct_state_ttl', 'ct_dst_ltm', 'ct_src_dport_ltm', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_srv_dst', 'bytes_ratio', 'pkts_ratio', 'bytes_per_pkt_src', 'bytes_per_pkt_dst', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'win_asymmetry']
+[78501 ms] INFO - select:144 - Low MI (0.1): ['ct_ftp_cmd', 'tcp_seq_one_sided', 'is_ftp_login']
+[93714 ms] INFO - select:159 - Low gain (0.05): NO!
+[1815544 ms] INFO - select:167 - Near-zero permutation importance: ['zero_win', 'ct_ftp_cmd', 'is_short', 'tcp_seq_one_sided', 'is_zero_dur', 'tcp_seq_established', 'is_sm_ips_ports', 'dwin', 'is_tcp']
+[1827180 ms] INFO - select:180 - Low SHAP (0.05): NO!
+[1827180 ms] INFO - select:196 - Dropping 7 features: ['ackdat', 'ct_ftp_cmd', 'dwin', 'synack', 'tcp_seq_one_sided', 'tcprtt', 'win_asymmetry']
+[2395029 ms] INFO - select:209 - RFECV count: 27
+[2395029 ms] INFO - select:210 - Removed: ['state', 'dpkts', 'dttl', 'sloss', 'dloss', 'swin', 'trans_depth', 'ct_state_ttl', 'is_ftp_login', 'ct_flw_http_mthd', 'is_sm_ips_ports', 'tcp_seq_established', 'is_tcp', 'is_ftp', 'is_http', 'is_zero_dur', 'is_short', 'pkts_ratio', 'zero_win']
+[2395029 ms] INFO - select:211 - Before: 53
+[2395029 ms] INFO - select:212 - Dropped: 26 -> {'dpkts', 'ct_flw_http_mthd', 'ct_ftp_cmd', 'is_ftp_login', 'is_sm_ips_ports', 'is_http', 'dwin', 'synack', 'state', 'tcprtt', 'zero_win', 'ackdat', 'is_short', 'is_ftp', 'pkts_ratio', 'ct_state_ttl', 'dloss', 'trans_depth', 'tcp_seq_one_sided', 'is_zero_dur', 'sloss', 'dttl', 'tcp_seq_established', 'win_asymmetry', 'swin', 'is_tcp'}
+[2395029 ms] INFO - select:213 - After: 27
+[2395029 ms] INFO - select:214 - Features: ['dur', 'proto', 'service', 'spkts', 'sbytes', 'dbytes', 'rate', 'sttl', 'sinpkt', 'dinpkt', 'sjit', 'djit', 'response_body_len', 'ct_srv_src', 'ct_dst_ltm', 'ct_src_dport_ltm', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_src_ltm', 'ct_srv_dst', 'bytes_ratio', 'bytes_per_pkt_src', 'bytes_per_pkt_dst', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio']
+[2395810 ms] INFO - audit:46 - Shape: (82332, 45)
+[2395812 ms] INFO - audit:47 - Null counts (Should be 0): 0
+[2395813 ms] INFO - audit:48 - attack_cat: 10
+[2396057 ms] INFO - main:351 - TRAIN RESULTS:
+{'X_train':              dur     spkts    sbytes    dbytes      rate      sttl    sinpkt    dinpkt      sjit  ...  service_6  service_7  service_8  service_9  service_10  service_11  service_12  label  attack_cat
+0       0.220981  0.577833 -0.202676  0.006758 -0.025220 -0.010417  0.742250  0.564756  0.439311  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+1       0.975524  1.097591  0.212419  0.790751 -0.025185 -1.000000  0.916254  0.706760  0.527986  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+2       1.881698  0.749222 -0.066146  0.625346 -0.025700 -1.000000  1.294432  1.172968  1.245447  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+3       1.924816  1.000000  0.150440  0.220067 -0.025704 -1.000000  1.191364  1.140477  0.710239  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+4       0.722369  0.886074  0.086024  0.069766 -0.025546  0.000000  0.905447  1.096433  0.994951  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+...          ...       ...       ...       ...       ...       ...       ...       ...       ...  ...        ...        ...        ...        ...         ...         ...         ...    ...         ...
+175336 -0.003072  0.000000 -0.525784 -0.728818  0.863309  0.000000 -0.059125 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      1     Generic
+175337  0.796856  0.886074  0.145346  0.109363 -0.025544  0.000000  0.937254  1.066032  1.050102  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      1   Shellcode
+175338 -0.003072  0.000000 -0.525784 -0.728818  0.863309  0.000000 -0.059125 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      1     Generic
+175339 -0.003072  0.000000 -0.525784 -0.728818  0.863309  0.000000 -0.059125 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      1     Generic
+175340 -0.003072  0.000000 -0.525784 -0.728818  0.863309  0.000000 -0.059125 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      1     Generic
+
+[175341 rows x 51 columns], 'y_label': 0         0
+1         0
+2         0
+3         0
+4         0
+         ..
+175336    1
+175337    1
+175338    1
+175339    1
+175340    1
+Name: label, Length: 175341, dtype: int64, 'y_cat': 0            Normal
+1            Normal
+2            Normal
+3            Normal
+4            Normal
+            ...    
+175336      Generic
+175337    Shellcode
+175338      Generic
+175339      Generic
+175340      Generic
+Name: attack_cat, Length: 175341, dtype: str, 'pipeline': Pipeline(), 'artifacts': {'is_drop': False, 'corr': 0.906898, 'selected': ['dur', 'proto', 'service', 'spkts', 'sbytes', 'dbytes', 'rate', 'sttl', 'sinpkt', 'dinpkt', 'sjit', 'djit', 'response_body_len', 'ct_srv_src', 'ct_dst_ltm', 'ct_src_dport_ltm', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_src_ltm', 'ct_srv_dst', 'bytes_ratio', 'bytes_per_pkt_src', 'bytes_per_pkt_dst', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio']}, 'selected': ['dur', 'proto', 'service', 'spkts', 'sbytes', 'dbytes', 'rate', 'sttl', 'sinpkt', 'dinpkt', 'sjit', 'djit', 'response_body_len', 'ct_srv_src', 'ct_dst_ltm', 'ct_src_dport_ltm', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_src_ltm', 'ct_srv_dst', 'bytes_ratio', 'bytes_per_pkt_src', 'bytes_per_pkt_dst', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio']}
+[2396078 ms] INFO - main:352 - TEST RESULTS:
+{'X_test':             dur     spkts    sbytes    dbytes      rate      sttl    sinpkt    dinpkt      sjit  ...  service_6  service_7  service_8  service_9  service_10  service_11  service_12  label  attack_cat
+0     -0.003068  0.000000  0.056703 -0.728818  0.701650  0.000000 -0.058632 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+1     -0.003074  0.000000  0.560601 -0.728818  0.974449  0.000000 -0.059371 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+2     -0.003080  0.000000  0.361501 -0.728818  1.574607  0.000000 -0.060113 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+3     -0.003078  0.000000  0.293459 -0.728818  1.307870  0.000000 -0.059865 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+4     -0.003070  0.000000  0.635297 -0.728818  0.774397  0.000000 -0.058878 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+...         ...       ...       ...       ...       ...       ...       ...       ...       ...  ...        ...        ...        ...        ...         ...         ...         ...    ...         ...
+82327 -0.003080  0.000000 -0.561987 -0.728818  1.574607  0.000000 -0.060113 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+82328  1.452643  1.327055  1.486608  0.109363 -0.025618  0.000000  0.943811  1.257174  1.082562  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+82329 -0.003089 -0.276516 -0.881878 -0.728818 -0.025813 -1.322917  2.675371 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+82330 -0.003089 -0.276516 -0.881878 -0.728818 -0.025813 -1.322917  2.675371 -0.001514  0.316882  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+82331 -0.003072  0.000000 -0.561987 -0.728818  0.863309  0.000000 -0.059125 -0.001514  0.000000  ...        0.0        0.0        0.0        0.0         0.0         0.0         0.0      0      Normal
+
+[82332 rows x 51 columns], 'y_label': 0        0
+1        0
+2        0
+3        0
+4        0
+        ..
+82327    0
+82328    0
+82329    0
+82330    0
+82331    0
+Name: label, Length: 82332, dtype: int64, 'y_cat': 0        Normal
+1        Normal
+2        Normal
+3        Normal
+4        Normal
+          ...  
+82327    Normal
+82328    Normal
+82329    Normal
+82330    Normal
+82331    Normal
+Name: attack_cat, Length: 82332, dtype: str}

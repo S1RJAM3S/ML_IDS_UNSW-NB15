@@ -1,0 +1,33 @@
+{
+  "is_drop": false,
+  "corr": 0.906898,
+  "selected": [
+    "dur",
+    "proto",
+    "service",
+    "spkts",
+    "sbytes",
+    "dbytes",
+    "rate",
+    "sttl",
+    "sinpkt",
+    "dinpkt",
+    "sjit",
+    "djit",
+    "response_body_len",
+    "ct_srv_src",
+    "ct_dst_ltm",
+    "ct_src_dport_ltm",
+    "ct_dst_sport_ltm",
+    "ct_dst_src_ltm",
+    "ct_src_ltm",
+    "ct_srv_dst",
+    "bytes_ratio",
+    "bytes_per_pkt_src",
+    "bytes_per_pkt_dst",
+    "jitter_ratio",
+    "interpacket_ratio",
+    "synack_ratio",
+    "ack_ratio"
+  ]
+}
