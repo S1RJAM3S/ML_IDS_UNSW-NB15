@@ -2,8 +2,10 @@ name: dsai
 channels:
   - conda-forge
 dependencies:
+  - imbalanced-learn
   - lightgbm
   - numpy
+  - optuna
   - pandas
   - pip
   - pyarrow

@@ -1,0 +1,14 @@
+{
+  "threshold": 0.246382,
+  "oof_recall": 0.996087,
+  "oof_precision": 0.938966,
+  "oof_f2": 0.984113,
+  "oof_mcc": 0.893034,
+  "mean_fold_recall": 0.984054,
+  "gamma": 1.0,
+  "alpha": 0.75,
+  "n_trials": 30,
+  "recall": 0.99,
+  "precision": 0.5,
+  "n_splits": 10
+}
