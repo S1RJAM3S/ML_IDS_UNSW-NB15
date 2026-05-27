@@ -6,6 +6,7 @@ import lightgbm as lgb
 import optuna
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import recall_score, precision_score, matthews_corrcoef
+from sklearn.model_selection import PredefinedSplit
 from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).parent.parent.parent.parent))
@@ -50,16 +51,16 @@ class FLLGBMEvalError:
 
 class FLLGBMWrapper(lgb.LGBMClassifier):
     def predict_proba(self, X, **kwargs):
-        raw = super().predict_proba(X, **kwargs) # 1D raw scores with custom obj
+        raw = self.booster_.predict(X) # NOTE: Raw output (log-odds)
         p = 1.0 / (1.0 + np.exp(-raw))
         return np.column_stack([1.0 - p, p])
 
 PARAMS = {
-    'n_estimators': 1000,
+    'n_estimators': 300, # PLEASE NO MORE OVERFIT :<<
     'learning_rate': 0.05,
-    'num_leaves': 64,
+    'num_leaves': 31,
     'max_depth': -1,
-    'min_data_in_leaf': 20,
+    'min_data_in_leaf': 50,
     'bagging_fraction': 0.8,
     'feature_fraction': 0.8,
     'lambda_l1': 0.1,
@@ -79,16 +80,29 @@ class FLLGBMTrainer(LabelTrainer):
         return FLLGBMWrapper(**PARAMS, objective=FLLGBM(self.gamma, self.alpha))
 
     def _predict_proba(self, model, X: np.ndarray) -> np.ndarray:
-        return model.predict_proba(X)[:, 1]
+        res = model.predict_proba(X)
+        return res[:, 1] if len(res.shape) > 1 else res
 
     def _fit_model(self, model, X_tr, y_tr, X_val, y_val):
         if X_val is not None:
-            # Inside CV - Pass eval_set so LightGBM tracks focal loss on val fold
-            model.fit(X_tr, y_tr, eval_set=[(X_val, y_val)], eval_metric=FLLGBMEvalError(self.gamma))
+            # AAAAAAAAAAAAAAAAAAAAAAAAa
+            idx = len(X_tr) // 2
+            X_tr_sub, X_cal_sub = X_tr[:idx], X_tr[idx:]
+            y_tr_sub, y_cal_sub = y_tr[:idx], y_tr[idx:]
+            model.fit(X_tr_sub, y_tr_sub, eval_set=[(X_val, y_val)], eval_metric=FLLGBMEvalError(self.gamma))
+            test_fold = np.concatenate([-1 * np.ones(len(X_tr_sub)), 0 * np.ones(len(X_cal_sub))])
+            s = PredefinedSplit(test_fold)
+            c_fold = CalibratedClassifierCV(model, method='isotonic', cv=s)
+            X_combined = np.vstack([X_tr_sub, X_cal_sub])
+            y_combined = np.concatenate([y_tr_sub, y_cal_sub])
+            c_fold.fit(X_combined, y_combined)
+            return c_fold
         else:
             # Final refit on full training data - No eval_set needed
             model.fit(X_tr, y_tr)
-        return model
+            c = CalibratedClassifierCV(model, method='isotonic', cv=5)
+            c.fit(X_tr, y_tr)
+            return model, c
 
     def train(self, name: str = 'lgbm_fl'):
         X, y_label, _ = load_train()
@@ -133,11 +147,10 @@ class FLLGBMTrainer(LabelTrainer):
         self.logger.info(f"OOF F2 = {best_f2}")
         self.logger.info(f"OOF MCC = {mcc}")
 
-        m = self._fit_model(self._build_model(), X_arr, y_arr, None, None)
-        c = CalibratedClassifierCV(m, method='isotonic', cv=5, ensemble=False).fit(X_arr, y_arr)
-
-        joblib.dump(m, ARTIFACTS_DIR / f"{name}.joblib")
+        model, c = self._fit_model(self._build_model(), X_arr, y_arr, None, None)
+        joblib.dump(model, ARTIFACTS_DIR / f"{name}.joblib")
         joblib.dump(c, ARTIFACTS_DIR / f"{name}_c.joblib")
+
         res = {
             'threshold': float(best_t),
             'oof_recall': float(r),

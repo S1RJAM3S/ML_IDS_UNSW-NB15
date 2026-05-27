@@ -8,14 +8,14 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import recall_score, precision_score, matthews_corrcoef, fbeta_score
 import sys
 sys.path.append(str(Path(__file__).parent.parent.parent))
-from utils import make_logger, load_train, get_smote_label
+from utils import make_logger, load_train
 
 warnings.filterwarnings('ignore')
 
 N_SPLITS = 10
 THRESHOLD_STEPS = 200
-LABEL_RECALL_TARGET = 0.99
-LABEL_PRECISION_TARGET = 0.80
+LABEL_RECALL_TARGET = 0.98
+LABEL_PRECISION_TARGET = 0.90
 
 class LabelTrainer(ABC):
     def __init__(self, artifacts_dir: Path, logger):
@@ -42,10 +42,9 @@ class LabelTrainer(ABC):
         for fold, (tr_idx, val_idx) in enumerate(skf.split(X_arr, y_arr)):
             X_tr, X_val = X_arr[tr_idx], X_arr[val_idx]
             y_tr, y_val = y_arr[tr_idx], y_arr[val_idx]
-            smote = get_smote_label()
-            X_tr_smote, y_tr_smote = smote.fit_resample(X_tr, y_tr)
+            # NOTE: No more SMOTE here, too much Attack already :<
             model = self._build_model()
-            model = self._fit_model(model, X_tr_smote, y_tr_smote, X_val, y_val)
+            model = self._fit_model(model, X_tr, y_tr, X_val, y_val)
             probs = self._predict_proba(model, X_val)
             oof_probs[val_idx] = probs
             fold_recalls.append(recall_score(y_val, (probs >= 0.5).astype(int), zero_division=0))
@@ -93,7 +92,7 @@ class LabelTrainer(ABC):
         self.logger.info(f"Mean OOF Recall: {mean_recall}")
 
         best_t, best_f2 = self._find_threshold(y_arr, oof_probs)
-        best_pred = (oof_probs >= best_thresh).astype(int)
+        best_pred = (oof_probs >= best_t).astype(int)
 
         r = recall_score(y_arr, best_pred, zero_division=0)
         p = precision_score(y_arr, best_pred, zero_division=0)

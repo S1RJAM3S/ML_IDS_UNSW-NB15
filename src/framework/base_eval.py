@@ -14,8 +14,8 @@ from utils import make_logger, load_test
 warnings.filterwarnings('ignore')
 
 THRESHOLD_STEPS = 200
-LABEL_RECALL_TARGET = 0.99
-LABEL_PRECISION_TARGET = 0.80
+LABEL_RECALL_TARGET = 0.98
+LABEL_PRECISION_TARGET = 0.90
 
 class LabelEvaluator(ABC):
     def __init__(self, artifacts_dir: Path, report_dir: Path, logger, name: str):

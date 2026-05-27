@@ -1,38 +1,38 @@
-[1016 ms] INFO - evaluate:193 - LGBM_FL - EVALUATION
-[1100 ms] INFO - evaluate:199 - Test shape: (82332, 49)
-[1101 ms] INFO - evaluate:200 - Attack rate: 0.5506000097167566
-[1101 ms] WARNING - evaluate:205 - Distribution shift: Train = 0.6806223302022916 - Test = 0.5506000097167566 -> Diff = 0.13002232048553497
-[1610 ms] INFO - _eval_at_threshold:58 - TP = 45246 - FP = 15627 - TN = 21373 - FN = 86
-[1610 ms] INFO - _eval_at_threshold:59 - Recall = 0.9981028853789817 [Target >= 0.99 :>]
-[1610 ms] INFO - _eval_at_threshold:60 - Precision = 0.7432852003351239 [Target >= 0.8 :<]
-[1610 ms] INFO - _eval_at_threshold:61 - MCC = 0.6524110575447861
-[1610 ms] INFO - _eval_at_threshold:62 - FPR = 0.42235135135134 (15627 packets)
-[1610 ms] INFO - _eval_at_threshold:63 - FNR = 0.0018971146210182235 (15627 packets)
-[10420 ms] INFO - _eval_threshold_sweep:94 - Best F2 Threshold = 0.5 -> F2 = -1.0
-[10626 ms] INFO - _eval_threshold_sweep:107 - Figure: /ids/src/models/label/lgbm_fl/report/figures/threshold_sweep.png
-[10655 ms] INFO - _eval_pr_curve:119 - PR-AUC = 0.8975914578305402
-[10656 ms] INFO - _eval_pr_curve:120 - ROC-AUC = 0.9121134947927722
-[10735 ms] INFO - _eval_pr_curve:133 - Figure: /ids/src/models/label/lgbm_fl/report/figures/pr_curve.png
-[10736 ms] INFO - _eval_score_dist:144 - NORMAL: Mean = 0.24953455351887505 - STD = 0.28868713787239103 - Median = 0.00031220730565095225
-[10736 ms] INFO - _eval_score_dist:145 - ATTACK: Mean = 0.642488669226737 - STD = 0.08325224045935627 - Median = 0.6117736339982656
-[10899 ms] INFO - _eval_score_dist:159 - Figure: /ids/src/models/label/lgbm_fl/report/figures/score_dist.png
-[10928 ms] INFO - _eval_confusion:171 - 
+[1004 ms] INFO - evaluate:193 - LGBM_FL - EVALUATION
+[1078 ms] INFO - evaluate:199 - Test shape: (82332, 49)
+[1079 ms] INFO - evaluate:200 - Attack rate: 0.5506000097167566
+[1079 ms] WARNING - evaluate:205 - Distribution shift: Train = 0.6806223302022916 - Test = 0.5506000097167566 -> Diff = 0.13002232048553497
+[1581 ms] INFO - _eval_at_threshold:58 - TP = 41379 - FP = 8477 - TN = 28523 - FN = 3953
+[1581 ms] INFO - _eval_at_threshold:59 - Recall = 0.9127989058501721 [Target >= 0.98 :<]
+[1581 ms] INFO - _eval_at_threshold:60 - Precision = 0.8299703145057766 [Target >= 0.9 :<]
+[1581 ms] INFO - _eval_at_threshold:61 - MCC = 0.6958618932913345
+[1581 ms] INFO - _eval_at_threshold:62 - FPR = 0.22910810810810195 (8477 packets)
+[1581 ms] INFO - _eval_at_threshold:63 - FNR = 0.08720109414982602 (8477 packets)
+[10262 ms] INFO - _eval_threshold_sweep:94 - Best F2 Threshold = 0.5 -> F2 = -1.0
+[10468 ms] INFO - _eval_threshold_sweep:107 - Figure: /ids/src/models/label/lgbm_fl/report/figures/threshold_sweep.png
+[10502 ms] INFO - _eval_pr_curve:119 - PR-AUC = 0.9353784961204221
+[10502 ms] INFO - _eval_pr_curve:120 - ROC-AUC = 0.9328870188352122
+[10612 ms] INFO - _eval_pr_curve:133 - Figure: /ids/src/models/label/lgbm_fl/report/figures/pr_curve.png
+[10612 ms] INFO - _eval_score_dist:144 - NORMAL: Mean = 0.2727568303504801 - STD = 0.31099236568813404 - Median = 0.019954648526077097
+[10613 ms] INFO - _eval_score_dist:145 - ATTACK: Mean = 0.7789621683367328 - STD = 0.11754275508981538 - Median = 0.7865589371722037
+[10790 ms] INFO - _eval_score_dist:159 - Figure: /ids/src/models/label/lgbm_fl/report/figures/score_dist.png
+[10820 ms] INFO - _eval_confusion:171 - 
               precision    recall  f1-score   support
 
-      Normal       1.00      0.58      0.73     37000
-      Attack       0.74      1.00      0.85     45332
+      Normal       0.88      0.77      0.82     37000
+      Attack       0.83      0.91      0.87     45332
 
-    accuracy                           0.81     82332
-   macro avg       0.87      0.79      0.79     82332
-weighted avg       0.86      0.81      0.80     82332
+    accuracy                           0.85     82332
+   macro avg       0.85      0.84      0.85     82332
+weighted avg       0.85      0.85      0.85     82332
 
-[10997 ms] INFO - _eval_confusion:179 - Figure: /ids/src/models/label/lgbm_fl/report/figures/confusion.png
-[10997 ms] INFO - _eval_generalisation_gap:190 - recall: OOF = 0.9966231219781969 - Test = 0.9981028853789817 -> Gap = 0.001479763400784817 [:>]
-[10997 ms] INFO - _eval_generalisation_gap:190 - precision: OOF = 0.937545817863646 - Test = 0.7432852003351239 -> Gap = -0.19426061752852208 [OVERFIT]
-[10997 ms] INFO - _eval_generalisation_gap:190 - f2: OOF = 0.9842194546733419 - Test = 0.9340589014909104 -> Gap = -0.05016055318243151 [OVERFIT]
-[10997 ms] INFO - _eval_generalisation_gap:190 - mcc: OOF = 0.8914175861398281 - Test = 0.6524110575447861 -> Gap = -0.239006528595042 [OVERFIT]
-[11414 ms] INFO - _extra_report:51 - ECE Uncalibrated = 0.13768023407036237
-[11414 ms] INFO - _extra_report:52 - ECE Calibrated = 0.12614481334710087
-[11414 ms] INFO - _extra_report:53 - Improve? 0.011535420723261497
-[11502 ms] INFO - _extra_report:67 - Figure: /ids/src/models/label/lgbm_fl/report/figures/calibration.png
-[11502 ms] INFO - evaluate:227 - lgbm_fl: {'model': 'lgbm_fl', 'training_oof': {'oof_recall': 0.9966231219781969, 'oof_precision': 0.937545817863646, 'oof_f2': 0.9842194546733419, 'oof_mcc': 0.8914175861398281, 'threshold': 0.18728643216080404}, 'test_at_threshold': {'threshold': 0.18728643216080404, 'tp': 45246, 'fp': 15627, 'tn': 21373, 'fn': 86, 'recall': 0.9981028853789817, 'precision': 0.7432852003351239, 'f1': 0.8520502801186385, 'f2': 0.9340589014909104, 'mcc': 0.6524110575447861, 'fpr': 0.42235135135134, 'fnr': 0.0018971146210182235, 'recall_target': True}, 'threshold_sweep': {'best_f2_threshold': 0.5, 'best_f2': -1.0}, 'pr_roc_auc': {'pr_auc': 0.8975914578305402, 'roc_auc': 0.9121134947927722, 'baseline': 0.5506000097167566}, 'score_distribution': {'normal_mean': 0.24953455351887505, 'normal_median': 0.00031220730565095225, 'attack_mean': 0.642488669226737, 'attack_median': 0.6117736339982656}, 'confusion': {'tn': 21373, 'fp': 15627, 'fn': 86, 'tp': 45246}, 'calibration': {'ece_uncalibrated': 0.13768023407036237, 'ece_calibrated': 0.12614481334710087, 'ece_improvement': 0.011535420723261497}}
+[10895 ms] INFO - _eval_confusion:179 - Figure: /ids/src/models/label/lgbm_fl/report/figures/confusion.png
+[10895 ms] INFO - _eval_generalisation_gap:190 - recall: OOF = 0.998701200760845 - Test = 0.9127989058501721 -> Gap = -0.08590229491067292 [OVERFIT]
+[10895 ms] INFO - _eval_generalisation_gap:190 - precision: OOF = 0.9147326088291275 - Test = 0.8299703145057766 -> Gap = -0.08476229432335092 [OVERFIT]
+[10895 ms] INFO - _eval_generalisation_gap:190 - f2: OOF = 0.9806964420893263 - Test = 0.8949365007959028 -> Gap = -0.08575994129342346 [OVERFIT]
+[10895 ms] INFO - _eval_generalisation_gap:190 - mcc: OOF = 0.8539989901991376 - Test = 0.6958618932913345 -> Gap = -0.1581370969078031 [OVERFIT]
+[10982 ms] INFO - _extra_report:51 - ECE Uncalibrated = 0.07083425589473756
+[10982 ms] INFO - _extra_report:52 - ECE Calibrated = 0.08011784921456161
+[10982 ms] INFO - _extra_report:53 - Improve? -0.009283593319824049
+[11066 ms] INFO - _extra_report:67 - Figure: /ids/src/models/label/lgbm_fl/report/figures/calibration.png
+[11066 ms] INFO - evaluate:227 - lgbm_fl: {'model': 'lgbm_fl', 'training_oof': {'oof_recall': 0.998701200760845, 'oof_precision': 0.9147326088291275, 'oof_f2': 0.9806964420893263, 'oof_mcc': 0.8539989901991376, 'threshold': 0.6157286432160805}, 'test_at_threshold': {'threshold': 0.6157286432160805, 'tp': 41379, 'fp': 8477, 'tn': 28523, 'fn': 3953, 'recall': 0.9127989058501721, 'precision': 0.8299703145057766, 'f1': 0.8694163129806278, 'f2': 0.8949365007959028, 'mcc': 0.6958618932913345, 'fpr': 0.22910810810810195, 'fnr': 0.08720109414982602, 'recall_target': False}, 'threshold_sweep': {'best_f2_threshold': 0.5, 'best_f2': -1.0}, 'pr_roc_auc': {'pr_auc': 0.9353784961204221, 'roc_auc': 0.9328870188352122, 'baseline': 0.5506000097167566}, 'score_distribution': {'normal_mean': 0.2727568303504801, 'normal_median': 0.019954648526077097, 'attack_mean': 0.7789621683367328, 'attack_median': 0.7865589371722037}, 'confusion': {'tn': 28523, 'fp': 8477, 'fn': 3953, 'tp': 41379}, 'calibration': {'ece_uncalibrated': 0.07083425589473756, 'ece_calibrated': 0.08011784921456161, 'ece_improvement': -0.009283593319824049}}
