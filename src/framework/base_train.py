@@ -5,10 +5,10 @@ import joblib
 import json
 import numpy as np
 from sklearn.model_selection import StratifiedKFold
-from sklearn import recall_score, precision_score, matthews_corrcoef
+from sklearn.metrics import recall_score, precision_score, matthews_corrcoef, fbeta_score
 import sys
 sys.path.append(str(Path(__file__).parent.parent.parent))
-from utils import make_logger, load_train, get_smote_label, get_smote_cat
+from utils import make_logger, load_train, get_smote_label
 
 warnings.filterwarnings('ignore')
 
@@ -17,7 +17,7 @@ THRESHOLD_STEPS = 200
 LABEL_RECALL_TARGET = 0.99
 LABEL_PRECISION_TARGET = 0.80
 
-class LabelTrain(ABC):
+class LabelTrainer(ABC):
     def __init__(self, artifacts_dir: Path, logger):
         self.artifacts_dir = artifacts_dir
         self.artifacts_dir.mkdir(parents=True, exist_ok=True)
@@ -25,9 +25,11 @@ class LabelTrain(ABC):
 
     @abstractmethod
     def _build_model(self):
+        pass
 
     @abstractmethod
     def _predict_proba(self, model, X: np.ndarray) -> np.ndarray:
+        pass
 
     def _fit_model(self, model, X_tr, y_tr, X_val, y_val):
         model.fit(X_tr, y_tr)
@@ -59,7 +61,7 @@ class LabelTrain(ABC):
             r = recall_score(y_arr, preds, zero_division=0)
             p = precision_score(y_arr, preds, zero_division=0)
             if r >= LABEL_RECALL_TARGET and p >= LABEL_PRECISION_TARGET:
-                f2 = (5 * p * r) / (4 * p + r + 1e-9)
+                f2 = fbeta_score(y_arr, preds, beta=2, average='binary', zero_division=0)
                 if f2 > best_f2:
                     best_f2 = f2
                     best_t = t
@@ -68,7 +70,7 @@ class LabelTrain(ABC):
             self.logger.warning(f"No threshold met targets, fallback to  max recall threshold :<")
             best_t = float(thresholds[np.argmax([recall_score(y_arr, (oof_probs >= t).astype(int), zero_division=0) for t in thresholds])])
             best_pred = (oof_probs >= best_t).astype(int)
-            best_f2 = float((5 * precision_score(y_arr, best_pred, zero_division=0) * recall_score(y_arr, best_pred, zero_division=0)) / (4 * precision_score(y_arr, best_pred, zero_division=0) + recall_score(y_arr, best_pred, zero_division=0) + 1e-9))
+            best_f2 = fbeta_score(y_arr, best_pred, beta=2, average='binary', zero_division=0)
 
         return float(best_t), float(best_f2)
 
@@ -80,7 +82,7 @@ class LabelTrain(ABC):
             json.dump(res, f)
         self.logger.info(f"Saved model ({model_path}) and result ({res_path})")
 
-    def train(self, name: str = 'model'):
+    def train(self, name: str = 'model'): # Default train, maybe override?
         X, y_label, _ = load_train()
         X_arr = X.values.astype(np.float64)
         y_arr = y_label.values.astype(int)

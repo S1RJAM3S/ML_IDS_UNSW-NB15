@@ -1,0 +1,350 @@
+[786 ms] INFO - train:98 - Train shape: (175341, 49)
+[786 ms] INFO - train:99 - Attack rate: 0.6806223302022916
+[786 ms] INFO - train:104 - Alpha search range: [0.1, 0.57]
+[60221 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9776288227901131
+[118653 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9725155019272667
+[176908 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9771241830065359
+[235075 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9761186525892408
+[290012 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9789676554382437
+[344945 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9768728004022121
+[400168 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9719289425171778
+[459287 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9801407742584213
+[518119 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9757834757834758
+[573609 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.973269649740238
+[573613 ms] INFO - obj:113 - Trial 0 - gamma = 2.0, alpha = 0.55 - OOF Recall = 0.9760350458452927
+[631470 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9719312945119397
+[690088 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9685771744595274
+[752525 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9718451483157365
+[814086 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9685771744595274
+[875122 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9726830903301491
+[936995 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9704206468912351
+[998702 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9664823194234959
+[1059802 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9740237975532093
+[1117936 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9702530584883526
+[1176007 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9679068208479973
+[1176009 ms] INFO - obj:113 - Trial 1 - gamma = 3.25, alpha = 0.35 - OOF Recall = 0.9702700525281169
+[1233973 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9648931713447843
+[1291209 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9581866934808111
+[1345901 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.963298139768728
+[1401859 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9609519021283727
+[1459330 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9642198759845819
+[1514136 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9622088151499916
+[1569621 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9573487514663985
+[1631097 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9648064353946707
+[1686381 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9617898441427853
+[1744381 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9596111949053125
+[1744383 ms] INFO - obj:113 - Trial 2 - gamma = 1.5, alpha = 0.15000000000000002 - OOF Recall = 0.9617314823766436
+[1798592 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9775450356095517
+[1854719 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.973604826546003
+[1908631 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9768728004022121
+[1961793 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9763700351935646
+[2018796 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9770403888050947
+[2074143 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9770403888050947
+[2128688 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9727668845315904
+[2183820 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9795542148483325
+[2238182 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9749455337690632
+[2296406 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9746941511647395
+[2296408 ms] INFO - obj:113 - Trial 3 - gamma = 1.0, alpha = 0.5 - OOF Recall = 0.9760434259675245
+[2358743 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9735232509426058
+[2419062 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.971342383107089
+[2475734 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9747779453661807
+[2536758 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9726830903301491
+[2595499 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9741075917546506
+[2656604 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.973269649740238
+[2716472 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9692475280710575
+[2775343 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9770403888050947
+[2834102 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9731020613373554
+[2891829 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9711747947042064
+[2891830 ms] INFO - obj:113 - Trial 4 - gamma = 2.75, alpha = 0.45000000000000007 - OOF Recall = 0.9730268684158627
+[2949430 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9788856304985337
+[3006694 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9760348583877996
+[3061385 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9788000670353612
+[3119195 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9784648902295962
+[3176474 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9794704206468913
+[3233699 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9782135076252724
+[3290129 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9741075917546506
+[3344535 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9808949220713926
+[3401999 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9773755656108597
+[3456476 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9766214177978884
+[3456477 ms] INFO - obj:113 - Trial 5 - gamma = 1.0, alpha = 0.55 - OOF Recall = 0.9778868871658245
+[3515753 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9659824046920821
+[3574764 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9614546673370202
+[3631801 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9669850846321435
+[3691348 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9627115803586391
+[3749304 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9663147310206134
+[3810753 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9650578179989945
+[3871259 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9623764035528741
+[3932767 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9685771744595274
+[3995394 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9643874643874644
+[4055390 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.961370873135579
+[4055392 ms] INFO - obj:113 - Trial 6 - gamma = 3.5, alpha = 0.2 - OOF Recall = 0.9645218201574938
+[4111882 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9648931713447843
+[4169255 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9581866934808111
+[4228575 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.963298139768728
+[4290114 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9609519021283727
+[4349930 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9642198759845819
+[4411528 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9622088151499916
+[4471698 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9573487514663985
+[4528348 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9648064353946707
+[4587263 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9617898441427853
+[4645680 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9596111949053125
+[4645681 ms] INFO - obj:113 - Trial 7 - gamma = 1.5, alpha = 0.15000000000000002 - OOF Recall = 0.9617314823766436
+[4704647 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9730205278592375
+[4766669 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9695827048768225
+[4825611 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9727668845315904
+[4884261 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.971007206301324
+[4941835 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9720127367186191
+[5002126 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9706720294955589
+[5061897 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9675716440422323
+[5118738 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9749455337690632
+[5178419 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9709234120998826
+[5236607 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9684933802580862
+[5236610 ms] INFO - obj:113 - Trial 8 - gamma = 1.75, alpha = 0.35 - OOF Recall = 0.9710996059952418
+[5296144 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9676581483033095
+[5355698 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9644712585889057
+[5415801 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9676554382436735
+[5472096 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9637171107759344
+[5531394 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9675716440422323
+[5590812 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9663985252220546
+[5650484 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9627115803586391
+[5709316 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9688285570638512
+[5766441 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9647226411932295
+[5824918 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9625439919557567
+[5824919 ms] INFO - obj:113 - Trial 9 - gamma = 2.25, alpha = 0.2 - OOF Recall = 0.9656278895747586
+[5882723 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9731881022203602
+[5938040 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9696664990782637
+[5991679 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9724317077258253
+[6048281 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.971677559912854
+[6106149 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9743589743589743
+[6161837 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9726830903301491
+[6215134 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9678230266465561
+[6272854 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9762862409921234
+[6331416 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9717613541142953
+[6386161 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.96941511647394
+[6386163 ms] INFO - obj:113 - Trial 10 - gamma = 4.0, alpha = 0.45000000000000007 - OOF Recall = 0.9719291671853341
+[6437987 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9788856304985337
+[6492254 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9760348583877996
+[6544558 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9788000670353612
+[6599030 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9784648902295962
+[6654914 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9794704206468913
+[6706522 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9782135076252724
+[6757994 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9741075917546506
+[6812295 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9808949220713926
+[6866580 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9773755656108597
+[6918384 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9766214177978884
+[6918386 ms] INFO - obj:113 - Trial 11 - gamma = 1.0, alpha = 0.55 - OOF Recall = 0.9778868871658245
+[6970116 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9788856304985337
+[7023986 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9760348583877996
+[7075500 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9788000670353612
+[7129215 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9784648902295962
+[7183037 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9794704206468913
+[7237443 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9782135076252724
+[7289685 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9741075917546506
+[7343748 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9808949220713926
+[7397888 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9773755656108597
+[7452091 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9766214177978884
+[7452094 ms] INFO - obj:113 - Trial 12 - gamma = 1.0, alpha = 0.55 - OOF Recall = 0.9778868871658245
+[7506238 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.975366568914956
+[7560176 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9733534439416792
+[7613914 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9746103569632981
+[7668130 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9744427685604157
+[7722387 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9760348583877996
+[7776669 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9753645047762695
+[7830548 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.971677559912854
+[7882272 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9782135076252724
+[7934253 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9744427685604157
+[7988533 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9721803251215015
+[7988535 ms] INFO - obj:113 - Trial 13 - gamma = 1.0, alpha = 0.45000000000000007 - OOF Recall = 0.9745686662764461
+[8043704 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9709258483452032
+[8098743 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9689961454667337
+[8153758 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.971007206301324
+[8208246 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9681582034523211
+[8266529 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9698340874811463
+[8324442 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9712585889056478
+[8379186 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9646388469917881
+[8434003 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9725155019272667
+[8488818 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.969079939668175
+[8546528 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9662309368191722
+[8546530 ms] INFO - obj:113 - Trial 14 - gamma = 2.75, alpha = 0.30000000000000004 - OOF Recall = 0.9692645305358779
+[8600646 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9777126099706744
+[8654615 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.975196916373387
+[8708739 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9775431540137423
+[8764545 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9770403888050947
+[8820223 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9789676554382437
+[8876324 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9772079772079773
+[8932448 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9728506787330317
+[8988498 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9811463046757164
+[9044160 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9766214177978884
+[9099809 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9740237975532093
+[9099811 ms] INFO - obj:113 - Trial 15 - gamma = 1.5, alpha = 0.55 - OOF Recall = 0.9768310900568965
+[9153561 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9754503560955173
+[9209272 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9712585889056478
+[9263142 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9730182671359142
+[9319108 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.971677559912854
+[9374564 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9742751801575331
+[9430102 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9727668845315904
+[9483815 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9685771744595274
+[9539556 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9766214177978884
+[9595378 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9715937657114128
+[9649141 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.971342383107089
+[9649143 ms] INFO - obj:113 - Trial 16 - gamma = 1.25, alpha = 0.4 - OOF Recall = 0.9726581577814974
+[9704238 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9758692919983243
+[9759581 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9728506787330317
+[9811587 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9768728004022121
+[9866391 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9756996815820346
+[9921541 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9771241830065359
+[9976213 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9756158873805932
+[10031429 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9719289425171778
+[10086329 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9798055974526563
+[10141078 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9745265627618569
+[10192860 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9726830903301491
+[10192861 ms] INFO - obj:113 - Trial 17 - gamma = 2.0, alpha = 0.5 - OOF Recall = 0.9752976716164572
+[10247687 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9719312945119397
+[10304803 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9684095860566448
+[10359544 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9699178816825875
+[10416601 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9697502932797051
+[10473685 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.971342383107089
+[10528405 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9695827048768225
+[10585193 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9653929948047595
+[10639681 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9734372381431204
+[10696565 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9702530584883526
+[10753778 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9666499078263784
+[10753780 ms] INFO - obj:113 - Trial 18 - gamma = 2.5, alpha = 0.30000000000000004 - OOF Recall = 0.9696667342777399
+[10807542 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9772098868873063
+[10863564 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.973269649740238
+[10919825 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9775431540137423
+[10975954 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9762024467906821
+[11031903 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9773755656108597
+[11087310 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9776269482151835
+[11142992 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9715937657114128
+[11196670 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9790514496396849
+[11252310 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9759510641863584
+[11305899 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9736886207474442
+[11305900 ms] INFO - obj:113 - Trial 19 - gamma = 1.25, alpha = 0.5 - OOF Recall = 0.9759512551542912
+[11362120 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9741097612065354
+[11415847 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9715099715099715
+[11471648 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9745265627618569
+[11527958 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9720127367186191
+[11584377 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9741913859560919
+[11638417 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9735210323445618
+[11695121 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9693313222724987
+[11749102 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9754482989777108
+[11803504 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9715099715099715
+[11859472 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9699178816825875
+[11859474 ms] INFO - obj:113 - Trial 20 - gamma = 1.75, alpha = 0.4 - OOF Recall = 0.9726078924940404
+[11913724 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9788856304985337
+[11965796 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9760348583877996
+[12019981 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9788000670353612
+[12073937 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9784648902295962
+[12128275 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9794704206468913
+[12180175 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9782135076252724
+[12234547 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9741075917546506
+[12288538 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9808949220713926
+[12342495 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9773755656108597
+[12396626 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9766214177978884
+[12396629 ms] INFO - obj:113 - Trial 21 - gamma = 1.0, alpha = 0.55 - OOF Recall = 0.9778868871658245
+[12450607 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9783829074151654
+[12505796 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9756996815820346
+[12559488 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9787162728339199
+[12613162 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9782973018267136
+[12667169 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9786324786324786
+[12720978 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9779621250209486
+[12776723 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9749455337690632
+[12832881 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9812300988771577
+[12887293 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9764538293950059
+[12943010 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9754482989777108
+[12943012 ms] INFO - obj:113 - Trial 22 - gamma = 1.25, alpha = 0.55 - OOF Recall = 0.9775768528330199
+[12997173 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9775450356095517
+[13049028 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.973604826546003
+[13100787 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9768728004022121
+[13154485 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9763700351935646
+[13206455 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9770403888050947
+[13260505 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9770403888050947
+[13314299 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9727668845315904
+[13368409 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9795542148483325
+[13422311 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9749455337690632
+[13474023 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9746941511647395
+[13474024 ms] INFO - obj:113 - Trial 23 - gamma = 1.0, alpha = 0.5 - OOF Recall = 0.9760434259675245
+[13527600 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9775450356095517
+[13583367 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9753645047762695
+[13639458 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9784648902295962
+[13695710 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9757834757834758
+[13752140 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9780459192223898
+[13805950 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9756158873805932
+[13862297 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9731858555387967
+[13917965 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9794704206468913
+[13974176 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9757834757834758
+[14028255 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9762862409921234
+[14028256 ms] INFO - obj:113 - Trial 24 - gamma = 1.75, alpha = 0.55 - OOF Recall = 0.9765545705963165
+[14084151 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9762044407205698
+[14138357 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9731020613373554
+[14193826 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.975196916373387
+[14249721 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9749455337690632
+[14305258 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9767890062007709
+[14360971 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9741075917546506
+[14416532 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9694989106753813
+[14470286 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9790514496396849
+[14526047 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9741913859560919
+[14581583 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9718451483157365
+[14581586 ms] INFO - obj:113 - Trial 25 - gamma = 1.25, alpha = 0.45000000000000007 - OOF Recall = 0.9744932444742691
+[14635904 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9770423125261835
+[14691254 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9747779453661807
+[14747539 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9767052119993297
+[14803374 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9766214177978884
+[14860138 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9771241830065359
+[14916085 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9756996815820346
+[14971884 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9715937657114128
+[15027986 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9798893916540975
+[15083804 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9748617395676219
+[15139583 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9740237975532093
+[15139584 ms] INFO - obj:113 - Trial 26 - gamma = 1.5, alpha = 0.5 - OOF Recall = 0.9758339446764495
+[15193580 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9736908253037285
+[15245185 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9707558236970002
+[15299306 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9736886207474442
+[15351461 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9725155019272667
+[15403022 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.973604826546003
+[15454679 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9729344729344729
+[15508703 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9685771744595274
+[15563068 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9769565946036535
+[15617418 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.971677559912854
+[15669340 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9702530584883526
+[15669341 ms] INFO - obj:113 - Trial 27 - gamma = 1.0, alpha = 0.4 - OOF Recall = 0.9724654458620303
+[15723716 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9772936740678676
+[15780610 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9746941511647395
+[15837041 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9776269482151835
+[15894107 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9770403888050947
+[15950973 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9782135076252724
+[16005460 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9770403888050947
+[16062433 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9721803251215015
+[16116874 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9799731858555388
+[16173898 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9767890062007709
+[16231122 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9727668845315904
+[16231125 ms] INFO - obj:113 - Trial 28 - gamma = 2.25, alpha = 0.55 - OOF Recall = 0.9763618460392655
+[16286242 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9758692919983243
+[16338570 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9728506787330317
+[16394024 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9768728004022121
+[16446245 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9756996815820346
+[16501281 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9771241830065359
+[16556560 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9756158873805932
+[16608939 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9719289425171778
+[16664047 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9798055974526563
+[16716492 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9745265627618569
+[16771302 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9726830903301491
+[16771304 ms] INFO - obj:113 - Trial 29 - gamma = 2.0, alpha = 0.5 - OOF Recall = 0.9752976716164572
+[16771304 ms] INFO - train:120 - Best: gamma = 1.0, alpha = 0.55 - OOF Recall = 0.9778868871658245
+[16825528 ms] INFO - _cv_loop:52 -  Fold 1/10 - Recall = 0.9788856304985337
+[16879731 ms] INFO - _cv_loop:52 -  Fold 2/10 - Recall = 0.9760348583877996
+[16933980 ms] INFO - _cv_loop:52 -  Fold 3/10 - Recall = 0.9788000670353612
+[16985841 ms] INFO - _cv_loop:52 -  Fold 4/10 - Recall = 0.9784648902295962
+[17037964 ms] INFO - _cv_loop:52 -  Fold 5/10 - Recall = 0.9794704206468913
+[17092140 ms] INFO - _cv_loop:52 -  Fold 6/10 - Recall = 0.9782135076252724
+[17145744 ms] INFO - _cv_loop:52 -  Fold 7/10 - Recall = 0.9741075917546506
+[17197315 ms] INFO - _cv_loop:52 -  Fold 8/10 - Recall = 0.9808949220713926
+[17251834 ms] INFO - _cv_loop:52 -  Fold 9/10 - Recall = 0.9773755656108597
+[17303481 ms] INFO - _cv_loop:52 -  Fold 10/10 - Recall = 0.9766214177978884
+[17303482 ms] INFO - train:123 - Mean OOF Recall = 0.9778868871658245
+[17312079 ms] INFO - train:130 - Best threshold = 0.18728643216080404
+[17312079 ms] INFO - train:131 - OOF Recall = 0.9966231219781969
+[17312079 ms] INFO - train:132 - OOF Precision = 0.937545817863646
+[17312079 ms] INFO - train:133 - OOF F2 = 0.9842194546733419
+[17312079 ms] INFO - train:134 - OOF MCC = 0.8914175861398281
