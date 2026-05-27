@@ -18,4 +18,4 @@ show_model_menu() {
 	echo -n "Input: "
 }
 
-python src/models/label/lgbm_fl/train.py
+python src/models/label/lgbm_fl/eval.py

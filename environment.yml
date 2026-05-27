@@ -4,6 +4,7 @@ channels:
 dependencies:
   - imbalanced-learn
   - lightgbm
+  - matplotlib
   - numpy
   - optuna
   - pandas
