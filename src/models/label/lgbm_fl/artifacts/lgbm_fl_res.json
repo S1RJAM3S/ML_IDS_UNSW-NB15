@@ -1,12 +1,13 @@
 {
-  "threshold": 0.6157286432160805,
-  "oof_recall": 0.998701200760845,
-  "oof_precision": 0.9147326088291275,
-  "oof_f2": 0.9806964420893263,
-  "oof_mcc": 0.8539989901991376,
-  "mean_fold_recall": 0.9990866516293462,
-  "gamma": 2.5,
-  "alpha": 0.4,
+  "threshold": 0.2513065326633166,
+  "oof_recall": 0.9998407923513294,
+  "oof_precision": 0.9126174979158221,
+  "oof_f2": 0.9810873343846764,
+  "oof_mcc": 0.8520228063795662,
+  "mean_fold_recall": 0.9732196147376413,
+  "gamma": 1.0,
+  "alpha": 0.47,
+  "best_iteration": 234,
   "n_trials": 30,
   "train_attack_rate": 0.6806223302022916
 }

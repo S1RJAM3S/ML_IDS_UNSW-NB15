@@ -1,1 +1,130 @@
-{"model": "lgbm_fl", "training_oof": {"oof_recall": 0.998701200760845, "oof_precision": 0.9147326088291275, "oof_f2": 0.9806964420893263, "oof_mcc": 0.8539989901991376, "threshold": 0.6157286432160805}, "test_at_threshold": {"threshold": 0.6157286432160805, "tp": 41379, "fp": 8477, "tn": 28523, "fn": 3953, "recall": 0.9127989058501721, "precision": 0.8299703145057766, "f1": 0.8694163129806278, "f2": 0.8949365007959028, "mcc": 0.6958618932913345, "fpr": 0.22910810810810195, "fnr": 0.08720109414982602, "recall_target": false}, "threshold_sweep": {"best_f2_threshold": 0.5, "best_f2": -1.0}, "pr_roc_auc": {"pr_auc": 0.9353784961204221, "roc_auc": 0.9328870188352122, "baseline": 0.5506000097167566}, "score_distribution": {"normal_mean": 0.2727568303504801, "normal_median": 0.019954648526077097, "attack_mean": 0.7789621683367328, "attack_median": 0.7865589371722037}, "confusion": {"tn": 28523, "fp": 8477, "fn": 3953, "tp": 41379}, "calibration": {"ece_uncalibrated": 0.07083425589473756, "ece_calibrated": 0.08011784921456161, "ece_improvement": -0.009283593319824049}}
+{
+  "model": "lgbm_fl",
+  "training_oof": {
+    "oof_recall": 0.9998407923513294,
+    "oof_precision": 0.9126174979158221,
+    "oof_f2": 0.9810873343846764,
+    "oof_mcc": 0.8520228063795662,
+    "threshold": 0.2513065326633166
+  },
+  "test_at_threshold": {
+    "threshold": 0.2513065326633166,
+    "tp": 45329,
+    "fp": 16831,
+    "tn": 20169,
+    "fn": 3,
+    "recall": 0.9999338215829877,
+    "precision": 0.7292310167310168,
+    "f1": 0.8433929966881256,
+    "f2": 0.9308261598107505,
+    "mcc": 0.6303811714900532,
+    "fpr": 0.4548918918918796,
+    "fnr": 6.617841701226362e-05,
+    "recall_target": true,
+    "precision_target": false
+  },
+  "test_at_adjusted_threshold": {
+    "threshold": 0.36862543889306976,
+    "tp": 45287,
+    "fp": 15530,
+    "tn": 21470,
+    "fn": 45,
+    "recall": 0.999007323744816,
+    "precision": 0.7446437673676768,
+    "f1": 0.8532722870681777,
+    "f2": 0.9351215180986598,
+    "mcc": 0.6558535307390589,
+    "fpr": 0.41972972972971845,
+    "fnr": 0.000992676255183954,
+    "recall_target": true,
+    "precision_target": false
+  },
+  "prevalence_adjustment": {
+    "train_rate": 0.6806223302022916,
+    "test_rate": 0.5506000097167566,
+    "oof_threshold": 0.2513065326633166,
+    "adjusted_threshold": 0.36862543889306976
+  },
+  "threshold_sweep": {
+    "best_f2_threshold": 0.5,
+    "best_f2": -1.0
+  },
+  "pr_roc_auc": {
+    "pr_auc": 0.9241497069355078,
+    "roc_auc": 0.930998303209236,
+    "baseline": 0.5506000097167566
+  },
+  "score_distribution": {
+    "normal_mean": 0.3353917758529169,
+    "normal_median": 0.08078556612717414,
+    "normal_std": 0.3676983887938421,
+    "attack_mean": 0.9004182994319169,
+    "attack_median": 0.9249402447828554,
+    "attack_std": 0.08333934185602607
+  },
+  "confusion": {
+    "tn": 20169,
+    "fp": 16831,
+    "fn": 3,
+    "tp": 45329
+  },
+  "fn_by_category": {
+    "Analysis": {
+      "total": 677,
+      "fn": 0,
+      "fn_rate": 0.0,
+      "median_score": 0.9140454806694293
+    },
+    "Backdoor": {
+      "total": 583,
+      "fn": 0,
+      "fn_rate": 0.0,
+      "median_score": 0.9123180729022444
+    },
+    "DoS": {
+      "total": 4089,
+      "fn": 0,
+      "fn_rate": 0.0,
+      "median_score": 0.9352283396281279
+    },
+    "Exploits": {
+      "total": 11132,
+      "fn": 1,
+      "fn_rate": 8.983111749909361e-05,
+      "median_score": 0.9380493603293025
+    },
+    "Fuzzers": {
+      "total": 6062,
+      "fn": 0,
+      "fn_rate": 0.0,
+      "median_score": 0.8309029218499768
+    },
+    "Generic": {
+      "total": 18871,
+      "fn": 0,
+      "fn_rate": 0.0,
+      "median_score": 0.9249402447828554
+    },
+    "Reconnaissance": {
+      "total": 3496,
+      "fn": 1,
+      "fn_rate": 0.0002860411899312683,
+      "median_score": 0.933575648466006
+    },
+    "Shellcode": {
+      "total": 378,
+      "fn": 1,
+      "fn_rate": 0.002645502645495647,
+      "median_score": 0.915794879741144
+    },
+    "Worms": {
+      "total": 44,
+      "fn": 0,
+      "fn_rate": 0.0,
+      "median_score": 0.9433480486677366
+    }
+  },
+  "calibration": {
+    "ece": 0.09589537550894799
+  }
+}

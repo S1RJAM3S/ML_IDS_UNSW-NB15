@@ -30,7 +30,7 @@ for p in [DATASET_PATH, OUTPUT_PATH, ARTIFACTS_PATH]:
 
 logger = logging.getLogger(__name__)
 fm = logging.Formatter('[%(relativeCreated)d ms] %(levelname)s - %(funcName)s:%(lineno)d - %(message)s')
-fh = logging.FileHandler(PATH / 'data_preprocessing.log', mode='w')
+fh = logging.FileHandler(Path(__file__).parent / 'data_preprocessing.log', mode='w')
 ch = logging.StreamHandler(sys.stdout)
 fh.setFormatter(fm)
 ch.setFormatter(fm)
@@ -42,17 +42,19 @@ DROPS = ['smean', 'dmean', 'sload', 'dload']
 LOG1P = ['sbytes', 'dbytes', 'spkts', 'dpkts', 'sloss', 'dloss', 'sinpkt', 'dinpkt', 'sjit', 'djit', 'response_body_len']
 FLAGS = ["is_ftp_login", "is_sm_ips_ports", "is_tcp", "is_ftp", "is_http", "tcp_seq_established", "tcp_seq_one_sided", "is_zero_dur", "is_short_flow", "zero_win"]
 
+
 def audit(df: pd.DataFrame) -> None:
     logger.info(f"Shape: {df.shape}")
     logger.info(f"Null counts (Should be 0): {df.isnull().sum().sum()}")
     logger.info(f"attack_cat: {len(df['attack_cat'].unique())}")
+
 
 def process(df: pd.DataFrame, is_train: bool, artifacts: dict) -> tuple:
     df = df.drop(columns=['id'])
     y_label = df['label'].copy().reset_index(drop=True)
     y_cat = df['attack_cat'].copy().reset_index(drop=True)
     df = df.drop(columns=['label', 'attack_cat']).reset_index(drop=True)
-    
+
     df['tcp_seq_established'] = ((df['stcpb'] != 0) & (df['dtcpb'] != 0)).astype(int)
     df['tcp_seq_one_sided'] = ((df['stcpb'] != 0) ^ (df['dtcpb'] != 0)).astype(int)
     df = df.drop(columns=['stcpb', 'dtcpb'])
@@ -61,7 +63,7 @@ def process(df: pd.DataFrame, is_train: bool, artifacts: dict) -> tuple:
 
     if is_train:
         corr, _ = spearmanr(df['rate'], (df['spkts'] + df['dpkts']) / (df['dur'] + 1e-9))
-        is_drop = bool(abs(corr) > 0.95) # Change? (90% should be good)
+        is_drop = bool(abs(corr) > 0.95)
         artifacts['is_drop'] = is_drop
         artifacts['corr'] = round(float(corr), 6)
         logger.info(f"Spearman correlation: {corr:.6f} -> Drop: {is_drop}")
@@ -73,7 +75,7 @@ def process(df: pd.DataFrame, is_train: bool, artifacts: dict) -> tuple:
     df['is_tcp'] = (df['proto'] == 'tcp').astype(int)
     df['is_ftp'] = df['service'].isin(['ftp', 'ftp-data']).astype(int)
     df['is_http'] = df['service'].isin(['http', 'ssl']).astype(int)
-    
+
     for feature in LOG1P:
         df[feature] = np.log1p(df[feature])
     df['is_zero_dur'] = (df['dur'] == 0).astype(int)
@@ -91,10 +93,20 @@ def process(df: pd.DataFrame, is_train: bool, artifacts: dict) -> tuple:
 
     df['zero_win'] = ((df['swin'] == 0) | (df['dwin'] == 0)).astype(int)
     df['win_asymmetry'] = np.abs(df['swin'] - df['dwin']) / (df['swin'] + df['dwin'] + 1)
-    
+
+    df['srv_diversity'] = 1.0 - np.clip(
+        df['ct_srv_src'] / (df['ct_src_ltm'] + 1e-9), 0.0, 1.0
+    )
+
+    df['dst_concentration'] = np.clip(
+        df['ct_dst_src_ltm'] / (df['ct_src_ltm'] + 1e-9), 0.0, 1.0
+    )
+
+    logger.info("Engineered features: srv_diversity, dst_concentration")
     return df, y_label, y_cat, artifacts
 
-def select(X_train: pd.DataFrame, y_label: pd.Series, y_cat: pd.Series) -> list:
+
+def select(X_train: pd.DataFrame, y_label: pd.Series, y_cat: pd.Series) -> tuple:
     for col in ['proto', 'service', 'state']:
         le = LabelEncoder()
         X_train[col] = le.fit_transform(X_train[col].astype(str))
@@ -102,6 +114,7 @@ def select(X_train: pd.DataFrame, y_label: pd.Series, y_cat: pd.Series) -> list:
     features = X_train.columns.tolist()
     flag_cnt = {f: 0 for f in features}
     flag_info = {f: [] for f in features}
+
     def flag(feat, method):
         flag_cnt[feat] += 1
         flag_info[feat].append(method)
@@ -124,7 +137,7 @@ def select(X_train: pd.DataFrame, y_label: pd.Series, y_cat: pd.Series) -> list:
             if corr_matrix.loc[c1, c2] > 0.90:
                 high_corr.append((c1, c2, corr_matrix.loc[c1, c2]))
                 seen.add((c1, c2))
-    logger.info(f"Spearman pairs (>0.90): {len(high_corr)}") # 0.90 LESS!!!
+    logger.info(f"Spearman pairs (>0.90): {len(high_corr)}")
     for c1, c2, r in high_corr:
         logger.info(f"{c1} - {c2}: {r:.6f}")
 
@@ -149,10 +162,11 @@ def select(X_train: pd.DataFrame, y_label: pd.Series, y_cat: pd.Series) -> list:
     lgb_label = lgb.LGBMClassifier(n_estimators=300, random_state=42, n_jobs=-1, is_unbalance=True, verbose=-1)
     lgb_label.fit(X_arr, y_label)
     gain_label = pd.Series(lgb_label.booster_.feature_importance(importance_type='gain'), index=features)
+
     lgb_cat = lgb.LGBMClassifier(n_estimators=300, random_state=42, n_jobs=-1, objective='multiclass', num_class=10, class_weight='balanced', verbose=-1)
     lgb_cat.fit(X_arr, y_cat)
     gain_cat = pd.Series(lgb_cat.booster_.feature_importance(importance_type='gain'), index=features)
-    # I prefer 0.05 :>
+
     thresh_glabel = gain_label.quantile(0.05)
     thresh_gcat = gain_cat.quantile(0.05)
     low_gain = set(gain_label[gain_label < thresh_glabel].index) & set(gain_cat[gain_cat < thresh_gcat].index)
@@ -160,14 +174,14 @@ def select(X_train: pd.DataFrame, y_label: pd.Series, y_cat: pd.Series) -> list:
     for f in low_gain:
         flag(f, 'low_gain')
 
-    mr_scorer = make_scorer(recall_score, average='macro', zero_division=0, pos_label=None)
-    perm = permutation_importance(lgb_cat, X_arr, y_cat, scoring=mr_scorer, n_repeats=5, random_state=42, n_jobs=-1)
+    binary_scorer = make_scorer(recall_score, pos_label=1, zero_division=0)
+    perm = permutation_importance(lgb_label, X_arr, y_label, scoring=binary_scorer, n_repeats=5, random_state=42, n_jobs=-1)
     perm_imp = pd.Series(perm.importances_mean, index=features)
-    low_perm = set(perm_imp[perm_imp < 0.0001].index) # Google for 0.0001 :>
-    logger.info(f"Near-zero permutation importance: {list(low_perm) if low_perm else 'NO!'}")
+    low_perm = set(perm_imp[perm_imp < 0.0001].index)
+    logger.info(f"Near-zero permutation importance (binary): {list(low_perm) if low_perm else 'NO!'}")
     for f in low_perm:
         flag(f, 'low_perm')
-    
+
     idx = np.random.default_rng(42).choice(len(X_arr), min(5000, len(X_arr)), replace=False)
     explainer = shap.TreeExplainer(lgb_cat)
     shap_vals = explainer.shap_values(X_arr[idx])
@@ -196,23 +210,47 @@ def select(X_train: pd.DataFrame, y_label: pd.Series, y_cat: pd.Series) -> list:
     logger.info(f"Dropping {len(d)} features: {sorted(d)}")
     features_after = [f for f in features if f not in d]
 
-    sss = StratifiedShuffleSplit(n_splits=1, train_size=min(30000, len(X_arr)), random_state=42)
-    sample_train_idx, _ = next(sss.split(X_train[features_after], y_cat))
-    X_rfecv = X_train[features_after].values[sample_train_idx]
-    y_rfecv = y_cat.values[sample_train_idx]
-    rfecv = RFECV(estimator=lgb.LGBMClassifier(n_estimators=100, random_state=42, n_jobs=-1, objective='multiclass', num_class=10, class_weight='balanced', verbose=-1), step=1, cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42), scoring=make_scorer(recall_score, average='macro',zero_division=0, pos_label=None), min_features_to_select=max(10, len(features_after) // 3), n_jobs=-1)
-    rfecv.fit(X_rfecv, y_rfecv)
-    selected_mask = rfecv.support_
-    fs = [f for f, sel in zip(features_after, selected_mask) if sel]
-    rm = [f for f, sel in zip(features_after, selected_mask) if not sel]
-    total = set(features) - set(fs)
-    logger.info(f"RFECV count: {rfecv.n_features_}")
-    logger.info(f"Removed: {rm}")
-    logger.info(f"Before: {len(features)}")
-    logger.info(f"Dropped: {len(total)} -> {total}")
-    logger.info(f"After: {len(fs)}")
-    logger.info(f"Features: {fs}")
-    return fs
+    logger.info("RFECV Pass 1 (binary recall - Stage 1 label model)...")
+    sss1 = StratifiedShuffleSplit(n_splits=1, train_size=min(30000, len(X_arr)), random_state=42)
+    idx1, _ = next(sss1.split(X_train[features_after], y_label))
+    rfecv_label = RFECV(
+        estimator=lgb.LGBMClassifier(
+            n_estimators=100, random_state=42, n_jobs=-1,
+            is_unbalance=True, verbose=-1,
+        ),
+        step=1,
+        cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42),
+        scoring=binary_scorer,
+        min_features_to_select=max(10, len(features_after) // 3),
+        n_jobs=-1,
+    )
+    rfecv_label.fit(X_train[features_after].values[idx1], y_label.values[idx1])
+    selected_label = [f for f, sel in zip(features_after, rfecv_label.support_) if sel]
+    removed_label = [f for f, sel in zip(features_after, rfecv_label.support_) if not sel]
+    logger.info(f"RFECV label - count: {rfecv_label.n_features_}, removed: {removed_label}")
+    logger.info(f"selected_label: {selected_label}")
+
+    logger.info("RFECV Pass 2 (multiclass macro recall - Stage 2 cat model)...")
+    sss2 = StratifiedShuffleSplit(n_splits=1, train_size=min(30000, len(X_arr)), random_state=42)
+    idx2, _ = next(sss2.split(X_train[features_after], y_cat))
+    rfecv_cat = RFECV(
+        estimator=lgb.LGBMClassifier(n_estimators=100, random_state=42, n_jobs=-1, objective='multiclass', num_class=10, class_weight='balanced', verbose=-1),
+        step=1,
+        cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42),
+        scoring=make_scorer(recall_score, average='macro', zero_division=0, pos_label=None),
+        min_features_to_select=max(10, len(features_after) // 3),
+        n_jobs=-1,
+    )
+    rfecv_cat.fit(X_train[features_after].values[idx2], y_cat.values[idx2])
+    selected_cat = [f for f, sel in zip(features_after, rfecv_cat.support_) if sel]
+    removed_cat = [f for f, sel in zip(features_after, rfecv_cat.support_) if not sel]
+    logger.info(f"RFECV cat   — count: {rfecv_cat.n_features_}, removed: {removed_cat}")
+    logger.info(f"selected_cat: {selected_cat}")
+
+    union = list(dict.fromkeys(selected_label + selected_cat))
+    logger.info(f"Union feature count: {len(union)} — label: {len(selected_label)}, cat: {len(selected_cat)}")
+    return selected_label, selected_cat
+
 
 class SmoothedTargetEncoder(BaseEstimator, TransformerMixin):
     def __init__(self, column: str, smoothing: float, is_multiclass: bool):
@@ -247,7 +285,7 @@ class SmoothedTargetEncoder(BaseEstimator, TransformerMixin):
             self._fit_single(col, b, key='binary')
             self.classes_ = ['binary']
         return self
-    
+
     def transform(self, X: pd.DataFrame) -> pd.DataFrame:
         col = X[self.column]
         res = {}
@@ -255,7 +293,7 @@ class SmoothedTargetEncoder(BaseEstimator, TransformerMixin):
             enc_map = self.encoding_maps_[key]
             global_mean = self.global_means_[key]
             encoded = col.map(enc_map).fillna(global_mean)
-            col_name = f"proto_enc_{key}" if self.is_multiclass else f"proto_enc"
+            col_name = f"proto_enc_{key}" if self.is_multiclass else "proto_enc"
             res[col_name] = encoded.values
         return pd.DataFrame(res, index=X.index)
 
@@ -263,6 +301,7 @@ class SmoothedTargetEncoder(BaseEstimator, TransformerMixin):
         if self.is_multiclass:
             return [f"proto_enc_{cl}" for cl in self.classes_]
         return ['proto_enc']
+
 
 class Pipeline(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -285,17 +324,17 @@ class Pipeline(BaseEstimator, TransformerMixin):
             self.ohe_ = OneHotEncoder(handle_unknown='ignore', sparse_output=False)
             self.ohe_.fit(X[self.ohe_cols_])
         X_encoded = self._apply_encodings(X)
-        ohe_names = (self.ohe_.get_feature_names_out(self.ohe_cols_).tolist() if self.ohe_ is not None else [])
-        proto_names = (self.proto_enc_label_.get_names() + self.proto_enc_cat_.get_names() if self.proto_enc_label_ is not None else [])
+        ohe_names = (self.ohe_.get_feature_names_out(self.ohe_cols_).tolist()
+                     if self.ohe_ is not None else [])
         non_scale_cols = set(FLAGS) | set(ohe_names)
         self.cont_cols_ = [c for c in X_encoded.columns if c not in non_scale_cols]
         self.scaler_ = RobustScaler()
         self.scaler_.fit(X_encoded[self.cont_cols_])
         self.output_cols_ = X_encoded.columns.tolist()
         return self
-    
+
     def _apply_encodings(self, X: pd.DataFrame) -> pd.DataFrame:
-        if 'proto' in X.columns and self.proto_enc_label_ is not None and self.proto_enc_cat_ is not None:
+        if 'proto' in X.columns and self.proto_enc_label_ is not None:
             proto_label = self.proto_enc_label_.transform(X[['proto']])
             proto_cat = self.proto_enc_cat_.transform(X[['proto']])
             X = pd.concat([X.drop(columns=['proto']), proto_label, proto_cat], axis=1)
@@ -310,36 +349,66 @@ class Pipeline(BaseEstimator, TransformerMixin):
         X_encoded[self.cont_cols_] = self.scaler_.transform(X_encoded[self.cont_cols_])
         return X_encoded
 
+    def get_stage_cols(self, pre_enc_features: list) -> list:
+        wanted = set()
+        ohe_all = (self.ohe_.get_feature_names_out(self.ohe_cols_).tolist()
+                   if self.ohe_ is not None else [])
+        for f in pre_enc_features:
+            if f == 'proto':
+                if self.proto_enc_label_ is not None:
+                    wanted.update(self.proto_enc_label_.get_names())
+                if self.proto_enc_cat_ is not None:
+                    wanted.update(self.proto_enc_cat_.get_names())
+            elif f in (self.ohe_cols_ or []):
+                wanted.update(c for c in ohe_all if c.startswith(f + '_'))
+            else:
+                wanted.add(f)
+        return [c for c in self.output_cols_ if c in wanted]
+
+
 def f_train(filename):
     df = pd.read_csv(DATASET_PATH / filename)
     audit(df)
     X, y_label, y_cat, artifacts = process(df=df, is_train=True, artifacts={})
-    selected = select(X_train=X, y_label=y_label, y_cat=y_cat)
-    artifacts['selected'] = selected
-    X_sel = X[selected].copy()
+    selected_label, selected_cat = select(X_train=X, y_label=y_label, y_cat=y_cat)
+    artifacts['selected_label'] = selected_label
+    artifacts['selected_cat'] = selected_cat
+
+    union = list(dict.fromkeys(selected_label + selected_cat))
+    artifacts['selected_union'] = union
+
+    X_union = X[union].copy()
     pl = Pipeline()
-    pl.fit(X_sel, y_label, y_cat)
-    X_t = pl.transform(X_sel)
+    pl.fit(X_union, y_label, y_cat)
+    X_t = pl.transform(X_union)
+
+    artifacts['selected_label_cols'] = pl.get_stage_cols(selected_label)
+    artifacts['selected_cat_cols'] = pl.get_stage_cols(selected_cat)
+
     X_t['label'] = y_label.values
     X_t['attack_cat'] = y_cat.values
     X_t.to_parquet(OUTPUT_PATH / 'train.parquet', index=False)
     joblib.dump(pl, PL_PATH)
     with open(A_PATH, 'w') as f:
         json.dump(artifacts, f, indent=2)
-    return {'X_train': X_t, 'y_label': y_label, 'y_cat': y_cat, 'pipeline': pl, 'artifacts': artifacts, 'selected': selected}
+    return {
+        'X_train': X_t, 'y_label': y_label, 'y_cat': y_cat,
+        'pipeline': pl, 'artifacts': artifacts,
+        'selected_label': selected_label, 'selected_cat': selected_cat
+    }
 
 def f_test(filename):
-    assert PL_PATH.exists() and A_PATH.exists(), ":<"
+    assert PL_PATH.exists() and A_PATH.exists(), "Run f_train first :<"
     pl = joblib.load(PL_PATH)
     with open(A_PATH) as f:
         artifacts = json.load(f)
     df = pd.read_csv(DATASET_PATH / filename)
     audit(df)
     X, y_label, y_cat, _ = process(df=df, is_train=False, artifacts=artifacts)
-    selected = artifacts['selected']
-    assert not [f for f in selected if f not in X.columns], "We might be missing some values..."
-    X_sel = X[selected].copy()
-    X_t = pl.transform(X_sel)
+    union = artifacts['selected_union']
+    missing = [c for c in union if c not in X.columns]
+    assert not missing, f"Missing features in test set: {missing}"
+    X_t = pl.transform(X[union].copy())
     X_t['label'] = y_label.values
     X_t['attack_cat'] = y_cat.values
     X_t.to_parquet(OUTPUT_PATH / 'test.parquet', index=False)

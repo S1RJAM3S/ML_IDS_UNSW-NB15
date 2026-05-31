@@ -17,7 +17,10 @@ THRESHOLD_STEPS = 200
 LABEL_RECALL_TARGET = 0.98
 LABEL_PRECISION_TARGET = 0.90
 
+
 class LabelTrainer(ABC):
+    STAGE: str = 'label'
+
     def __init__(self, artifacts_dir: Path, logger):
         self.artifacts_dir = artifacts_dir
         self.artifacts_dir.mkdir(parents=True, exist_ok=True)
@@ -31,25 +34,38 @@ class LabelTrainer(ABC):
     def _predict_proba(self, model, X: np.ndarray) -> np.ndarray:
         pass
 
-    def _fit_model(self, model, X_tr, y_tr, X_val, y_val):
+    def _fit_model(self, model, X_tr, y_tr, X_val, y_val, sample_weight=None):
         model.fit(X_tr, y_tr)
         return model
 
-    def _cv_loop(self, X_arr: np.ndarray, y_arr: np.ndarray) -> tuple:
+    def _cv_loop(self, X_arr: np.ndarray, y_arr: np.ndarray,
+                 sample_weights: np.ndarray = None) -> tuple:
         skf = StratifiedKFold(n_splits=N_SPLITS, shuffle=True, random_state=42)
         oof_probs = np.zeros(len(y_arr), dtype=np.float64)
-        fold_recalls = []
+        fold_recalls, fold_precisions = [], []
         for fold, (tr_idx, val_idx) in enumerate(skf.split(X_arr, y_arr)):
             X_tr, X_val = X_arr[tr_idx], X_arr[val_idx]
             y_tr, y_val = y_arr[tr_idx], y_arr[val_idx]
-            # NOTE: No more SMOTE here, too much Attack already :<
+            fold_sw = sample_weights[tr_idx] if sample_weights is not None else None
             model = self._build_model()
-            model = self._fit_model(model, X_tr, y_tr, X_val, y_val)
+            model = self._fit_model(model, X_tr, y_tr, X_val, y_val, sample_weight=fold_sw)
             probs = self._predict_proba(model, X_val)
             oof_probs[val_idx] = probs
-            fold_recalls.append(recall_score(y_val, (probs >= 0.5).astype(int), zero_division=0))
-            self.logger.info(f" Fold {fold+1}/{N_SPLITS} - Recall = {fold_recalls[-1]}")
-        return oof_probs, float(np.mean(fold_recalls))
+            preds = (probs >= 0.5).astype(int)
+            fold_recalls.append(recall_score(y_val, preds, zero_division=0))
+            fold_precisions.append(precision_score(y_val, preds, zero_division=0))
+            self.logger.info(
+                f" Fold {fold+1}/{N_SPLITS} "
+                f"- Recall@0.5 = {fold_recalls[-1]:.4f} "
+                f"- Precision@0.5 = {fold_precisions[-1]:.4f}"
+            )
+        mean_recall = float(np.mean(fold_recalls))
+        mean_precision = float(np.mean(fold_precisions))
+        self.logger.info(
+            f"Mean OOF Recall@0.5 = {mean_recall:.4f}  "
+            f"Mean OOF Precision@0.5 = {mean_precision:.4f}"
+        )
+        return oof_probs, mean_recall
 
     def _find_threshold(self, y_arr: np.ndarray, oof_probs: np.ndarray) -> tuple:
         thresholds = np.linspace(0.01, 0.99, THRESHOLD_STEPS)
@@ -66,8 +82,11 @@ class LabelTrainer(ABC):
                     best_t = t
 
         if best_f2 < 0:
-            self.logger.warning(f"No threshold met targets, fallback to  max recall threshold :<")
-            best_t = float(thresholds[np.argmax([recall_score(y_arr, (oof_probs >= t).astype(int), zero_division=0) for t in thresholds])])
+            self.logger.warning("No threshold met both targets; fallback to max-recall threshold :<")
+            best_t = float(thresholds[np.argmax(
+                [recall_score(y_arr, (oof_probs >= t).astype(int), zero_division=0)
+                 for t in thresholds]
+            )])
             best_pred = (oof_probs >= best_t).astype(int)
             best_f2 = fbeta_score(y_arr, best_pred, beta=2, average='binary', zero_division=0)
 
@@ -81,15 +100,15 @@ class LabelTrainer(ABC):
             json.dump(res, f)
         self.logger.info(f"Saved model ({model_path}) and result ({res_path})")
 
-    def train(self, name: str = 'model'): # Default train, maybe override?
-        X, y_label, _ = load_train()
+    def train(self, name: str = 'model'):
+        X, y_label, _ = load_train(stage=self.STAGE)
         X_arr = X.values.astype(np.float64)
         y_arr = y_label.values.astype(int)
         self.logger.info(f"Train shape: {X.shape}")
-        self.logger.info(f"Attack rate: {y_arr.mean()}")
-        
+        self.logger.info(f"Attack rate: {y_arr.mean():.4f}")
+
         oof_probs, mean_recall = self._cv_loop(X_arr, y_arr)
-        self.logger.info(f"Mean OOF Recall: {mean_recall}")
+        self.logger.info(f"Mean OOF Recall@0.5: {mean_recall:.4f}")
 
         best_t, best_f2 = self._find_threshold(y_arr, oof_probs)
         best_pred = (oof_probs >= best_t).astype(int)
@@ -114,7 +133,7 @@ class LabelTrainer(ABC):
             'train_attack_rate': float(y_arr.mean()),
             'n_splits': N_SPLITS,
             'recall_target': LABEL_RECALL_TARGET,
-            'precision_target': LABEL_PRECISION_TARGET
+            'precision_target': LABEL_PRECISION_TARGET,
         }
         self._save(model, res, name)
         self.logger.info(f"{name}: {res}")

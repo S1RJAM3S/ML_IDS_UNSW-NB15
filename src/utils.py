@@ -1,4 +1,5 @@
 import logging
+import json
 import sys
 from imblearn.combine import SMOTETomek
 from pathlib import Path
@@ -23,15 +24,18 @@ def make_logger(name: str, f: str) -> logging.Logger:
 def get_smote_label():
     return SMOTETomek(random_state=42)
 
-def _load(filename):
+def _load(filename, stage: str) -> tuple:
+    assert stage in ('label', 'cat'), f"Stage must be 'label' or 'cat', got '{stage}'"
     df = pd.read_parquet(DATA_DIR / filename)
     y_label = df['label'].reset_index(drop=True)
     y_cat = df['attack_cat'].reset_index(drop=True)
-    X = df.drop(columns=['label', 'attack_cat']).reset_index(drop=True)
+    with open(ARTIFACTS_DIR / 'artifacts.json') as f:
+        artifacts = json.load(f)
+    X = df[artifacts[f'selected_{stage}_cols']].reset_index(drop=True)
     return X, y_label, y_cat
 
-def load_train() -> tuple:
-    return _load('train.parquet')
+def load_train(stage: str) -> tuple:
+    return _load('train.parquet', stage)
 
-def load_test() -> tuple:
-    return _load('test.parquet')
+def load_test(stage: str) -> tuple:
+    return _load('test.parquet', stage)
