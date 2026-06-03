@@ -1,7 +1,6 @@
 import logging
 import json
 import sys
-from imblearn.combine import SMOTETomek
 from pathlib import Path
 import pandas as pd
 
@@ -20,9 +19,6 @@ def make_logger(name: str, f: str) -> logging.Logger:
     l.addHandler(ch)
     l.setLevel(logging.INFO)
     return l
-
-def get_smote_label():
-    return SMOTETomek(random_state=42)
 
 def _load(filename, stage: str) -> tuple:
     assert stage in ('label', 'cat'), f"Stage must be 'label' or 'cat', got '{stage}'"

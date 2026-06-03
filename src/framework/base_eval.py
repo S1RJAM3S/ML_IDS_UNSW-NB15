@@ -111,7 +111,7 @@ class LabelEvaluator(ABC):
             fn_rate = fn / (total + 1e-9)
             median_score = float(np.median(attack_probs[cat_mask]))
             result[cat] = {'total': total, 'fn': fn, 'fn_rate': float(fn_rate), 'median_score': median_score}
-            self.logger.info(f"{cat:20s}: total={total:6d}  FN={fn:5d} FN_rate={fn_rate:.3f}  median_score={median_score:.3f}")
+            self.logger.info(f"{cat}: total={total}  FN={fn} FN_rate={fn_rate}  median_score={median_score}")
         cats = list(result.keys())
         fn_rates = [result[c]['fn_rate'] for c in cats]
         colours = ['#E24B4A' if r > 0.05 else '#1D9E75' for r in fn_rates]
@@ -231,10 +231,7 @@ class LabelEvaluator(ABC):
             test = test_metrics.get(key)
             if oof is not None and test is not None:
                 gap = test - oof
-                self.logger.info(
-                    f"  {key}: OOF={oof:.4f} Test={test:.4f} "
-                    f"Gap={gap:+.4f} [{'OVERFIT' if gap < -0.03 else ':>'}]"
-                )
+                self.logger.info(f"{key}: OOF={oof:.4f} Test={test:.4f} - Gap={gap:+.4f} [{'OVERFIT' if gap < -0.03 else ':>'}]")
 
     def evaluate(self):
         self.logger.info(f"{self.name.upper()} - EVALUATION")

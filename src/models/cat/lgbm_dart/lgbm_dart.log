@@ -1,0 +1,29 @@
+[937 ms] INFO - train:74 - Applied Label filter :>
+[998 ms] INFO - train:78 - Train shape: (175341, 29)
+[998 ms] INFO - train:79 - N Classes: 10
+[999 ms] INFO - train:80 - Class distribution:
+[999 ms] INFO - train:82 - Analysis: 1997
+[999 ms] INFO - train:82 - Backdoor: 1746
+[999 ms] INFO - train:82 - DoS: 12263
+[999 ms] INFO - train:82 - Exploits: 33388
+[999 ms] INFO - train:82 - Fuzzers: 18176
+[999 ms] INFO - train:82 - Generic: 39999
+[999 ms] INFO - train:82 - Normal: 11425
+[999 ms] INFO - train:82 - Reconnaissance: 10490
+[999 ms] INFO - train:82 - Shellcode: 1133
+[999 ms] INFO - train:82 - Worms: 130
+[1088 ms] INFO - _get_smote:167 - SMOTE targets (ratio = 0.3 - Max multiplier = 8 - Majority = 35999 - Target = 10799: Analysis:10799, Backdoor:10799, Normal:10799, Reconnaissance:10799, Shellcode:8160, Worms:936
+[838957 ms] INFO - _cv_loop:196 - Fold 1/10 - Macro Recall = 0.4121695942522859
+[839017 ms] INFO - _get_smote:167 - SMOTE targets (ratio = 0.3 - Max multiplier = 8 - Majority = 35999 - Target = 10799: Analysis:10799, Backdoor:10799, Normal:10799, Reconnaissance:10799, Shellcode:8160, Worms:936
+[1704395 ms] INFO - _cv_loop:196 - Fold 2/10 - Macro Recall = 0.43565837081222014
+[1704452 ms] INFO - _get_smote:167 - SMOTE targets (ratio = 0.3 - Max multiplier = 8 - Majority = 35999 - Target = 10799: Analysis:10799, Backdoor:10799, Normal:10799, Reconnaissance:10799, Shellcode:8160, Worms:936
+[2597964 ms] INFO - _cv_loop:196 - Fold 3/10 - Macro Recall = 0.41818627061310354
+[2598023 ms] INFO - _get_smote:167 - SMOTE targets (ratio = 0.3 - Max multiplier = 8 - Majority = 35999 - Target = 10799: Analysis:10799, Backdoor:10799, Normal:10799, Reconnaissance:10799, Shellcode:8160, Worms:936
+[3489645 ms] INFO - _cv_loop:196 - Fold 4/10 - Macro Recall = 0.40946059865536927
+[3489703 ms] INFO - _get_smote:167 - SMOTE targets (ratio = 0.3 - Max multiplier = 8 - Majority = 35999 - Target = 10799: Analysis:10799, Backdoor:10799, Normal:10799, Reconnaissance:10799, Shellcode:8152, Worms:936
+[4399714 ms] INFO - _cv_loop:196 - Fold 5/10 - Macro Recall = 0.41883217783242604
+[4399772 ms] INFO - _get_smote:167 - SMOTE targets (ratio = 0.3 - Max multiplier = 8 - Majority = 35999 - Target = 10799: Analysis:10799, Backdoor:10799, Normal:10799, Reconnaissance:10799, Shellcode:8152, Worms:936
+[5267057 ms] INFO - _cv_loop:196 - Fold 6/10 - Macro Recall = 0.38605362073545385
+[5267115 ms] INFO - _get_smote:167 - SMOTE targets (ratio = 0.3 - Max multiplier = 8 - Majority = 35999 - Target = 10799: Analysis:10799, Backdoor:10799, Normal:10799, Reconnaissance:10799, Shellcode:8152, Worms:936
+[6142947 ms] INFO - _cv_loop:196 - Fold 7/10 - Macro Recall = 0.3995560311216587
+[6143010 ms] INFO - _get_smote:167 - SMOTE targets (ratio = 0.3 - Max multiplier = 8 - Majority = 36000 - Target = 10800: Analysis:10800, Backdoor:10800, Normal:10800, Reconnaissance:10800, Shellcode:8160, Worms:936

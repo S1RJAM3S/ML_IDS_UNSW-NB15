@@ -136,6 +136,7 @@ class FLLGBMTrainer(LabelTrainer):
 
         oof_probs, mean_recall = self._cv_loop(X_arr, y_arr)
         self.logger.info(f"Mean OOF Recall@0.5 = {mean_recall:.4f}")
+        np.save(ARTIFACTS_DIR / 'lgbm_fl_oof.npy', oof_probs)
         best_t, best_f2 = self._find_threshold(y_arr, oof_probs)
         best_pred = (oof_probs >= best_t).astype(int)
 
