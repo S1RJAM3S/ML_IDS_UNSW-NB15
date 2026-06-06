@@ -1,0 +1,270 @@
+[913 ms] INFO - train:95 - OOF filter (t=0.2513065326633166): 130747 rows kept (44594 dropped) — 11425 Normal FPs retained
+[978 ms] INFO - train:100 - Train shape: (130747, 39)
+[978 ms] INFO - train:101 - N Classes: 10
+[978 ms] INFO - train:102 - Class distribution:
+[978 ms] INFO - train:105 - Analysis: 1997 - (balanced_weight=6.5 - min_fold_train~1617)
+[978 ms] INFO - train:105 - Backdoor: 1746 - (balanced_weight=7.5 - min_fold_train~1414)
+[978 ms] INFO - train:105 - DoS: 12263 - (balanced_weight=1.1 - min_fold_train~9933)
+[978 ms] INFO - train:105 - Exploits: 33388 - (balanced_weight=0.4 - min_fold_train~27044)
+[978 ms] INFO - train:105 - Fuzzers: 18176 - (balanced_weight=0.7 - min_fold_train~14722)
+[978 ms] INFO - train:105 - Generic: 39999 - (balanced_weight=0.3 - min_fold_train~32399)
+[978 ms] INFO - train:105 - Normal: 11425 - (balanced_weight=1.1 - min_fold_train~9254)
+[978 ms] INFO - train:105 - Reconnaissance: 10490 - (balanced_weight=1.2 - min_fold_train~8496)
+[978 ms] INFO - train:105 - Shellcode: 1133 - (balanced_weight=11.5 - min_fold_train~917)
+[978 ms] INFO - train:105 - Worms: 130 - (balanced_weight=100.6 - min_fold_train~105)
+[1018 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[72715 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.4870796989668619
+[72727 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[141400 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.4551999751046497
+[141408 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[197555 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.449101673646784
+[197563 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[249344 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.4593141577620131
+[249353 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[293056 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.45968448463851824
+[293056 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.4620759980237654
+[293386 ms] INFO - obj:124 - Trial 0 - num_leaves=127 min_data=30 ff=0.9 l1=0.3 l2=0.0 -> Macro PR-AUC=0.462918
+[293396 ms] INFO - obj:130 - Analysis: recall=0.2208 (n=1997)
+[293402 ms] INFO - obj:130 - Backdoor: recall=0.2211 (n=1746)
+[293433 ms] INFO - obj:130 - DoS: recall=0.4147 (n=12263)
+[293512 ms] INFO - obj:130 - Exploits: recall=0.4606 (n=33388)
+[293557 ms] INFO - obj:130 - Fuzzers: recall=0.4620 (n=18176)
+[293661 ms] INFO - obj:130 - Generic: recall=0.9778 (n=39999)
+[293684 ms] INFO - obj:130 - Normal: recall=0.6392 (n=11425)
+[293709 ms] INFO - obj:130 - Reconnaissance: recall=0.4814 (n=10490)
+[293713 ms] INFO - obj:130 - Shellcode: recall=0.5278 (n=1133)
+[293715 ms] INFO - obj:130 - Worms: recall=0.2154 (n=130)
+[293756 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[339308 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.4879402268334526
+[339316 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[385630 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.4573283984134339
+[385637 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[419139 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.45246808051461535
+[419147 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[462816 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.46108025695017796
+[462824 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[516219 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.46071936280272763
+[516219 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.46390726510288144
+[516485 ms] INFO - obj:124 - Trial 1 - num_leaves=95 min_data=5 ff=1.0 l1=0.3 l2=0.4 -> Macro PR-AUC=0.463747
+[516490 ms] INFO - obj:130 - Analysis: recall=0.2228 (n=1997)
+[516495 ms] INFO - obj:130 - Backdoor: recall=0.2096 (n=1746)
+[516518 ms] INFO - obj:130 - DoS: recall=0.4408 (n=12263)
+[516578 ms] INFO - obj:130 - Exploits: recall=0.4574 (n=33388)
+[516613 ms] INFO - obj:130 - Fuzzers: recall=0.4606 (n=18176)
+[516688 ms] INFO - obj:130 - Generic: recall=0.9777 (n=39999)
+[516710 ms] INFO - obj:130 - Normal: recall=0.6476 (n=11425)
+[516730 ms] INFO - obj:130 - Reconnaissance: recall=0.4895 (n=10490)
+[516734 ms] INFO - obj:130 - Shellcode: recall=0.5331 (n=1133)
+[516736 ms] INFO - obj:130 - Worms: recall=0.2000 (n=130)
+[516767 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[562760 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.4923826424654944
+[562767 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[606203 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.4617540962026953
+[606211 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[641826 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.45611417868409065
+[641836 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[675116 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.4726585828589685
+[675126 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[708099 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.45971633031677195
+[708099 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.46852516610560413
+[708371 ms] INFO - obj:124 - Trial 2 - num_leaves=63 min_data=30 ff=1.0 l1=0.1 l2=0.1 -> Macro PR-AUC=0.461613
+[708376 ms] INFO - obj:130 - Analysis: recall=0.2278 (n=1997)
+[708381 ms] INFO - obj:130 - Backdoor: recall=0.2171 (n=1746)
+[708405 ms] INFO - obj:130 - DoS: recall=0.4410 (n=12263)
+[708466 ms] INFO - obj:130 - Exploits: recall=0.4493 (n=33388)
+[708501 ms] INFO - obj:130 - Fuzzers: recall=0.4561 (n=18176)
+[708578 ms] INFO - obj:130 - Generic: recall=0.9778 (n=39999)
+[708600 ms] INFO - obj:130 - Normal: recall=0.6413 (n=11425)
+[708621 ms] INFO - obj:130 - Reconnaissance: recall=0.4931 (n=10490)
+[708624 ms] INFO - obj:130 - Shellcode: recall=0.5587 (n=1133)
+[708626 ms] INFO - obj:130 - Worms: recall=0.2231 (n=130)
+[708659 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[746662 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.48922438800927004
+[746669 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[788480 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.4553626450537543
+[788488 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[829369 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.45426690794460844
+[829377 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[857403 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.46277613701349746
+[857411 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[889994 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.4605203934966372
+[889994 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.46443009430355353
+[890267 ms] INFO - obj:124 - Trial 3 - num_leaves=95 min_data=10 ff=0.8 l1=0.2 l2=0.1 -> Macro PR-AUC=0.462163
+[890273 ms] INFO - obj:130 - Analysis: recall=0.2268 (n=1997)
+[890278 ms] INFO - obj:130 - Backdoor: recall=0.2113 (n=1746)
+[890301 ms] INFO - obj:130 - DoS: recall=0.4328 (n=12263)
+[890362 ms] INFO - obj:130 - Exploits: recall=0.4583 (n=33388)
+[890397 ms] INFO - obj:130 - Fuzzers: recall=0.4579 (n=18176)
+[890475 ms] INFO - obj:130 - Generic: recall=0.9776 (n=39999)
+[890497 ms] INFO - obj:130 - Normal: recall=0.6509 (n=11425)
+[890517 ms] INFO - obj:130 - Reconnaissance: recall=0.4910 (n=10490)
+[890521 ms] INFO - obj:130 - Shellcode: recall=0.5375 (n=1133)
+[890523 ms] INFO - obj:130 - Worms: recall=0.2000 (n=130)
+[890555 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[942145 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.4843249332578866
+[942154 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[989985 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.4469948522502631
+[989992 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1034573 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.4459037178969826
+[1034580 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1079092 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.4600877015472157
+[1079099 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1132155 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.449272618655362
+[1132155 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.457316764721542
+[1132420 ms] INFO - obj:124 - Trial 4 - num_leaves=191 min_data=5 ff=0.7 l1=0.2 l2=0.2 -> Macro PR-AUC=0.461854
+[1132426 ms] INFO - obj:130 - Analysis: recall=0.2203 (n=1997)
+[1132431 ms] INFO - obj:130 - Backdoor: recall=0.2050 (n=1746)
+[1132454 ms] INFO - obj:130 - DoS: recall=0.4208 (n=12263)
+[1132517 ms] INFO - obj:130 - Exploits: recall=0.4717 (n=33388)
+[1132553 ms] INFO - obj:130 - Fuzzers: recall=0.4672 (n=18176)
+[1132631 ms] INFO - obj:130 - Generic: recall=0.9777 (n=39999)
+[1132653 ms] INFO - obj:130 - Normal: recall=0.6432 (n=11425)
+[1132673 ms] INFO - obj:130 - Reconnaissance: recall=0.4740 (n=10490)
+[1132677 ms] INFO - obj:130 - Shellcode: recall=0.4934 (n=1133)
+[1132679 ms] INFO - obj:130 - Worms: recall=0.2000 (n=130)
+[1132714 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1197113 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.48338932103975035
+[1197121 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1253938 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.4560904576747692
+[1253947 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1314108 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.44296882967941775
+[1314115 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1382428 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.45708174264385615
+[1382435 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1451661 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.4502268828136871
+[1451661 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.45795144677029614
+[1451930 ms] INFO - obj:124 - Trial 5 - num_leaves=223 min_data=10 ff=0.8 l1=0.3 l2=0.0 -> Macro PR-AUC=0.462101
+[1451936 ms] INFO - obj:130 - Analysis: recall=0.2163 (n=1997)
+[1451940 ms] INFO - obj:130 - Backdoor: recall=0.2033 (n=1746)
+[1451964 ms] INFO - obj:130 - DoS: recall=0.4230 (n=12263)
+[1452024 ms] INFO - obj:130 - Exploits: recall=0.4730 (n=33388)
+[1452059 ms] INFO - obj:130 - Fuzzers: recall=0.4739 (n=18176)
+[1452136 ms] INFO - obj:130 - Generic: recall=0.9778 (n=39999)
+[1452158 ms] INFO - obj:130 - Normal: recall=0.6369 (n=11425)
+[1452178 ms] INFO - obj:130 - Reconnaissance: recall=0.4701 (n=10490)
+[1452181 ms] INFO - obj:130 - Shellcode: recall=0.4898 (n=1133)
+[1452183 ms] INFO - obj:130 - Worms: recall=0.2154 (n=130)
+[1452216 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1532568 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.4813249375286876
+[1532577 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1609521 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.4499346368279301
+[1609531 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1681834 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.4438073705206578
+[1681844 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1741746 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.45770144118719475
+[1741756 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1795229 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.4584724493455942
+[1795229 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.4582481670820129
+[1795518 ms] INFO - obj:124 - Trial 6 - num_leaves=191 min_data=10 ff=0.6 l1=0.5 l2=0.5 -> Macro PR-AUC=0.460725
+[1795524 ms] INFO - obj:130 - Analysis: recall=0.2233 (n=1997)
+[1795530 ms] INFO - obj:130 - Backdoor: recall=0.2257 (n=1746)
+[1795554 ms] INFO - obj:130 - DoS: recall=0.3952 (n=12263)
+[1795618 ms] INFO - obj:130 - Exploits: recall=0.4703 (n=33388)
+[1795655 ms] INFO - obj:130 - Fuzzers: recall=0.4761 (n=18176)
+[1795735 ms] INFO - obj:130 - Generic: recall=0.9776 (n=39999)
+[1795758 ms] INFO - obj:130 - Normal: recall=0.6285 (n=11425)
+[1795779 ms] INFO - obj:130 - Reconnaissance: recall=0.4712 (n=10490)
+[1795783 ms] INFO - obj:130 - Shellcode: recall=0.4916 (n=1133)
+[1795785 ms] INFO - obj:130 - Worms: recall=0.2231 (n=130)
+[1795822 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1855041 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.4800296166662495
+[1855052 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1927044 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.44722360061667166
+[1927053 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[1993182 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.44724360104316513
+[1993191 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2055226 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.45825487236696844
+[2055238 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2121266 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.4526449227906177
+[2121266 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.45707932269673446
+[2121559 ms] INFO - obj:124 - Trial 7 - num_leaves=223 min_data=10 ff=0.6 l1=0.4 l2=0.2 -> Macro PR-AUC=0.460291
+[2121566 ms] INFO - obj:130 - Analysis: recall=0.2233 (n=1997)
+[2121573 ms] INFO - obj:130 - Backdoor: recall=0.2045 (n=1746)
+[2121603 ms] INFO - obj:130 - DoS: recall=0.4164 (n=12263)
+[2121671 ms] INFO - obj:130 - Exploits: recall=0.4754 (n=33388)
+[2121708 ms] INFO - obj:130 - Fuzzers: recall=0.4799 (n=18176)
+[2121788 ms] INFO - obj:130 - Generic: recall=0.9776 (n=39999)
+[2121811 ms] INFO - obj:130 - Normal: recall=0.6270 (n=11425)
+[2121833 ms] INFO - obj:130 - Reconnaissance: recall=0.4668 (n=10490)
+[2121836 ms] INFO - obj:130 - Shellcode: recall=0.4846 (n=1133)
+[2121839 ms] INFO - obj:130 - Worms: recall=0.2154 (n=130)
+[2121875 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2172527 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.49062702554975013
+[2172538 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2221006 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.4607059031506247
+[2221015 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2269206 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.4532036750304938
+[2269214 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2319728 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.4648119348020484
+[2319736 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2368919 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.46111239036922635
+[2368920 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.46609218578042866
+[2369226 ms] INFO - obj:124 - Trial 8 - num_leaves=63 min_data=15 ff=0.6 l1=0.5 l2=0.1 -> Macro PR-AUC=0.461879
+[2369232 ms] INFO - obj:130 - Analysis: recall=0.2273 (n=1997)
+[2369238 ms] INFO - obj:130 - Backdoor: recall=0.2302 (n=1746)
+[2369263 ms] INFO - obj:130 - DoS: recall=0.4120 (n=12263)
+[2369327 ms] INFO - obj:130 - Exploits: recall=0.4554 (n=33388)
+[2369364 ms] INFO - obj:130 - Fuzzers: recall=0.4603 (n=18176)
+[2369445 ms] INFO - obj:130 - Generic: recall=0.9778 (n=39999)
+[2369468 ms] INFO - obj:130 - Normal: recall=0.6427 (n=11425)
+[2369490 ms] INFO - obj:130 - Reconnaissance: recall=0.4944 (n=10490)
+[2369494 ms] INFO - obj:130 - Shellcode: recall=0.5455 (n=1133)
+[2369496 ms] INFO - obj:130 - Worms: recall=0.2154 (n=130)
+[2369533 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2433399 ms] INFO - _cv_loop:196 - Fold 1/5 - Macro Recall = 0.48247449298364276
+[2433412 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2494854 ms] INFO - _cv_loop:196 - Fold 2/5 - Macro Recall = 0.45405000835709747
+[2494862 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2553851 ms] INFO - _cv_loop:196 - Fold 3/5 - Macro Recall = 0.44742623986527785
+[2553860 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2614268 ms] INFO - _cv_loop:196 - Fold 4/5 - Macro Recall = 0.461559303343227
+[2614277 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2691029 ms] INFO - _cv_loop:196 - Fold 5/5 - Macro Recall = 0.45192251864402344
+[2691029 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.4594865126386537
+[2691320 ms] INFO - obj:124 - Trial 9 - num_leaves=191 min_data=10 ff=0.8 l1=0.3 l2=0.1 -> Macro PR-AUC=0.462041
+[2691327 ms] INFO - obj:130 - Analysis: recall=0.2183 (n=1997)
+[2691332 ms] INFO - obj:130 - Backdoor: recall=0.1982 (n=1746)
+[2691357 ms] INFO - obj:130 - DoS: recall=0.4230 (n=12263)
+[2691422 ms] INFO - obj:130 - Exploits: recall=0.4712 (n=33388)
+[2691462 ms] INFO - obj:130 - Fuzzers: recall=0.4820 (n=18176)
+[2691544 ms] INFO - obj:130 - Generic: recall=0.9778 (n=39999)
+[2691567 ms] INFO - obj:130 - Normal: recall=0.6244 (n=11425)
+[2691589 ms] INFO - obj:130 - Reconnaissance: recall=0.4724 (n=10490)
+[2691593 ms] INFO - obj:130 - Shellcode: recall=0.4969 (n=1133)
+[2691595 ms] INFO - obj:130 - Worms: recall=0.2308 (n=130)
+[2691595 ms] INFO - train:141 - Best params: {'num_leaves': 95, 'min_data_in_leaf': 5, 'feature_fraction': 1.0, 'lambda_l1': 0.30000000000000004, 'lambda_l2': 0.4} -> Macro PR-AUC=0.463747
+[2691631 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2753083 ms] INFO - _cv_loop:196 - Fold 1/10 - Macro Recall = 0.4772827355476387
+[2753091 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2820958 ms] INFO - _cv_loop:196 - Fold 2/10 - Macro Recall = 0.49592063201065884
+[2820964 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2888892 ms] INFO - _cv_loop:196 - Fold 3/10 - Macro Recall = 0.4714213959796306
+[2888900 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[2956546 ms] INFO - _cv_loop:196 - Fold 4/10 - Macro Recall = 0.44771886667396227
+[2956553 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[3024596 ms] INFO - _cv_loop:196 - Fold 5/10 - Macro Recall = 0.45793343499968986
+[3024607 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[3088634 ms] INFO - _cv_loop:196 - Fold 6/10 - Macro Recall = 0.4404416410902878
+[3088641 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[3138575 ms] INFO - _cv_loop:196 - Fold 7/10 - Macro Recall = 0.4714821099439247
+[3138586 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[3212035 ms] INFO - _cv_loop:196 - Fold 8/10 - Macro Recall = 0.45694714395735414
+[3212042 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[3270524 ms] INFO - _cv_loop:196 - Fold 9/10 - Macro Recall = 0.47718188013219676
+[3270531 ms] INFO - _cv_loop:189 - Skipped SMOTE
+[3331702 ms] INFO - _cv_loop:196 - Fold 10/10 - Macro Recall = 0.45650834360556514
+[3331703 ms] INFO - _cv_loop:198 - Mean OOF Macro Recall = 0.4652838183940909
+[3331705 ms] INFO - train:144 - Mean OOF Macro Recall = 0.4653
+[3331715 ms] INFO - train:153 - Analysis: recall=0.2228  (n=1997)
+[3331721 ms] INFO - train:153 - Backdoor: recall=0.1976  (n=1746)
+[3331751 ms] INFO - train:153 - DoS: recall=0.4395  (n=12263)
+[3331817 ms] INFO - train:153 - Exploits: recall=0.4557  (n=33388)
+[3331856 ms] INFO - train:153 - Fuzzers: recall=0.4630  (n=18176)
+[3331944 ms] INFO - train:153 - Generic: recall=0.9777  (n=39999)
+[3331967 ms] INFO - train:153 - Normal: recall=0.6509  (n=11425)
+[3331991 ms] INFO - train:153 - Reconnaissance: recall=0.4876  (n=10490)
+[3331996 ms] INFO - train:153 - Shellcode: recall=0.5349  (n=1133)
+[3331999 ms] INFO - train:153 - Worms: recall=0.2231  (n=130)
+[3396587 ms] INFO - train:164 - Early stopping: best_iteration = 168
+[3448465 ms] INFO - train:177 - Final model trained on full dataset.
+[3448600 ms] INFO - train:197 - RESULT (lgbm_gbdt): {'mean_oof_macro_recall': 0.4652838183940909, 'per_class_oof_recall': {'Analysis': 0.2228342513770656, 'Backdoor': 0.19759450171821305, 'DoS': 0.4394520101117182, 'Exploits': 0.4556726967772853, 'Fuzzers': 0.4630281690140845, 'Generic': 0.9777244431110778, 'Normal': 0.6508533916849015, 'Reconnaissance': 0.48760724499523356, 'Shellcode': 0.5348631950573698, 'Worms': 0.2230769230769231}, 'classes': ['Analysis', 'Backdoor', 'DoS', 'Exploits', 'Fuzzers', 'Generic', 'Normal', 'Reconnaissance', 'Shellcode', 'Worms'], 'num_leaves': 95, 'min_data_in_leaf': 5, 'feature_fraction': 1.0, 'lambda_l1': 0.30000000000000004, 'lambda_l2': 0.4, 'best_iteration': 168, 'n_trials': 10, 'n_splits': 10}

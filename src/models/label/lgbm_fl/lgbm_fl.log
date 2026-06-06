@@ -1,385 +1,385 @@
-[905 ms] INFO - train:112 - Train shape: (175341, 29)
-[905 ms] INFO - train:113 - Attack rate: 0.6806
-[905 ms] INFO - train:118 - Alpha search range: [0.22, 0.47]
-[3100 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9719312945119397 - Precision@0.5 = 0.9451641815367066
-[5374 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9738562091503268 - Precision@0.5 = 0.9392274123161468
-[7413 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9719289425171778 - Precision@0.5 = 0.942165543010316
-[9543 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9728506787330317 - Precision@0.5 = 0.9416822126693163
-[11448 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9422233057045344
-[13751 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9441463414634146
-[16019 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9709234120998826 - Precision@0.5 = 0.9416497358797237
-[18348 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9752807105748282 - Precision@0.5 = 0.942276554404145
-[20532 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9417444219066937
-[22507 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9703368526897939 - Precision@0.5 = 0.9409279271959048
-[22507 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9724403223454458 - Mean OOF Precision@0.5 = 0.9421207636086901
-[22533 ms] INFO - obj:128 - Trial 0 - gamma=2.0, alpha=0.47 - OOF PR-AUC=0.991161
-[24353 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.954084625052367 - Precision@0.5 = 0.9560070523045924
-[26469 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9572649572649573 - Precision@0.5 = 0.9522380595148787
-[28182 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9548349254231607 - Precision@0.5 = 0.9528388661259303
-[30393 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9544997486173957 - Precision@0.5 = 0.9485385960529603
-[32922 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9579353108764873 - Precision@0.5 = 0.9521905713809762
-[35098 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9558404558404558 - Precision@0.5 = 0.954560669456067
-[37150 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.954918719624602 - Precision@0.5 = 0.953081876724931
-[39818 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.961706049941344 - Precision@0.5 = 0.9530017437515569
-[41900 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9564270152505446 - Precision@0.5 = 0.9521187854521188
-[44476 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9556728674375733 - Precision@0.5 = 0.9508921127230282
-[44476 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.956318467532889 - Mean OOF Precision@0.5 = 0.952546833348704
-[44503 ms] INFO - obj:128 - Trial 1 - gamma=3.25, alpha=0.37 - OOF PR-AUC=0.990909
-[52374 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9403435274403016 - Precision@0.5 = 0.96276915158274
-[57636 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9371543489190548 - Precision@0.5 = 0.9615682228527211
-[63239 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9385788503435563 - Precision@0.5 = 0.9626160192506016
-[70634 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9405061169767052 - Precision@0.5 = 0.9588245344267897
-[77630 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9416792357968828 - Precision@0.5 = 0.962652047284564
-[86167 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9430199430199431 - Precision@0.5 = 0.9637749421940567
-[94138 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9384950561421149 - Precision@0.5 = 0.9620340147740938
-[100928 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9415954415954416 - Precision@0.5 = 0.962813812012681
-[110532 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9413440589911178 - Precision@0.5 = 0.9601709401709402
-[116281 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9345567286743758 - Precision@0.5 = 0.9616313157440938
-[116281 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9397273307899494 - Mean OOF Precision@0.5 = 0.9618855000293282
-[116308 ms] INFO - obj:128 - Trial 2 - gamma=1.5, alpha=0.22 - OOF PR-AUC=0.990959
-[119623 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
-[125014 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
-[128550 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
-[132702 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
-[136382 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
-[140182 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
-[144706 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
-[148574 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
-[154615 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
-[159340 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
-[159340 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
-[159367 ms] INFO - obj:128 - Trial 3 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
-[161716 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9635525764558023 - Precision@0.5 = 0.9494715984147952
-[164062 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9658119658119658 - Precision@0.5 = 0.946383118482634
-[166093 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9612870789341378 - Precision@0.5 = 0.9493545183714002
-[168652 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.963633316574493 - Precision@0.5 = 0.9461127108185932
-[170481 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.963633316574493 - Precision@0.5 = 0.9502561560072715
-[173743 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9638846991788168 - Precision@0.5 = 0.9516836270373128
-[176023 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9622088151499916 - Precision@0.5 = 0.9483812355467459
-[178342 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9659795542148484 - Precision@0.5 = 0.949979398434281
-[180359 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9628791687615217 - Precision@0.5 = 0.9483370471238756
-[182346 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9620412267471091 - Precision@0.5 = 0.9473553923591055
-[182346 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.963491171840318 - Mean OOF Precision@0.5 = 0.9487314802596014
-[182373 ms] INFO - obj:128 - Trial 4 - gamma=2.75, alpha=0.42000000000000004 - OOF PR-AUC=0.991019
-[185522 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
-[190739 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
-[194320 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
-[198016 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
-[201979 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
-[206005 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
-[210044 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
-[213345 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
-[218919 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
-[223405 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
-[223405 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
-[223435 ms] INFO - obj:128 - Trial 5 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
-[227368 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9447842480100545 - Precision@0.5 = 0.9600681140911026
-[231144 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.946874476286241 - Precision@0.5 = 0.9571404370658987
-[234009 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9450310038545333 - Precision@0.5 = 0.9587690215081187
-[237837 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9458689458689459 - Precision@0.5 = 0.9561240047433508
-[240754 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9443606502430032 - Precision@0.5 = 0.9590673134201344
-[245609 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9479638009049773 - Precision@0.5 = 0.9595419847328245
-[249349 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9434389140271493 - Precision@0.5 = 0.9590289608177172
-[252456 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9476286240992123 - Precision@0.5 = 0.9602615267045937
-[256018 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9435227082285906 - Precision@0.5 = 0.9578087784960871
-[259790 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9430199430199431 - Precision@0.5 = 0.9569727891156462
-[259790 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.945249331454265 - Mean OOF Precision@0.5 = 0.9584782930695475
-[259816 ms] INFO - obj:128 - Trial 6 - gamma=3.5, alpha=0.27 - OOF PR-AUC=0.990805
-[266192 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9445328864683703 - Precision@0.5 = 0.9595675859720804
-[271547 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.947209653092006 - Precision@0.5 = 0.9586973115087779
-[278392 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9496396849338026 - Precision@0.5 = 0.9579071929676274
-[286212 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9467068878833584 - Precision@0.5 = 0.9551910720324653
-[292197 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.947209653092006 - Precision@0.5 = 0.96
-[298628 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9493883023294788 - Precision@0.5 = 0.9616363945000849
-[303225 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9418468241997654 - Precision@0.5 = 0.960848008206531
-[310927 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9519859225741578 - Precision@0.5 = 0.9581681707008518
-[317051 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9461203284732697 - Precision@0.5 = 0.9588145380434783
-[323383 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.944612032847327 - Precision@0.5 = 0.9576112810057764
-[323384 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9469252175893544 - Mean OOF Precision@0.5 = 0.9588441554937674
-[323410 ms] INFO - obj:128 - Trial 7 - gamma=1.5, alpha=0.27 - OOF PR-AUC=0.991028
-[326541 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9566820276497696 - Precision@0.5 = 0.955161452233562
-[329246 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9556728674375733 - Precision@0.5 = 0.9531968240702048
-[332795 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9583542818836936 - Precision@0.5 = 0.9543558077436582
-[335848 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9547511312217195 - Precision@0.5 = 0.9510057591186044
-[338840 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9566783978548684 - Precision@0.5 = 0.9535621815752109
-[342712 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9586056644880174 - Precision@0.5 = 0.9558823529411765
-[346471 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9550863080274845 - Precision@0.5 = 0.9523729946524064
-[349197 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.959108429696665 - Precision@0.5 = 0.956144014702197
-[352467 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9579353108764873 - Precision@0.5 = 0.9536998414949529
-[355816 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9544997486173957 - Precision@0.5 = 0.9520267446719599
-[355816 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9567374167753675 - Mean OOF Precision@0.5 = 0.9537407973203932
-[355843 ms] INFO - obj:128 - Trial 8 - gamma=1.75, alpha=0.37 - OOF PR-AUC=0.991180
-[359144 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9416003351487222 - Precision@0.5 = 0.9612522453169104
-[364176 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9476286240992123 - Precision@0.5 = 0.9584710568692262
-[368227 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9443606502430032 - Precision@0.5 = 0.9591489361702128
-[373324 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9461203284732697 - Precision@0.5 = 0.9558113942266994
-[377142 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9448634154516508 - Precision@0.5 = 0.9598229485869936
-[382632 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9488855371208312 - Precision@0.5 = 0.9603120759837178
-[385524 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9401709401709402 - Precision@0.5 = 0.9613572101790764
-[390822 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9505614211496565 - Precision@0.5 = 0.9587559161595672
-[396148 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.947209653092006 - Precision@0.5 = 0.9581284963553145
-[399706 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9409250879839115 - Precision@0.5 = 0.9586783915307777
-[399706 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9452325992933204 - Mean OOF Precision@0.5 = 0.9591738671378497
-[399732 ms] INFO - obj:128 - Trial 9 - gamma=2.25, alpha=0.27 - OOF PR-AUC=0.990945
-[401286 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9598659405111019 - Precision@0.5 = 0.9503110742430527
-[404014 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9648902295961119 - Precision@0.5 = 0.9455575628181967
-[405669 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9638846991788168 - Precision@0.5 = 0.948857543512332
-[407498 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9607843137254902 - Precision@0.5 = 0.9459615543272007
-[409126 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9616222557399028 - Precision@0.5 = 0.9474118715429704
-[411085 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9653929948047595 - Precision@0.5 = 0.9498722071069338
-[412697 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9595274007038713 - Precision@0.5 = 0.9491876657824934
-[414512 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9667337020278197 - Precision@0.5 = 0.947986852917009
-[416388 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9635495223730518 - Precision@0.5 = 0.94813654353562
-[418026 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9623764035528741 - Precision@0.5 = 0.9470602787169127
-[418026 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9628627462213799 - Mean OOF Precision@0.5 = 0.9480343154502722
-[418052 ms] INFO - obj:128 - Trial 10 - gamma=4.0, alpha=0.42000000000000004 - OOF PR-AUC=0.990770
-[421109 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
-[426577 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
-[429992 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
-[433463 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
-[437520 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
-[441232 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
-[445229 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
-[448510 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
-[453934 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
-[458112 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
-[458113 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
-[458141 ms] INFO - obj:128 - Trial 11 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
-[461362 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
-[466567 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
-[469828 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
-[473196 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
-[477014 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
-[480882 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
-[484504 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
-[487558 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
-[492795 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
-[496746 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
-[496746 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
-[496772 ms] INFO - obj:128 - Trial 12 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
-[500240 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9621281943862589 - Precision@0.5 = 0.9523138165533256
-[502837 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9643874643874644 - Precision@0.5 = 0.946775255018098
-[507792 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9653929948047595 - Precision@0.5 = 0.9497938994229184
-[511209 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9617898441427853 - Precision@0.5 = 0.946639175257732
-[515182 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.965225406401877 - Precision@0.5 = 0.9493942141267617
-[519634 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9646388469917881 - Precision@0.5 = 0.9510905485789821
-[521918 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9631305513658455 - Precision@0.5 = 0.9470995385629531
-[527862 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9663985252220546 - Precision@0.5 = 0.9491399884783145
-[532358 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9638009049773756 - Precision@0.5 = 0.9512074098577572
-[537774 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9622926093514329 - Precision@0.5 = 0.9482288828337875
-[537774 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9639185342031642 - Mean OOF Precision@0.5 = 0.9491682728690629
-[537802 ms] INFO - obj:128 - Trial 13 - gamma=1.0, alpha=0.42000000000000004 - OOF PR-AUC=0.991273
-[540266 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9747800586510263 - Precision@0.5 = 0.9437053861129137
-[542301 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9703368526897939 - Precision@0.5 = 0.9391727493917275
-[544282 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.973269649740238 - Precision@0.5 = 0.9429290469232018
-[546566 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9706720294955589 - Precision@0.5 = 0.9412529454781832
-[548241 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9720127367186191 - Precision@0.5 = 0.9405659612421957
-[551790 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9451507742461288
-[553725 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9712585889056478 - Precision@0.5 = 0.9409042941797224
-[556371 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9746103569632981 - Precision@0.5 = 0.9441513109830343
-[558847 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9729344729344729 - Precision@0.5 = 0.940771349862259
-[561388 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.971677559912854 - Precision@0.5 = 0.9406992780076255
-[561388 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9723313660125804 - Mean OOF Precision@0.5 = 0.9419303096426992
-[561416 ms] INFO - obj:128 - Trial 14 - gamma=2.75, alpha=0.47 - OOF PR-AUC=0.991059
-[568147 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9540008378718056 - Precision@0.5 = 0.9577725437415882
-[573391 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9514831573655103 - Precision@0.5 = 0.9564521563342318
-[576792 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9488855371208312 - Precision@0.5 = 0.9579561796802301
-[581657 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9503938327467739 - Precision@0.5 = 0.9535900454010425
-[586274 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9525724819842467 - Precision@0.5 = 0.9571440599477983
-[590093 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9487179487179487 - Precision@0.5 = 0.9598168870803663
-[593740 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9473772414948886 - Precision@0.5 = 0.9583792489616004
-[599162 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.956510809451986 - Precision@0.5 = 0.9568315171835708
-[603606 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.949136919725155 - Precision@0.5 = 0.9572382320628751
-[607102 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.946539299480476 - Precision@0.5 = 0.9574504153246313
-[607102 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9505618065959622 - Mean OOF Precision@0.5 = 0.9572631285717936
-[607129 ms] INFO - obj:128 - Trial 15 - gamma=1.5, alpha=0.32 - OOF PR-AUC=0.991170
-[610529 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9628822790113113 - Precision@0.5 = 0.9502232511989416
-[616018 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.965560583207642 - Precision@0.5 = 0.9480829356590423
-[620175 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9647226411932295 - Precision@0.5 = 0.9485088152908222
-[622128 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9623764035528741 - Precision@0.5 = 0.9448009213557091
-[625408 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.963298139768728 - Precision@0.5 = 0.9496117627622667
-[629303 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9643036701860231 - Precision@0.5 = 0.9527278748240748
-[632001 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9630467571644042 - Precision@0.5 = 0.9467830958069033
-[634964 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9667337020278197 - Precision@0.5 = 0.9496254835788954
-[639004 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9644712585889057 - Precision@0.5 = 0.9494349583436443
-[644872 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9638009049773756 - Precision@0.5 = 0.9473684210526315
-[644872 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9641196339678315 - Mean OOF Precision@0.5 = 0.9487167519872932
-[644900 ms] INFO - obj:128 - Trial 16 - gamma=1.25, alpha=0.42000000000000004 - OOF PR-AUC=0.991254
-[646822 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.952744030163385 - Precision@0.5 = 0.9561086353317078
-[651146 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9585218702865762 - Precision@0.5 = 0.9507147606382979
-[654425 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9592760180995475 - Precision@0.5 = 0.9537615596100975
-[656787 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9537456008044244 - Precision@0.5 = 0.9516722408026755
-[658880 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.954248366013072 - Precision@0.5 = 0.9548884789535469
-[661881 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9576839282721635 - Precision@0.5 = 0.9554422337401772
-[664329 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9537456008044244 - Precision@0.5 = 0.954225352112676
-[667301 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9602815485168427 - Precision@0.5 = 0.954045954045954
-[670435 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9570135746606335 - Precision@0.5 = 0.9534184823441022
-[673693 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9555052790346908 - Precision@0.5 = 0.9507253626813407
-[673693 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.956276581665576 - Mean OOF Precision@0.5 = 0.9535003060260575
-[673720 ms] INFO - obj:128 - Trial 17 - gamma=2.0, alpha=0.37 - OOF PR-AUC=0.991164
-[676308 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9722664432341852 - Precision@0.5 = 0.9434913407594113
-[679123 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.973604826546003 - Precision@0.5 = 0.9397444192817859
-[681690 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9740237975532093 - Precision@0.5 = 0.9434299164028894
-[683808 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9701692642869113 - Precision@0.5 = 0.9403833658219624
-[686703 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9416963996107688
-[689956 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9721803251215015 - Precision@0.5 = 0.9457124225627649
-[692042 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9710910005027652 - Precision@0.5 = 0.9413532613110227
-[694779 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9756158873805932 - Precision@0.5 = 0.9417617083232225
-[696788 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.971677559912854 - Precision@0.5 = 0.9417688621781857
-[699104 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.971342383107089 - Precision@0.5 = 0.9410618606916707
-[699104 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9725073548982467 - Mean OOF Precision@0.5 = 0.9420403556943684
-[699131 ms] INFO - obj:128 - Trial 18 - gamma=2.5, alpha=0.47 - OOF PR-AUC=0.991097
-[707405 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9533305404273146 - Precision@0.5 = 0.9566167815705398
-[713293 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9514831573655103 - Precision@0.5 = 0.9562910560889338
-[719540 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.954248366013072 - Precision@0.5 = 0.9568139808435557
-[725397 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9514831573655103 - Precision@0.5 = 0.9542818724262543
-[730795 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9531590413943355 - Precision@0.5 = 0.9579754084554489
-[735601 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9520697167755992 - Precision@0.5 = 0.960845665961945
-[742529 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9506452153510977 - Precision@0.5 = 0.955770850884583
-[749526 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9567621920563097 - Precision@0.5 = 0.9565217391304348
-[755846 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9518183341712754 - Precision@0.5 = 0.9567890835579514
-[762028 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9499748617395676 - Precision@0.5 = 0.9550968828980624
-[762028 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9524974582659592 - Mean OOF Precision@0.5 = 0.9567003321817709
-[762054 ms] INFO - obj:128 - Trial 19 - gamma=1.25, alpha=0.32 - OOF PR-AUC=0.991265
-[765275 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9644742354419774 - Precision@0.5 = 0.9504582610849641
-[768436 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9653929948047595 - Precision@0.5 = 0.9472169694976569
-[770927 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9627953745600805 - Precision@0.5 = 0.9490377467580738
-[773945 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9621250209485503 - Precision@0.5 = 0.9469690721649484
-[776552 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9630467571644042 - Precision@0.5 = 0.9497562184943393
-[780608 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9646388469917881 - Precision@0.5 = 0.9523494374586366
-[783404 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9621250209485503 - Precision@0.5 = 0.9496319576544537
-[786845 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9679906150494386 - Precision@0.5 = 0.949453439631791
-[789986 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.965225406401877 - Precision@0.5 = 0.948768635203031
-[793010 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9621250209485503 - Precision@0.5 = 0.9469690721649484
-[793010 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9639939293259976 - Mean OOF Precision@0.5 = 0.9490610810112845
-[793039 ms] INFO - obj:128 - Trial 20 - gamma=1.75, alpha=0.42000000000000004 - OOF PR-AUC=0.991195
-[796274 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
-[801702 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
-[805266 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
-[808847 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
-[812908 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
-[816998 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
-[820869 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
-[824120 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
-[829702 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
-[833960 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
-[833960 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
-[833986 ms] INFO - obj:128 - Trial 21 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
-[837929 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9727691663175534 - Precision@0.5 = 0.9449780237668891
-[841638 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.939386582503844
-[845043 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9745265627618569 - Precision@0.5 = 0.9433809214795588
-[848661 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9723479135243841 - Precision@0.5 = 0.9404327741308047
-[853251 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9741913859560919 - Precision@0.5 = 0.9422157387146446
-[857122 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9464547677261613
-[861101 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9408284023668639
-[865279 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9437008193396609
-[869713 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.973940003351768 - Precision@0.5 = 0.9434253246753247
-[873165 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9720965309200603 - Precision@0.5 = 0.9420219244823386
-[873165 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9733033955994108 - Mean OOF Precision@0.5 = 0.9426825279186091
-[873192 ms] INFO - obj:128 - Trial 22 - gamma=1.25, alpha=0.47 - OOF PR-AUC=0.991286
-[876597 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9621281943862589 - Precision@0.5 = 0.9523138165533256
-[879068 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9643874643874644 - Precision@0.5 = 0.946775255018098
-[883953 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9653929948047595 - Precision@0.5 = 0.9497938994229184
-[888065 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9617898441427853 - Precision@0.5 = 0.946639175257732
-[892006 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.965225406401877 - Precision@0.5 = 0.9493942141267617
-[896457 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9646388469917881 - Precision@0.5 = 0.9510905485789821
-[899411 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9631305513658455 - Precision@0.5 = 0.9470995385629531
-[904819 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9663985252220546 - Precision@0.5 = 0.9491399884783145
-[908745 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9638009049773756 - Precision@0.5 = 0.9512074098577572
-[913672 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9622926093514329 - Precision@0.5 = 0.9482288828337875
-[913673 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9639185342031642 - Mean OOF Precision@0.5 = 0.9491682728690629
-[913699 ms] INFO - obj:128 - Trial 23 - gamma=1.0, alpha=0.42000000000000004 - OOF PR-AUC=0.991273
-[916239 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9729367406786762 - Precision@0.5 = 0.9439115590960819
-[919311 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9733534439416792 - Precision@0.5 = 0.9398058252427185
-[921567 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9425091352009745
-[924615 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9746941511647395 - Precision@0.5 = 0.9403395311236863
-[927595 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9731858555387967 - Precision@0.5 = 0.9411669367909238
-[930144 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9720965309200603 - Precision@0.5 = 0.9458622095393396
-[932449 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.971342383107089 - Precision@0.5 = 0.9408327246165084
-[935829 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9771241830065359 - Precision@0.5 = 0.9433702774856403
-[938814 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9746103569632981 - Precision@0.5 = 0.9423918327661643
-[941922 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9711747947042064 - Precision@0.5 = 0.9405177310719792
-[941922 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9733117736153789 - Mean OOF Precision@0.5 = 0.9420707762934016
-[941949 ms] INFO - obj:128 - Trial 24 - gamma=1.75, alpha=0.47 - OOF PR-AUC=0.991172
-[945697 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9727691663175534 - Precision@0.5 = 0.9449780237668891
-[949315 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.939386582503844
-[952642 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9745265627618569 - Precision@0.5 = 0.9433809214795588
-[956067 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9723479135243841 - Precision@0.5 = 0.9404327741308047
-[960484 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9741913859560919 - Precision@0.5 = 0.9422157387146446
-[964398 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9464547677261613
-[968452 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9408284023668639
-[972192 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9437008193396609
-[976802 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.973940003351768 - Precision@0.5 = 0.9434253246753247
-[980393 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9720965309200603 - Precision@0.5 = 0.9420219244823386
-[980393 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9733033955994108 - Mean OOF Precision@0.5 = 0.9426825279186091
-[980420 ms] INFO - obj:128 - Trial 25 - gamma=1.25, alpha=0.47 - OOF PR-AUC=0.991286
-[983543 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.963049853372434 - Precision@0.5 = 0.9521994863722972
-[986182 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9646388469917881 - Precision@0.5 = 0.946165858469631
-[988447 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9621250209485503 - Precision@0.5 = 0.9494749028363516
-[990261 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9627953745600805 - Precision@0.5 = 0.9452900041135335
-[992936 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9643036701860231 - Precision@0.5 = 0.9484094280534037
-[996096 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.963633316574493 - Precision@0.5 = 0.9532493368700266
-[998691 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9627953745600805 - Precision@0.5 = 0.9475507174666007
-[1001854 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.965895760013407 - Precision@0.5 = 0.9498187211601846
-[1005667 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9644712585889057 - Precision@0.5 = 0.9497483290700552
-[1008340 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9634657281716105 - Precision@0.5 = 0.9489147478748865
-[1008340 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9637174203967375 - Mean OOF Precision@0.5 = 0.949082153228697
-[1008366 ms] INFO - obj:128 - Trial 26 - gamma=1.5, alpha=0.42000000000000004 - OOF PR-AUC=0.991241
-[1013182 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9581064097193129 - Precision@0.5 = 0.955384743921798
-[1018153 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9582704876822524 - Precision@0.5 = 0.9524444074289997
-[1022855 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9587732528909 - Precision@0.5 = 0.9542156617463098
-[1028568 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9574325456678398 - Precision@0.5 = 0.9509779442363712
-[1032384 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9565946036534272 - Precision@0.5 = 0.9549142618151402
-[1036818 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9586894586894587 - Precision@0.5 = 0.9564454104664771
-[1039803 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9532428355957768 - Precision@0.5 = 0.9538822740231427
-[1042204 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9577677224736049 - Precision@0.5 = 0.9563253012048193
-[1047737 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9581866934808111 - Precision@0.5 = 0.9539501126220071
-[1052176 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9550025138260433 - Precision@0.5 = 0.9526078234704113
-[1052176 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9572066523679427 - Mean OOF Precision@0.5 = 0.9541147940935476
-[1052202 ms] INFO - obj:128 - Trial 27 - gamma=1.0, alpha=0.37 - OOF PR-AUC=0.991288
-[1054683 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9725178047758692 - Precision@0.5 = 0.9438120019515368
-[1056950 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9722641193229429 - Precision@0.5 = 0.9401231567006968
-[1059289 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.973604826546003 - Precision@0.5 = 0.9427180527383368
-[1061689 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9693313222724987 - Precision@0.5 = 0.9404113486708398
-[1063507 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9407383419689119
-[1065695 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9725155019272667 - Precision@0.5 = 0.9438074327071644
-[1067627 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9730182671359142 - Precision@0.5 = 0.9407761484242081
-[1069684 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.975867269984917 - Precision@0.5 = 0.9433014741616718
-[1072837 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.971677559912854 - Precision@0.5 = 0.943070917371503
-[1075099 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9700016758840289 - Precision@0.5 = 0.9412147329051143
-[1075099 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9724486968509739 - Mean OOF Precision@0.5 = 0.9419973607599985
-[1075126 ms] INFO - obj:128 - Trial 28 - gamma=2.25, alpha=0.47 - OOF PR-AUC=0.991140
-[1077047 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9719312945119397 - Precision@0.5 = 0.9451641815367066
-[1079458 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9738562091503268 - Precision@0.5 = 0.9392274123161468
-[1081875 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9719289425171778 - Precision@0.5 = 0.942165543010316
-[1084103 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9728506787330317 - Precision@0.5 = 0.9416822126693163
-[1086098 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9422233057045344
-[1088416 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9441463414634146
-[1090628 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9709234120998826 - Precision@0.5 = 0.9416497358797237
-[1092781 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9752807105748282 - Precision@0.5 = 0.942276554404145
-[1094944 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9417444219066937
-[1097062 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9703368526897939 - Precision@0.5 = 0.9409279271959048
-[1097063 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9724403223454458 - Mean OOF Precision@0.5 = 0.9421207636086901
-[1097089 ms] INFO - obj:128 - Trial 29 - gamma=2.0, alpha=0.47 - OOF PR-AUC=0.991161
-[1097089 ms] INFO - train:135 - Best: gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
-[1100206 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
-[1105329 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
-[1109005 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
-[1112452 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
-[1116485 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
-[1119955 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
-[1123403 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
-[1126692 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
-[1132122 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
-[1136386 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
-[1136386 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
-[1136387 ms] INFO - train:138 - Mean OOF Recall@0.5 = 0.9732
-[1145983 ms] INFO - train:146 - Best threshold = 0.2513065326633166
-[1145983 ms] INFO - train:147 - OOF Recall = 0.9998407923513294
-[1145983 ms] INFO - train:148 - OOF Precision = 0.9126174979158221
-[1145983 ms] INFO - train:149 - OOF F2 = 0.9810873343846764
-[1145983 ms] INFO - train:150 - OOF MCC = 0.8520228063795662
-[1145983 ms] INFO - train:152 - Final refit: finding best_iteration via 10% hold-out...
-[1151436 ms] INFO - train:161 - Early stopping found best_iteration = 234
-[1155568 ms] INFO - train:166 - Final model trained on full dataset.
-[1155584 ms] INFO - train:184 - lgbm_fl: {'threshold': 0.2513065326633166, 'oof_recall': 0.9998407923513294, 'oof_precision': 0.9126174979158221, 'oof_f2': 0.9810873343846764, 'oof_mcc': 0.8520228063795662, 'mean_fold_recall': 0.9732196147376413, 'gamma': 1.0, 'alpha': 0.47, 'best_iteration': 234, 'n_trials': 30, 'train_attack_rate': 0.6806223302022916}
+[813 ms] INFO - train:112 - Train shape: (175341, 29)
+[813 ms] INFO - train:113 - Attack rate: 0.6806
+[813 ms] INFO - train:118 - Alpha search range: [0.22, 0.47]
+[2285 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9719312945119397 - Precision@0.5 = 0.9451641815367066
+[3939 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9738562091503268 - Precision@0.5 = 0.9392274123161468
+[5320 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9719289425171778 - Precision@0.5 = 0.942165543010316
+[7058 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9728506787330317 - Precision@0.5 = 0.9416822126693163
+[8438 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9422233057045344
+[10157 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9441463414634146
+[11638 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9709234120998826 - Precision@0.5 = 0.9416497358797237
+[13275 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9752807105748282 - Precision@0.5 = 0.942276554404145
+[14850 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9417444219066937
+[16333 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9703368526897939 - Precision@0.5 = 0.9409279271959048
+[16333 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9724403223454458 - Mean OOF Precision@0.5 = 0.9421207636086901
+[16359 ms] INFO - obj:128 - Trial 0 - gamma=2.0, alpha=0.47 - OOF PR-AUC=0.991161
+[17746 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.954084625052367 - Precision@0.5 = 0.9560070523045924
+[19322 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9572649572649573 - Precision@0.5 = 0.9522380595148787
+[20517 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9548349254231607 - Precision@0.5 = 0.9528388661259303
+[21993 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9544997486173957 - Precision@0.5 = 0.9485385960529603
+[23799 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9579353108764873 - Precision@0.5 = 0.9521905713809762
+[25210 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9558404558404558 - Precision@0.5 = 0.954560669456067
+[26539 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.954918719624602 - Precision@0.5 = 0.953081876724931
+[28665 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.961706049941344 - Precision@0.5 = 0.9530017437515569
+[30165 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9564270152505446 - Precision@0.5 = 0.9521187854521188
+[31988 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9556728674375733 - Precision@0.5 = 0.9508921127230282
+[31989 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.956318467532889 - Mean OOF Precision@0.5 = 0.952546833348704
+[32014 ms] INFO - obj:128 - Trial 1 - gamma=3.25, alpha=0.37 - OOF PR-AUC=0.990909
+[37822 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9403435274403016 - Precision@0.5 = 0.96276915158274
+[41685 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9371543489190548 - Precision@0.5 = 0.9615682228527211
+[45476 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9385788503435563 - Precision@0.5 = 0.9626160192506016
+[51127 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9405061169767052 - Precision@0.5 = 0.9588245344267897
+[55985 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9416792357968828 - Precision@0.5 = 0.962652047284564
+[62680 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9430199430199431 - Precision@0.5 = 0.9637749421940567
+[68590 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9384950561421149 - Precision@0.5 = 0.9620340147740938
+[73688 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9415954415954416 - Precision@0.5 = 0.962813812012681
+[80475 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9413440589911178 - Precision@0.5 = 0.9601709401709402
+[84662 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9345567286743758 - Precision@0.5 = 0.9616313157440938
+[84662 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9397273307899494 - Mean OOF Precision@0.5 = 0.9618855000293282
+[84687 ms] INFO - obj:128 - Trial 2 - gamma=1.5, alpha=0.22 - OOF PR-AUC=0.990959
+[86963 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
+[90920 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
+[93440 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
+[96155 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
+[99067 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
+[102018 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
+[105182 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
+[107507 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
+[111338 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
+[114529 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
+[114529 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
+[114554 ms] INFO - obj:128 - Trial 3 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
+[116356 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9635525764558023 - Precision@0.5 = 0.9494715984147952
+[118163 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9658119658119658 - Precision@0.5 = 0.946383118482634
+[119539 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9612870789341378 - Precision@0.5 = 0.9493545183714002
+[121357 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.963633316574493 - Precision@0.5 = 0.9461127108185932
+[122772 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.963633316574493 - Precision@0.5 = 0.9502561560072715
+[124989 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9638846991788168 - Precision@0.5 = 0.9516836270373128
+[126710 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9622088151499916 - Precision@0.5 = 0.9483812355467459
+[128475 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9659795542148484 - Precision@0.5 = 0.949979398434281
+[130094 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9628791687615217 - Precision@0.5 = 0.9483370471238756
+[131605 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9620412267471091 - Precision@0.5 = 0.9473553923591055
+[131605 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.963491171840318 - Mean OOF Precision@0.5 = 0.9487314802596014
+[131631 ms] INFO - obj:128 - Trial 4 - gamma=2.75, alpha=0.42000000000000004 - OOF PR-AUC=0.991019
+[133900 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
+[137866 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
+[140441 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
+[142955 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
+[145883 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
+[148577 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
+[151431 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
+[153842 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
+[157611 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
+[160652 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
+[160653 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
+[160678 ms] INFO - obj:128 - Trial 5 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
+[163343 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9447842480100545 - Precision@0.5 = 0.9600681140911026
+[165957 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.946874476286241 - Precision@0.5 = 0.9571404370658987
+[167909 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9450310038545333 - Precision@0.5 = 0.9587690215081187
+[170661 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9458689458689459 - Precision@0.5 = 0.9561240047433508
+[172819 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9443606502430032 - Precision@0.5 = 0.9590673134201344
+[176176 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9479638009049773 - Precision@0.5 = 0.9595419847328245
+[178866 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9434389140271493 - Precision@0.5 = 0.9590289608177172
+[181173 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9476286240992123 - Precision@0.5 = 0.9602615267045937
+[183669 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9435227082285906 - Precision@0.5 = 0.9578087784960871
+[186382 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9430199430199431 - Precision@0.5 = 0.9569727891156462
+[186382 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.945249331454265 - Mean OOF Precision@0.5 = 0.9584782930695475
+[186408 ms] INFO - obj:128 - Trial 6 - gamma=3.5, alpha=0.27 - OOF PR-AUC=0.990805
+[191233 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9445328864683703 - Precision@0.5 = 0.9595675859720804
+[195163 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.947209653092006 - Precision@0.5 = 0.9586973115087779
+[200252 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9496396849338026 - Precision@0.5 = 0.9579071929676274
+[205785 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9467068878833584 - Precision@0.5 = 0.9551910720324653
+[210169 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.947209653092006 - Precision@0.5 = 0.96
+[214840 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9493883023294788 - Precision@0.5 = 0.9616363945000849
+[218077 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9418468241997654 - Precision@0.5 = 0.960848008206531
+[223762 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9519859225741578 - Precision@0.5 = 0.9581681707008518
+[228209 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9461203284732697 - Precision@0.5 = 0.9588145380434783
+[232897 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.944612032847327 - Precision@0.5 = 0.9576112810057764
+[232897 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9469252175893544 - Mean OOF Precision@0.5 = 0.9588441554937674
+[232922 ms] INFO - obj:128 - Trial 7 - gamma=1.5, alpha=0.27 - OOF PR-AUC=0.991028
+[235350 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9566820276497696 - Precision@0.5 = 0.955161452233562
+[237278 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9556728674375733 - Precision@0.5 = 0.9531968240702048
+[239926 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9583542818836936 - Precision@0.5 = 0.9543558077436582
+[242261 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9547511312217195 - Precision@0.5 = 0.9510057591186044
+[244557 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9566783978548684 - Precision@0.5 = 0.9535621815752109
+[247533 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9586056644880174 - Precision@0.5 = 0.9558823529411765
+[250214 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9550863080274845 - Precision@0.5 = 0.9523729946524064
+[251967 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.959108429696665 - Precision@0.5 = 0.956144014702197
+[254304 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9579353108764873 - Precision@0.5 = 0.9536998414949529
+[256586 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9544997486173957 - Precision@0.5 = 0.9520267446719599
+[256586 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9567374167753675 - Mean OOF Precision@0.5 = 0.9537407973203932
+[256612 ms] INFO - obj:128 - Trial 8 - gamma=1.75, alpha=0.37 - OOF PR-AUC=0.991180
+[259048 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9416003351487222 - Precision@0.5 = 0.9612522453169104
+[262758 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9476286240992123 - Precision@0.5 = 0.9584710568692262
+[265880 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9443606502430032 - Precision@0.5 = 0.9591489361702128
+[269722 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9461203284732697 - Precision@0.5 = 0.9558113942266994
+[272541 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9448634154516508 - Precision@0.5 = 0.9598229485869936
+[276623 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9488855371208312 - Precision@0.5 = 0.9603120759837178
+[278815 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9401709401709402 - Precision@0.5 = 0.9613572101790764
+[282748 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9505614211496565 - Precision@0.5 = 0.9587559161595672
+[286880 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.947209653092006 - Precision@0.5 = 0.9581284963553145
+[289627 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9409250879839115 - Precision@0.5 = 0.9586783915307777
+[289627 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9452325992933204 - Mean OOF Precision@0.5 = 0.9591738671378497
+[289654 ms] INFO - obj:128 - Trial 9 - gamma=2.25, alpha=0.27 - OOF PR-AUC=0.990945
+[290941 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9598659405111019 - Precision@0.5 = 0.9503110742430527
+[292932 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9648902295961119 - Precision@0.5 = 0.9455575628181967
+[294120 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9638846991788168 - Precision@0.5 = 0.948857543512332
+[295532 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9607843137254902 - Precision@0.5 = 0.9459615543272007
+[296788 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9616222557399028 - Precision@0.5 = 0.9474118715429704
+[298263 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9653929948047595 - Precision@0.5 = 0.9498722071069338
+[299467 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9595274007038713 - Precision@0.5 = 0.9491876657824934
+[300810 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9667337020278197 - Precision@0.5 = 0.947986852917009
+[302220 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9635495223730518 - Precision@0.5 = 0.94813654353562
+[303512 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9623764035528741 - Precision@0.5 = 0.9470602787169127
+[303512 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9628627462213799 - Mean OOF Precision@0.5 = 0.9480343154502722
+[303538 ms] INFO - obj:128 - Trial 10 - gamma=4.0, alpha=0.42000000000000004 - OOF PR-AUC=0.990770
+[305798 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
+[309624 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
+[312152 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
+[314795 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
+[317513 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
+[320337 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
+[322979 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
+[325309 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
+[329216 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
+[332234 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
+[332234 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
+[332261 ms] INFO - obj:128 - Trial 11 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
+[334723 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
+[338457 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
+[340900 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
+[343572 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
+[346283 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
+[349147 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
+[351983 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
+[354295 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
+[358461 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
+[361538 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
+[361538 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
+[361564 ms] INFO - obj:128 - Trial 12 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
+[364192 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9621281943862589 - Precision@0.5 = 0.9523138165533256
+[365960 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9643874643874644 - Precision@0.5 = 0.946775255018098
+[369428 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9653929948047595 - Precision@0.5 = 0.9497938994229184
+[372207 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9617898441427853 - Precision@0.5 = 0.946639175257732
+[375179 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.965225406401877 - Precision@0.5 = 0.9493942141267617
+[378396 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9646388469917881 - Precision@0.5 = 0.9510905485789821
+[380327 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9631305513658455 - Precision@0.5 = 0.9470995385629531
+[384274 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9663985252220546 - Precision@0.5 = 0.9491399884783145
+[387250 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9638009049773756 - Precision@0.5 = 0.9512074098577572
+[390986 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9622926093514329 - Precision@0.5 = 0.9482288828337875
+[390986 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9639185342031642 - Mean OOF Precision@0.5 = 0.9491682728690629
+[391011 ms] INFO - obj:128 - Trial 13 - gamma=1.0, alpha=0.42000000000000004 - OOF PR-AUC=0.991273
+[392554 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9747800586510263 - Precision@0.5 = 0.9437053861129137
+[393817 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9703368526897939 - Precision@0.5 = 0.9391727493917275
+[395217 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.973269649740238 - Precision@0.5 = 0.9429290469232018
+[396716 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9706720294955589 - Precision@0.5 = 0.9412529454781832
+[397877 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9720127367186191 - Precision@0.5 = 0.9405659612421957
+[400156 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9451507742461288
+[401388 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9712585889056478 - Precision@0.5 = 0.9409042941797224
+[403171 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9746103569632981 - Precision@0.5 = 0.9441513109830343
+[404757 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9729344729344729 - Precision@0.5 = 0.940771349862259
+[406351 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.971677559912854 - Precision@0.5 = 0.9406992780076255
+[406351 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9723313660125804 - Mean OOF Precision@0.5 = 0.9419303096426992
+[406376 ms] INFO - obj:128 - Trial 14 - gamma=2.75, alpha=0.47 - OOF PR-AUC=0.991059
+[410603 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9540008378718056 - Precision@0.5 = 0.9577725437415882
+[414029 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9514831573655103 - Precision@0.5 = 0.9564521563342318
+[416263 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9488855371208312 - Precision@0.5 = 0.9579561796802301
+[419491 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9503938327467739 - Precision@0.5 = 0.9535900454010425
+[422674 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9525724819842467 - Precision@0.5 = 0.9571440599477983
+[425827 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9487179487179487 - Precision@0.5 = 0.9598168870803663
+[428688 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9473772414948886 - Precision@0.5 = 0.9583792489616004
+[432748 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.956510809451986 - Precision@0.5 = 0.9568315171835708
+[436146 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.949136919725155 - Precision@0.5 = 0.9572382320628751
+[438661 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.946539299480476 - Precision@0.5 = 0.9574504153246313
+[438661 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9505618065959622 - Mean OOF Precision@0.5 = 0.9572631285717936
+[438686 ms] INFO - obj:128 - Trial 15 - gamma=1.5, alpha=0.32 - OOF PR-AUC=0.991170
+[441108 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9628822790113113 - Precision@0.5 = 0.9502232511989416
+[445069 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.965560583207642 - Precision@0.5 = 0.9480829356590423
+[448222 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9647226411932295 - Precision@0.5 = 0.9485088152908222
+[449602 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9623764035528741 - Precision@0.5 = 0.9448009213557091
+[451815 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.963298139768728 - Precision@0.5 = 0.9496117627622667
+[454807 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9643036701860231 - Precision@0.5 = 0.9527278748240748
+[456817 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9630467571644042 - Precision@0.5 = 0.9467830958069033
+[458756 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9667337020278197 - Precision@0.5 = 0.9496254835788954
+[461552 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9644712585889057 - Precision@0.5 = 0.9494349583436443
+[465843 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9638009049773756 - Precision@0.5 = 0.9473684210526315
+[465843 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9641196339678315 - Mean OOF Precision@0.5 = 0.9487167519872932
+[465869 ms] INFO - obj:128 - Trial 16 - gamma=1.25, alpha=0.42000000000000004 - OOF PR-AUC=0.991254
+[467190 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.952744030163385 - Precision@0.5 = 0.9561086353317078
+[470190 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9585218702865762 - Precision@0.5 = 0.9507147606382979
+[472364 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9592760180995475 - Precision@0.5 = 0.9537615596100975
+[473966 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9537456008044244 - Precision@0.5 = 0.9516722408026755
+[475304 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.954248366013072 - Precision@0.5 = 0.9548884789535469
+[477160 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9576839282721635 - Precision@0.5 = 0.9554422337401772
+[478884 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9537456008044244 - Precision@0.5 = 0.954225352112676
+[480724 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9602815485168427 - Precision@0.5 = 0.954045954045954
+[482776 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9570135746606335 - Precision@0.5 = 0.9534184823441022
+[485100 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9555052790346908 - Precision@0.5 = 0.9507253626813407
+[485100 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.956276581665576 - Mean OOF Precision@0.5 = 0.9535003060260575
+[485126 ms] INFO - obj:128 - Trial 17 - gamma=2.0, alpha=0.37 - OOF PR-AUC=0.991164
+[487039 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9722664432341852 - Precision@0.5 = 0.9434913407594113
+[488932 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.973604826546003 - Precision@0.5 = 0.9397444192817859
+[490594 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9740237975532093 - Precision@0.5 = 0.9434299164028894
+[492067 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9701692642869113 - Precision@0.5 = 0.9403833658219624
+[494175 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9416963996107688
+[496524 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9721803251215015 - Precision@0.5 = 0.9457124225627649
+[497959 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9710910005027652 - Precision@0.5 = 0.9413532613110227
+[499797 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9756158873805932 - Precision@0.5 = 0.9417617083232225
+[501270 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.971677559912854 - Precision@0.5 = 0.9417688621781857
+[502856 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.971342383107089 - Precision@0.5 = 0.9410618606916707
+[502856 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9725073548982467 - Mean OOF Precision@0.5 = 0.9420403556943684
+[502881 ms] INFO - obj:128 - Trial 18 - gamma=2.5, alpha=0.47 - OOF PR-AUC=0.991097
+[508522 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9533305404273146 - Precision@0.5 = 0.9566167815705398
+[512560 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9514831573655103 - Precision@0.5 = 0.9562910560889338
+[516986 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.954248366013072 - Precision@0.5 = 0.9568139808435557
+[521072 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9514831573655103 - Precision@0.5 = 0.9542818724262543
+[524869 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9531590413943355 - Precision@0.5 = 0.9579754084554489
+[528579 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9520697167755992 - Precision@0.5 = 0.960845665961945
+[533873 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9506452153510977 - Precision@0.5 = 0.955770850884583
+[538894 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9567621920563097 - Precision@0.5 = 0.9565217391304348
+[543313 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9518183341712754 - Precision@0.5 = 0.9567890835579514
+[547828 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9499748617395676 - Precision@0.5 = 0.9550968828980624
+[547828 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9524974582659592 - Mean OOF Precision@0.5 = 0.9567003321817709
+[547854 ms] INFO - obj:128 - Trial 19 - gamma=1.25, alpha=0.32 - OOF PR-AUC=0.991265
+[550286 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9644742354419774 - Precision@0.5 = 0.9504582610849641
+[552556 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9653929948047595 - Precision@0.5 = 0.9472169694976569
+[554369 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9627953745600805 - Precision@0.5 = 0.9490377467580738
+[556381 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9621250209485503 - Precision@0.5 = 0.9469690721649484
+[558121 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9630467571644042 - Precision@0.5 = 0.9497562184943393
+[561079 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9646388469917881 - Precision@0.5 = 0.9523494374586366
+[563201 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9621250209485503 - Precision@0.5 = 0.9496319576544537
+[565570 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9679906150494386 - Precision@0.5 = 0.949453439631791
+[567559 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.965225406401877 - Precision@0.5 = 0.948768635203031
+[569702 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9621250209485503 - Precision@0.5 = 0.9469690721649484
+[569702 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9639939293259976 - Mean OOF Precision@0.5 = 0.9490610810112845
+[569729 ms] INFO - obj:128 - Trial 20 - gamma=1.75, alpha=0.42000000000000004 - OOF PR-AUC=0.991195
+[571774 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
+[575507 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
+[578125 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
+[580848 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
+[583670 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
+[586484 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
+[589263 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
+[591659 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
+[595720 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
+[598887 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
+[598888 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
+[598913 ms] INFO - obj:128 - Trial 21 - gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
+[601614 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9727691663175534 - Precision@0.5 = 0.9449780237668891
+[604403 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.939386582503844
+[606895 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9745265627618569 - Precision@0.5 = 0.9433809214795588
+[609457 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9723479135243841 - Precision@0.5 = 0.9404327741308047
+[612801 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9741913859560919 - Precision@0.5 = 0.9422157387146446
+[615592 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9464547677261613
+[618580 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9408284023668639
+[621481 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9437008193396609
+[624597 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.973940003351768 - Precision@0.5 = 0.9434253246753247
+[627076 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9720965309200603 - Precision@0.5 = 0.9420219244823386
+[627076 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9733033955994108 - Mean OOF Precision@0.5 = 0.9426825279186091
+[627102 ms] INFO - obj:128 - Trial 22 - gamma=1.25, alpha=0.47 - OOF PR-AUC=0.991286
+[629795 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9621281943862589 - Precision@0.5 = 0.9523138165533256
+[631463 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9643874643874644 - Precision@0.5 = 0.946775255018098
+[634955 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9653929948047595 - Precision@0.5 = 0.9497938994229184
+[637836 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9617898441427853 - Precision@0.5 = 0.946639175257732
+[640737 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.965225406401877 - Precision@0.5 = 0.9493942141267617
+[644047 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9646388469917881 - Precision@0.5 = 0.9510905485789821
+[645966 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9631305513658455 - Precision@0.5 = 0.9470995385629531
+[649901 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9663985252220546 - Precision@0.5 = 0.9491399884783145
+[652862 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9638009049773756 - Precision@0.5 = 0.9512074098577572
+[656540 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9622926093514329 - Precision@0.5 = 0.9482288828337875
+[656540 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9639185342031642 - Mean OOF Precision@0.5 = 0.9491682728690629
+[656566 ms] INFO - obj:128 - Trial 23 - gamma=1.0, alpha=0.42000000000000004 - OOF PR-AUC=0.991273
+[658569 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9729367406786762 - Precision@0.5 = 0.9439115590960819
+[660913 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9733534439416792 - Precision@0.5 = 0.9398058252427185
+[662565 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9425091352009745
+[664861 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9746941511647395 - Precision@0.5 = 0.9403395311236863
+[666965 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9731858555387967 - Precision@0.5 = 0.9411669367909238
+[668839 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9720965309200603 - Precision@0.5 = 0.9458622095393396
+[670478 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.971342383107089 - Precision@0.5 = 0.9408327246165084
+[672954 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9771241830065359 - Precision@0.5 = 0.9433702774856403
+[675181 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9746103569632981 - Precision@0.5 = 0.9423918327661643
+[677428 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9711747947042064 - Precision@0.5 = 0.9405177310719792
+[677428 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9733117736153789 - Mean OOF Precision@0.5 = 0.9420707762934016
+[677453 ms] INFO - obj:128 - Trial 24 - gamma=1.75, alpha=0.47 - OOF PR-AUC=0.991172
+[680113 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9727691663175534 - Precision@0.5 = 0.9449780237668891
+[682864 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.939386582503844
+[685284 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9745265627618569 - Precision@0.5 = 0.9433809214795588
+[687838 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9723479135243841 - Precision@0.5 = 0.9404327741308047
+[691230 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9741913859560919 - Precision@0.5 = 0.9422157387146446
+[693993 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9464547677261613
+[696879 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9408284023668639
+[699890 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9437008193396609
+[703129 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.973940003351768 - Precision@0.5 = 0.9434253246753247
+[705671 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9720965309200603 - Precision@0.5 = 0.9420219244823386
+[705672 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9733033955994108 - Mean OOF Precision@0.5 = 0.9426825279186091
+[705697 ms] INFO - obj:128 - Trial 25 - gamma=1.25, alpha=0.47 - OOF PR-AUC=0.991286
+[708034 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.963049853372434 - Precision@0.5 = 0.9521994863722972
+[710079 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9646388469917881 - Precision@0.5 = 0.946165858469631
+[711815 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9621250209485503 - Precision@0.5 = 0.9494749028363516
+[713218 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9627953745600805 - Precision@0.5 = 0.9452900041135335
+[715277 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9643036701860231 - Precision@0.5 = 0.9484094280534037
+[717798 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.963633316574493 - Precision@0.5 = 0.9532493368700266
+[719699 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9627953745600805 - Precision@0.5 = 0.9475507174666007
+[722165 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.965895760013407 - Precision@0.5 = 0.9498187211601846
+[724971 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9644712585889057 - Precision@0.5 = 0.9497483290700552
+[726903 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9634657281716105 - Precision@0.5 = 0.9489147478748865
+[726903 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9637174203967375 - Mean OOF Precision@0.5 = 0.949082153228697
+[726929 ms] INFO - obj:128 - Trial 26 - gamma=1.5, alpha=0.42000000000000004 - OOF PR-AUC=0.991241
+[729999 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9581064097193129 - Precision@0.5 = 0.955384743921798
+[733532 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9582704876822524 - Precision@0.5 = 0.9524444074289997
+[737137 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9587732528909 - Precision@0.5 = 0.9542156617463098
+[741168 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9574325456678398 - Precision@0.5 = 0.9509779442363712
+[743815 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9565946036534272 - Precision@0.5 = 0.9549142618151402
+[747054 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9586894586894587 - Precision@0.5 = 0.9564454104664771
+[749391 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9532428355957768 - Precision@0.5 = 0.9538822740231427
+[751060 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9577677224736049 - Precision@0.5 = 0.9563253012048193
+[755199 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9581866934808111 - Precision@0.5 = 0.9539501126220071
+[758482 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9550025138260433 - Precision@0.5 = 0.9526078234704113
+[758482 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9572066523679427 - Mean OOF Precision@0.5 = 0.9541147940935476
+[758507 ms] INFO - obj:128 - Trial 27 - gamma=1.0, alpha=0.37 - OOF PR-AUC=0.991288
+[760283 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9725178047758692 - Precision@0.5 = 0.9438120019515368
+[762051 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9722641193229429 - Precision@0.5 = 0.9401231567006968
+[763823 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.973604826546003 - Precision@0.5 = 0.9427180527383368
+[765554 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9693313222724987 - Precision@0.5 = 0.9404113486708398
+[767014 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9407383419689119
+[768693 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9725155019272667 - Precision@0.5 = 0.9438074327071644
+[770037 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9730182671359142 - Precision@0.5 = 0.9407761484242081
+[771485 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.975867269984917 - Precision@0.5 = 0.9433014741616718
+[773881 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.971677559912854 - Precision@0.5 = 0.943070917371503
+[775605 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9700016758840289 - Precision@0.5 = 0.9412147329051143
+[775605 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9724486968509739 - Mean OOF Precision@0.5 = 0.9419973607599985
+[775631 ms] INFO - obj:128 - Trial 28 - gamma=2.25, alpha=0.47 - OOF PR-AUC=0.991140
+[777067 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9719312945119397 - Precision@0.5 = 0.9451641815367066
+[778627 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9738562091503268 - Precision@0.5 = 0.9392274123161468
+[780115 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9719289425171778 - Precision@0.5 = 0.942165543010316
+[781749 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9728506787330317 - Precision@0.5 = 0.9416822126693163
+[783097 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9422233057045344
+[784745 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9731020613373554 - Precision@0.5 = 0.9441463414634146
+[786308 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9709234120998826 - Precision@0.5 = 0.9416497358797237
+[787836 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9752807105748282 - Precision@0.5 = 0.942276554404145
+[789340 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9725992961287079 - Precision@0.5 = 0.9417444219066937
+[790738 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9703368526897939 - Precision@0.5 = 0.9409279271959048
+[790738 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9724403223454458 - Mean OOF Precision@0.5 = 0.9421207636086901
+[790763 ms] INFO - obj:128 - Trial 29 - gamma=2.0, alpha=0.47 - OOF PR-AUC=0.991161
+[790764 ms] INFO - train:135 - Best: gamma=1.0, alpha=0.47 - OOF PR-AUC=0.991312
+[793084 ms] INFO - _cv_loop:61 -  Fold 1/10 - Recall@0.5 = 0.9711772098868873 - Precision@0.5 = 0.9448928018260373
+[796942 ms] INFO - _cv_loop:61 -  Fold 2/10 - Recall@0.5 = 0.9736886207474442 - Precision@0.5 = 0.9411955289162481
+[799457 ms] INFO - _cv_loop:61 -  Fold 3/10 - Recall@0.5 = 0.9737724149488856 - Precision@0.5 = 0.94265087605451
+[802488 ms] INFO - _cv_loop:61 -  Fold 4/10 - Recall@0.5 = 0.9715937657114128 - Precision@0.5 = 0.9413054067218705
+[805284 ms] INFO - _cv_loop:61 -  Fold 5/10 - Recall@0.5 = 0.9743589743589743 - Precision@0.5 = 0.9415384615384615
+[808011 ms] INFO - _cv_loop:61 -  Fold 6/10 - Recall@0.5 = 0.9724317077258253 - Precision@0.5 = 0.9451095366072155
+[810970 ms] INFO - _cv_loop:61 -  Fold 7/10 - Recall@0.5 = 0.9726830903301491 - Precision@0.5 = 0.9422077922077922
+[813345 ms] INFO - _cv_loop:61 -  Fold 8/10 - Recall@0.5 = 0.9747779453661807 - Precision@0.5 = 0.9435477329872658
+[817241 ms] INFO - _cv_loop:61 -  Fold 9/10 - Recall@0.5 = 0.9759510641863584 - Precision@0.5 = 0.9435353208036293
+[820393 ms] INFO - _cv_loop:61 -  Fold 10/10 - Recall@0.5 = 0.9717613541142953 - Precision@0.5 = 0.9419265756985056
+[820393 ms] INFO - _cv_loop:64 - Mean OOF Recall@0.5 = 0.9732196147376413 - Mean OOF Precision@0.5 = 0.9427910033361536
+[820394 ms] INFO - train:138 - Mean OOF Recall@0.5 = 0.9732
+[829470 ms] INFO - train:146 - Best threshold = 0.2513065326633166
+[829470 ms] INFO - train:147 - OOF Recall = 0.9998407923513294
+[829470 ms] INFO - train:148 - OOF Precision = 0.9126174979158221
+[829470 ms] INFO - train:149 - OOF F2 = 0.9810873343846764
+[829470 ms] INFO - train:150 - OOF MCC = 0.8520228063795662
+[829470 ms] INFO - train:152 - Final refit: finding best_iteration via 10% hold-out...
+[833705 ms] INFO - train:161 - Early stopping found best_iteration = 234
+[836856 ms] INFO - train:166 - Final model trained on full dataset.
+[836865 ms] INFO - train:184 - lgbm_fl: {'threshold': 0.2513065326633166, 'oof_recall': 0.9998407923513294, 'oof_precision': 0.9126174979158221, 'oof_f2': 0.9810873343846764, 'oof_mcc': 0.8520228063795662, 'mean_fold_recall': 0.9732196147376413, 'gamma': 1.0, 'alpha': 0.47, 'best_iteration': 234, 'n_trials': 30, 'train_attack_rate': 0.6806223302022916}

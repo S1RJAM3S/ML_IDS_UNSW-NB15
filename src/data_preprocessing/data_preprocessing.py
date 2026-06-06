@@ -42,7 +42,6 @@ DROPS = ['smean', 'dmean', 'sload', 'dload']
 LOG1P = ['sbytes', 'dbytes', 'spkts', 'dpkts', 'sloss', 'dloss', 'sinpkt', 'dinpkt', 'sjit', 'djit', 'response_body_len']
 FLAGS = ["is_ftp_login", "is_sm_ips_ports", "is_tcp", "is_ftp", "is_http", "tcp_seq_established", "tcp_seq_one_sided", "is_zero_dur", "is_short_flow", "zero_win"]
 
-
 def audit(df: pd.DataFrame) -> None:
     logger.info(f"Shape: {df.shape}")
     logger.info(f"Null counts (Should be 0): {df.isnull().sum().sum()}")
@@ -104,7 +103,6 @@ def process(df: pd.DataFrame, is_train: bool, artifacts: dict) -> tuple:
 
     logger.info("Engineered features: srv_diversity, dst_concentration")
     return df, y_label, y_cat, artifacts
-
 
 def select(X_train: pd.DataFrame, y_label: pd.Series, y_cat: pd.Series) -> tuple:
     for col in ['proto', 'service', 'state']:
@@ -230,22 +228,41 @@ def select(X_train: pd.DataFrame, y_label: pd.Series, y_cat: pd.Series) -> tuple
     logger.info(f"RFECV label - count: {rfecv_label.n_features_}, removed: {removed_label}")
     logger.info(f"selected_label: {selected_label}")
 
+    CAT_RFECV_CANDIDATES = ['proto', 'state']
+    CAT_ALWAYS_KEEP      = ['ct_state_ttl']
+
+    features_after_cat = list(dict.fromkeys(
+        features_after + [f for f in CAT_RFECV_CANDIDATES if f not in features_after]
+    ))
+    rfecv_added = [f for f in CAT_RFECV_CANDIDATES if f not in features_after]
+    always_added = [f for f in CAT_ALWAYS_KEEP if f not in features_after]
+    logger.info(f"RFECV Pass 2: offering {rfecv_added} as candidates; always-keeping {always_added}")
+
     logger.info("RFECV Pass 2 (multiclass macro recall - Stage 2 cat model)...")
     sss2 = StratifiedShuffleSplit(n_splits=1, train_size=min(30000, len(X_arr)), random_state=42)
-    idx2, _ = next(sss2.split(X_train[features_after], y_cat))
+    idx2, _ = next(sss2.split(X_train[features_after_cat], y_cat))
     rfecv_cat = RFECV(
-        estimator=lgb.LGBMClassifier(n_estimators=100, random_state=42, n_jobs=-1, objective='multiclass', num_class=10, class_weight='balanced', verbose=-1),
+        estimator=lgb.LGBMClassifier(
+            n_estimators=100, random_state=42, n_jobs=-1,
+            objective='multiclass', num_class=10, class_weight='balanced', verbose=-1,
+        ),
         step=1,
         cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42),
         scoring=make_scorer(recall_score, average='macro', zero_division=0, pos_label=None),
-        min_features_to_select=max(10, len(features_after) // 3),
+        min_features_to_select=max(10, len(features_after_cat) // 3),
         n_jobs=-1,
     )
-    rfecv_cat.fit(X_train[features_after].values[idx2], y_cat.values[idx2])
-    selected_cat = [f for f, sel in zip(features_after, rfecv_cat.support_) if sel]
-    removed_cat = [f for f, sel in zip(features_after, rfecv_cat.support_) if not sel]
+    rfecv_cat.fit(X_train[features_after_cat].values[idx2], y_cat.values[idx2])
+    selected_cat = [f for f, sel in zip(features_after_cat, rfecv_cat.support_) if sel]
+    removed_cat  = [f for f, sel in zip(features_after_cat, rfecv_cat.support_) if not sel]
     logger.info(f"RFECV cat   — count: {rfecv_cat.n_features_}, removed: {removed_cat}")
-    logger.info(f"selected_cat: {selected_cat}")
+
+    # Append always-keep features — deduplicated, order preserved
+    for f in CAT_ALWAYS_KEEP:
+        if f not in selected_cat:
+            selected_cat.append(f)
+            logger.info(f"Force-appended '{f}' to selected_cat (bypassed RFECV)")
+    logger.info(f"selected_cat (final): {selected_cat}")
 
     union = list(dict.fromkeys(selected_label + selected_cat))
     logger.info(f"Union feature count: {len(union)} — label: {len(selected_label)}, cat: {len(selected_cat)}")
@@ -301,7 +318,6 @@ class SmoothedTargetEncoder(BaseEstimator, TransformerMixin):
         if self.is_multiclass:
             return [f"proto_enc_{cl}" for cl in self.classes_]
         return ['proto_enc']
-
 
 class Pipeline(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -390,12 +406,13 @@ def f_train(filename):
     X_t.to_parquet(OUTPUT_PATH / 'train.parquet', index=False)
     joblib.dump(pl, PL_PATH)
     with open(A_PATH, 'w') as f:
-        json.dump(artifacts, f, indent=2)
+        json.dump(artifacts, f)
     return {
         'X_train': X_t, 'y_label': y_label, 'y_cat': y_cat,
         'pipeline': pl, 'artifacts': artifacts,
         'selected_label': selected_label, 'selected_cat': selected_cat
     }
+
 
 def f_test(filename):
     assert PL_PATH.exists() and A_PATH.exists(), "Run f_train first :<"
@@ -413,6 +430,7 @@ def f_test(filename):
     X_t['attack_cat'] = y_cat.values
     X_t.to_parquet(OUTPUT_PATH / 'test.parquet', index=False)
     return {'X_test': X_t, 'y_label': y_label, 'y_cat': y_cat}
+
 
 def main():
     train_res = f_train('trainset.csv')
