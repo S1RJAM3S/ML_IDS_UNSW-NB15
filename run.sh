@@ -22,4 +22,5 @@ show_model_menu() {
 # python src/models/label/lgbm_fl/train.py
 # python src/models/cat/lgbm_gbdt/train.py
 # python src/models/cat/balanced_rf/train.py
-python src/models/cat/xgboost/train.py
+# python src/models/cat/xgboost/train.py
+python src/models/cat/meta/train.py
