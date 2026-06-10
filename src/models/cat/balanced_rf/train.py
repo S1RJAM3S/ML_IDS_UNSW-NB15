@@ -39,8 +39,7 @@ class BalancedRFTrainer(CatTrainer):
             max_depth = self.max_depth,
             max_features = self.max_features,
             min_samples_leaf = self.min_samples_leaf,
-            sampling_strategy = 'all',   # Balance all classes in each bootstrap
-            replacement = True,
+            sampling_strategy = 'all',
             random_state = 42,
             n_jobs = -1
         )
@@ -75,7 +74,7 @@ class BalancedRFTrainer(CatTrainer):
         n_total = sum(cnts.values())
         for cls, cnt in sorted(cnts.items()):
             min_fold_train = int(cnt * 0.9 * 0.9)
-            self.logger.info(f"{cls}: {cnt} - (balanced_weight={n_total/(len(cnts)*cnt):.1f} - min_fold_train~{min_fold_train})")
+            self.logger.info(f"{cls}: {cnt} - (balanced_weight={n_total/(len(cnts)*cnt)} - min_fold_train~{min_fold_train})")
 
         optuna.logging.set_verbosity(optuna.logging.WARNING)
 
@@ -89,13 +88,13 @@ class BalancedRFTrainer(CatTrainer):
             pr_auc = average_precision_score(y_bin, oof_probs, average='macro')
 
             preds = np.array(classes)[oof_probs.argmax(axis=1)]
-            self.logger.info(f"Trial {trial.number} - max_features={self.max_features} - min_samples_leaf={self.min_samples_leaf} - max_depth={self.max_depth} -> Macro PR-AUC={pr_auc:.6f}")
+            self.logger.info(f"Trial {trial.number} - max_features={self.max_features} - min_samples_leaf={self.min_samples_leaf} - max_depth={self.max_depth} -> Macro PR-AUC={pr_auc}")
             for cls in sorted(classes):
                 m = y_arr == cls
                 if m.sum() == 0:
                     continue
                 r = recall_score(y_arr[m], preds[m], average='micro', zero_division=0)
-                self.logger.info(f"{cls}: recall={r:.4f} (n={m.sum()})")
+                self.logger.info(f"{cls}: recall={r} (n={m.sum()})")
             return pr_auc
 
         study = optuna.create_study(
@@ -106,10 +105,10 @@ class BalancedRFTrainer(CatTrainer):
         self.max_features = study.best_params['max_features']
         self.min_samples_leaf = study.best_params['min_samples_leaf']
         self.max_depth = study.best_params['max_depth']
-        self.logger.info(f"Best params: {study.best_params} -> Macro PR-AUC={study.best_value:.6f}")
+        self.logger.info(f"Best params: {study.best_params} -> Macro PR-AUC={study.best_value}")
 
         oof_probs, mean_recall, classes = self._cv_loop(X_arr, y_arr)
-        self.logger.info(f"Mean OOF Macro Recall = {mean_recall:.4f}")
+        self.logger.info(f"Mean OOF Macro Recall = {mean_recall}")
 
         preds = np.array(classes)[oof_probs.argmax(axis=1)]
         per_cls = {}
@@ -118,13 +117,12 @@ class BalancedRFTrainer(CatTrainer):
             if mask.sum() == 0:
                 continue
             r = recall_score(y_arr[mask], preds[mask], average='micro', zero_division=0)
-            self.logger.info(f"{cls}: recall={r:.4f}  (n={mask.sum()})")
+            self.logger.info(f"{cls}: recall={r}  (n={mask.sum()})")
             per_cls[cls] = float(r)
 
         self.n_estimators = 500
         m = self._build_model()
         m.fit(X_arr, y_arr)
-        self.logger.info("Final model trained on full dataset.")
 
         joblib.dump(m, ARTIFACTS_DIR / f'{name}.joblib')
         np.save(ARTIFACTS_DIR / f'{name}_oof.npy', oof_probs)
@@ -150,8 +148,11 @@ class BalancedRFTrainer(CatTrainer):
 
 
 if __name__ == '__main__':
+    label_path = PATH.parent.parent / 'label' / 'lgbm_fl' / 'artifacts'
+    with open(label_path / 'lgbm_fl_res.json', 'r') as f:
+        label_threshold = float(json.load(f)['threshold'])
     t = BalancedRFTrainer(artifacts_dir=ARTIFACTS_DIR, logger=logger)
     t.train(
-        label_oof_path = PATH.parent.parent / 'label' / 'lgbm_fl' / 'artifacts' / 'lgbm_fl_oof.npy',
-        label_threshold = 0.2513065326633166,
+        label_oof_path = label_path / 'lgbm_fl_oof.npy',
+        label_threshold = label_threshold,
     )

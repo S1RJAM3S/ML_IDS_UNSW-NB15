@@ -110,11 +110,11 @@ class FLLGBMTrainer(LabelTrainer):
         y_arr = y_label.values.astype(int)
         attack_rate = float(y_arr.mean())
         self.logger.info(f"Train shape: {X.shape}")
-        self.logger.info(f"Attack rate: {attack_rate:.4f}")
+        self.logger.info(f"Attack rate: {attack_rate}")
 
-        alpha_mid = round(1.0 - attack_rate, 2)
-        alpha_low = round(max(0.20, alpha_mid - 0.10), 2)
-        alpha_high = round(min(0.55, alpha_mid + 0.15), 2)
+        alpha_mid = 1.0 - attack_rate
+        alpha_low = max(0.20, alpha_mid - 0.10)
+        alpha_high = min(0.55, alpha_mid + 0.15)
         self.logger.info(f"Alpha search range: [{alpha_low}, {alpha_high}]")
         optuna.logging.set_verbosity(optuna.logging.WARNING)
 
@@ -125,17 +125,17 @@ class FLLGBMTrainer(LabelTrainer):
             self.alpha = alpha
             oof_probs, _ = self._cv_loop(X_arr, y_arr)
             pr_auc = average_precision_score(y_arr, oof_probs)
-            self.logger.info(f"Trial {trial.number} - gamma={gamma}, alpha={alpha} - OOF PR-AUC={pr_auc:.6f}")
+            self.logger.info(f"Trial {trial.number} - gamma={gamma}, alpha={alpha} - OOF PR-AUC={pr_auc}")
             return pr_auc
 
         study = optuna.create_study(direction='maximize', sampler=optuna.samplers.TPESampler(seed=42))
         study.optimize(obj, n_trials=N_TRIALS)
         self.gamma = study.best_params['gamma']
         self.alpha = study.best_params['alpha']
-        self.logger.info(f"Best: gamma={self.gamma}, alpha={self.alpha} - OOF PR-AUC={study.best_value:.6f}")
+        self.logger.info(f"Best: gamma={self.gamma}, alpha={self.alpha} - OOF PR-AUC={study.best_value}")
 
         oof_probs, mean_recall = self._cv_loop(X_arr, y_arr)
-        self.logger.info(f"Mean OOF Recall@0.5 = {mean_recall:.4f}")
+        self.logger.info(f"Mean OOF Recall@0.5 = {mean_recall}")
         np.save(ARTIFACTS_DIR / 'lgbm_fl_oof.npy', oof_probs)
         best_t, best_f2 = self._find_threshold(y_arr, oof_probs)
         best_pred = (oof_probs >= best_t).astype(int)

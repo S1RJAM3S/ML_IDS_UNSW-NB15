@@ -1,0 +1,62 @@
+[973 ms] INFO - load_models:43 - Loading models...
+[976 ms] INFO - load_models:45 - LABEL: lgbm_fl.joblib
+[1029 ms] INFO - load_models:51 -   lgbm_gbdt: lgbm_gbdt.joblib
+[1249 ms] INFO - load_models:51 -   balanced_rf: balanced_rf.joblib
+[1377 ms] INFO - load_models:51 -   xgboost: xgboost.joblib
+[1378 ms] INFO - load_models:55 - Meta: meta.joblib  classes=['Analysis', 'Backdoor', 'DoS', 'Exploits', 'Fuzzers', 'Generic', 'Normal', 'Reconnaissance', 'Shellcode', 'Worms']
+[1430 ms] INFO - evaluate:96 - Test shape: (82332, 18)
+[1430 ms] INFO - evaluate:97 - Total: 82332  Attack=45332  Normal=37000
+[1537 ms] INFO - run_label:62 - label: flagged=60951 / 82332 (74.0307535344702%) packets sent to cat
+[1537 ms] INFO - evaluate:106 - label: TP=45315  FP=15636  TN=21364  FN=17
+[1537 ms] INFO - evaluate:107 - label: Recall=0.9996249889702419 Precision=0.7434660629029755
+[3158 ms] INFO - run_cat:71 - lgbm_gbdt: predict_proba shape=(60951, 10)
+[3492 ms] INFO - run_cat:71 - balanced_rf: predict_proba shape=(60951, 10)
+[4275 ms] INFO - run_cat:71 - xgboost: predict_proba shape=(60951, 10)
+[4369 ms] INFO - evaluate:111 - cat: classified 60951 packets
+[4792 ms] INFO - evaluate:117 - 
+                precision    recall  f1-score   support
+
+      Analysis       0.00      0.00      0.00       677
+      Backdoor       0.02      0.09      0.03       583
+           DoS       0.15      0.14      0.14      4089
+      Exploits       0.81      0.55      0.65     11132
+       Fuzzers       0.31      0.41      0.36      6062
+       Generic       0.67      0.76      0.71     18871
+        Normal       0.86      0.74      0.80     37000
+Reconnaissance       0.48      0.42      0.45      3496
+     Shellcode       0.08      0.41      0.14       378
+         Worms       0.03      0.14      0.05        44
+
+      accuracy                           0.64     82332
+     macro avg       0.34      0.37      0.33     82332
+  weighted avg       0.70      0.64      0.66     82332
+
+[5355 ms] INFO - evaluate:122 - Macro Recall: 0.36680479968565327
+[5355 ms] INFO - evaluate:123 - Macro Precision: 0.3400392326059527
+[5355 ms] INFO - evaluate:124 - Macro F1: 0.3323757145948688
+[5355 ms] INFO - evaluate:127 - 
+[5355 ms] INFO - evaluate:128 - Per-class Recall:
+[5732 ms] INFO - evaluate:138 - Analysis: Recall=0.0029542097488921715  Prec=0.002173913043478261  F1=0.002504696305572949 (n=677)
+[6109 ms] INFO - evaluate:138 - Backdoor: Recall=0.09433962264150944  Prec=0.01737207833228048  F1=0.029341157642037877 (n=583)
+[6493 ms] INFO - evaluate:138 - DoS: Recall=0.1384201516263145  Prec=0.14720416124837452  F1=0.1426770859591631 (n=4089)
+[6890 ms] INFO - evaluate:138 - Exploits: Recall=0.5497664390945023  Prec=0.8080274623712701  F1=0.6543355073238533 (n=11132)
+[7276 ms] INFO - evaluate:138 - Fuzzers: Recall=0.4132299571098647  Prec=0.31238309016086796  F1=0.3557985938498686 (n=6062)
+[7687 ms] INFO - evaluate:138 - Generic: Recall=0.759525197392825  Prec=0.6658768873403019  F1=0.7096247153183484 (n=18871)
+[8144 ms] INFO - evaluate:138 - Normal: Recall=0.7447027027027027  Prec=0.8574718366838863  F1=0.7971186391645211 (n=37000)
+[8523 ms] INFO - evaluate:138 - Reconnaissance: Recall=0.4213386727688787  Prec=0.47918022121014964  F1=0.4484018264840183 (n=3496)
+[8901 ms] INFO - evaluate:138 - Shellcode: Recall=0.4074074074074074  Prec=0.08279569892473118  F1=0.13762287756925826 (n=378)
+[9277 ms] INFO - evaluate:138 - Worms: Recall=0.13636363636363635  Prec=0.027906976744186046  F1=0.04633204633204633 (n=44)
+[9754 ms] INFO - evaluate:147 - Saved -> figures/confusion_system.png
+[9901 ms] INFO - evaluate:164 - Saved -> figures/per_class_system.png
+[9901 ms] INFO - evaluate:166 - Correctly routed as Normal (TN): 21364 -> count as correct Normal predictions at system level
+[9901 ms] INFO - evaluate:167 - Attacks missed by label (FN): 17 -> system-level FN (misclassified as Normal)
+[9901 ms] INFO - evaluate:168 - Hard Normals passed to cat: 15636 -> cat must reclassify these as Normal
+[9902 ms] INFO - evaluate:170 - System Normal recall: 0.7447027027027027 (label TN=21364 + cat Normal corrections)
+[12757 ms] INFO - evaluate:179 - Per-Model Prediction Entropy Across Filtered Attack Traffic:
+[12770 ms] INFO - evaluate:191 - -> lgbm_gbdt: Mean Entropy = 1.8170479808850806 / 3.321928094887362 bits (41.987826286689305% of packets exhibit Entropy > 2.0)
+[12788 ms] INFO - evaluate:191 - -> balanced_rf: Mean Entropy = 3.08811266632698 / 3.321928094887362 bits (88.61872651802267% of packets exhibit Entropy > 2.0)
+[12796 ms] INFO - evaluate:191 - -> xgboost: Mean Entropy = 1.9081804253107135 / 3.321928094887362 bits (49.66776591032141% of packets exhibit Entropy > 2.0)
+[12796 ms] INFO - evaluate:194 - Tracking Minority Attack Class Redirection to Dominant Coordinates:
+[12803 ms] INFO - evaluate:207 - -> Minority Class [Worms]: Real Rows Flagged = 44 - Deflected into ['Exploits', 'Generic'] = 17 (38.63636363636363%)
+[12804 ms] INFO - evaluate:207 - -> Minority Class [Analysis]: Real Rows Flagged = 677 - Deflected into ['Exploits', 'Generic'] = 352 (51.994091580502214%)
+[12804 ms] INFO - evaluate:207 - -> Minority Class [Shellcode]: Real Rows Flagged = 377 - Deflected into ['Exploits', 'Generic'] = 58 (15.384615384615385%)

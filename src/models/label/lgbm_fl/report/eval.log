@@ -1,55 +1,55 @@
-[978 ms] INFO - evaluate:237 - LGBM_FL - EVALUATION
-[1033 ms] INFO - evaluate:244 - Test shape: (82332, 29)
-[1033 ms] INFO - evaluate:245 - Attack rate: 0.5506
-[1033 ms] WARNING - evaluate:252 - Distribution shift: Train=0.6806 Test=0.5506 Diff=0.1300
-[1033 ms] INFO - _prevalence_adjusted_threshold:89 - Prevalence adjustment (diagnostic): base_t=0.2513 train=0.6806 test=0.5506 → adjusted_t=0.3686
-[1217 ms] INFO - _eval_at_threshold:65 - [OOF threshold] TP=45329 FP=16831 TN=20169 FN=3
-[1217 ms] INFO - _eval_at_threshold:66 - [OOF threshold] Recall=0.999934 [Target >= 0.98 :>]
-[1217 ms] INFO - _eval_at_threshold:67 - [OOF threshold] Precision=0.729231 [Target >= 0.9 :<]
-[1217 ms] INFO - _eval_at_threshold:68 - [OOF threshold] MCC=0.630381
-[1217 ms] INFO - _eval_at_threshold:69 - [OOF threshold] FPR=0.454892 (16831 packets)
-[1217 ms] INFO - _eval_at_threshold:70 - [OOF threshold] FNR=0.000066 (3 packets)
-[1277 ms] INFO - _eval_at_threshold:65 - [Adjusted threshold] TP=45287 FP=15530 TN=21470 FN=45
-[1277 ms] INFO - _eval_at_threshold:66 - [Adjusted threshold] Recall=0.999007 [Target >= 0.98 :>]
-[1277 ms] INFO - _eval_at_threshold:67 - [Adjusted threshold] Precision=0.744644 [Target >= 0.9 :<]
-[1277 ms] INFO - _eval_at_threshold:68 - [Adjusted threshold] MCC=0.655854
-[1277 ms] INFO - _eval_at_threshold:69 - [Adjusted threshold] FPR=0.419730 (15530 packets)
-[1277 ms] INFO - _eval_at_threshold:70 - [Adjusted threshold] FNR=0.000993 (45 packets)
-[9899 ms] WARNING - _eval_threshold_sweep:146 - Threshold sweep: no threshold met recall >= 0.98 AND precision >= 0.9 simultaneously. :<
-[10136 ms] INFO - _eval_threshold_sweep:165 - Figure: /ids/src/models/label/lgbm_fl/report/figures/threshold_sweep.png
-[10172 ms] INFO - _eval_pr_curve:173 - PR-AUC = 0.924150
-[10172 ms] INFO - _eval_pr_curve:174 - ROC-AUC = 0.930998
-[10261 ms] INFO - _eval_pr_curve:184 - Figure: /ids/src/models/label/lgbm_fl/report/figures/pr_curve.png
-[10262 ms] INFO - _eval_score_dist:190 - NORMAL: Mean=0.3354 STD=0.3677 Median=0.0808
-[10262 ms] INFO - _eval_score_dist:191 - ATTACK: Mean=0.9004 STD=0.0833 Median=0.9249
-[10438 ms] INFO - _eval_score_dist:204 - Figure: /ids/src/models/label/lgbm_fl/report/figures/score_dist.png
-[10467 ms] INFO - _eval_confusion:215 - [OOF threshold]
+[950 ms] INFO - evaluate:237 - LGBM_FL - EVALUATION
+[1003 ms] INFO - evaluate:244 - Test shape: (82332, 18)
+[1003 ms] INFO - evaluate:245 - Attack rate: 0.5506
+[1003 ms] WARNING - evaluate:252 - Distribution shift: Train=0.6806 Test=0.5506 Diff=0.1300
+[1003 ms] INFO - _prevalence_adjusted_threshold:89 - Prevalence adjustment (diagnostic): base_t=0.2759 train=0.6806 test=0.5506 → adjusted_t=0.3986
+[1172 ms] INFO - _eval_at_threshold:65 - [OOF threshold] TP=45315 FP=15636 TN=21364 FN=17
+[1172 ms] INFO - _eval_at_threshold:66 - [OOF threshold] Recall=0.999625 [Target >= 0.98 :>]
+[1172 ms] INFO - _eval_at_threshold:67 - [OOF threshold] Precision=0.743466 [Target >= 0.9 :<]
+[1172 ms] INFO - _eval_at_threshold:68 - [OOF threshold] MCC=0.654633
+[1172 ms] INFO - _eval_at_threshold:69 - [OOF threshold] FPR=0.422595 (15636 packets)
+[1172 ms] INFO - _eval_at_threshold:70 - [OOF threshold] FNR=0.000375 (17 packets)
+[1233 ms] INFO - _eval_at_threshold:65 - [Adjusted threshold] TP=45049 FP=14264 TN=22736 FN=283
+[1233 ms] INFO - _eval_at_threshold:66 - [Adjusted threshold] Recall=0.993757 [Target >= 0.98 :>]
+[1233 ms] INFO - _eval_at_threshold:67 - [Adjusted threshold] Precision=0.759513 [Target >= 0.9 :<]
+[1233 ms] INFO - _eval_at_threshold:68 - [Adjusted threshold] MCC=0.674160
+[1233 ms] INFO - _eval_at_threshold:69 - [Adjusted threshold] FPR=0.385514 (14264 packets)
+[1233 ms] INFO - _eval_at_threshold:70 - [Adjusted threshold] FNR=0.006243 (283 packets)
+[9822 ms] WARNING - _eval_threshold_sweep:146 - Threshold sweep: no threshold met recall >= 0.98 AND precision >= 0.9 simultaneously. :<
+[10054 ms] INFO - _eval_threshold_sweep:165 - Figure: /ids/src/models/label/lgbm_fl/report/figures/threshold_sweep.png
+[10090 ms] INFO - _eval_pr_curve:173 - PR-AUC = 0.929931
+[10090 ms] INFO - _eval_pr_curve:174 - ROC-AUC = 0.927186
+[10175 ms] INFO - _eval_pr_curve:184 - Figure: /ids/src/models/label/lgbm_fl/report/figures/pr_curve.png
+[10176 ms] INFO - _eval_score_dist:190 - NORMAL: Mean=0.2688 STD=0.3170 Median=0.0252
+[10176 ms] INFO - _eval_score_dist:191 - ATTACK: Mean=0.8248 STD=0.1406 Median=0.8534
+[10345 ms] INFO - _eval_score_dist:204 - Figure: /ids/src/models/label/lgbm_fl/report/figures/score_dist.png
+[10374 ms] INFO - _eval_confusion:215 - [OOF threshold]
               precision    recall  f1-score   support
 
-      Normal       1.00      0.55      0.71     37000
-      Attack       0.73      1.00      0.84     45332
+      Normal       1.00      0.58      0.73     37000
+      Attack       0.74      1.00      0.85     45332
 
-    accuracy                           0.80     82332
-   macro avg       0.86      0.77      0.77     82332
-weighted avg       0.85      0.80      0.78     82332
+    accuracy                           0.81     82332
+   macro avg       0.87      0.79      0.79     82332
+weighted avg       0.86      0.81      0.80     82332
 
-[10536 ms] INFO - _eval_confusion:223 - Figure: /ids/src/models/label/lgbm_fl/report/figures/confusion_oof_threshold.png
-[10536 ms] INFO - _eval_generalisation_gap:228 - Generalisation gaps (OOF threshold):
-[10536 ms] INFO - _eval_generalisation_gap:234 - recall: OOF=0.9998 Test=0.9999 - Gap=+0.0001 [:>]
-[10536 ms] INFO - _eval_generalisation_gap:234 - precision: OOF=0.9126 Test=0.7292 - Gap=-0.1834 [OVERFIT]
-[10536 ms] INFO - _eval_generalisation_gap:234 - f2: OOF=0.9811 Test=0.9308 - Gap=-0.0503 [OVERFIT]
-[10536 ms] INFO - _eval_generalisation_gap:234 - mcc: OOF=0.8520 Test=0.6304 - Gap=-0.2216 [OVERFIT]
-[10539 ms] INFO - _eval_fn_by_category:102 - FN breakdown by attack_cat:
-[10541 ms] INFO - _eval_fn_by_category:114 - Analysis: total=677  FN=0 FN_rate=0.0  median_score=0.9140454806694293
-[10542 ms] INFO - _eval_fn_by_category:114 - Backdoor: total=583  FN=0 FN_rate=0.0  median_score=0.9123180729022444
-[10542 ms] INFO - _eval_fn_by_category:114 - DoS: total=4089  FN=0 FN_rate=0.0  median_score=0.9352283396281279
-[10543 ms] INFO - _eval_fn_by_category:114 - Exploits: total=11132  FN=1 FN_rate=8.983111749909361e-05  median_score=0.9380493603293025
-[10544 ms] INFO - _eval_fn_by_category:114 - Fuzzers: total=6062  FN=0 FN_rate=0.0  median_score=0.8309029218499768
-[10545 ms] INFO - _eval_fn_by_category:114 - Generic: total=18871  FN=0 FN_rate=0.0  median_score=0.9249402447828554
-[10546 ms] INFO - _eval_fn_by_category:114 - Reconnaissance: total=3496  FN=1 FN_rate=0.0002860411899312683  median_score=0.933575648466006
-[10546 ms] INFO - _eval_fn_by_category:114 - Shellcode: total=378  FN=1 FN_rate=0.002645502645495647  median_score=0.915794879741144
-[10546 ms] INFO - _eval_fn_by_category:114 - Worms: total=44  FN=0 FN_rate=0.0  median_score=0.9433480486677366
-[10627 ms] INFO - _eval_fn_by_category:128 - Figure: /ids/src/models/label/lgbm_fl/report/figures/fn_by_category.png
-[10633 ms] INFO - _extra_report:44 - ECE (raw model) = 0.095895
-[10710 ms] INFO - _extra_report:57 - Figure: /ids/src/models/label/lgbm_fl/report/figures/calibration.png
-[10711 ms] INFO - evaluate:302 - lgbm_fl: saved report to /ids/src/models/label/lgbm_fl/report/report.json
+[10441 ms] INFO - _eval_confusion:223 - Figure: /ids/src/models/label/lgbm_fl/report/figures/confusion_oof_threshold.png
+[10441 ms] INFO - _eval_generalisation_gap:228 - Generalisation gaps (OOF threshold):
+[10441 ms] INFO - _eval_generalisation_gap:234 - recall: OOF=0.9997 Test=0.9996 - Gap=-0.0001 [:>]
+[10441 ms] INFO - _eval_generalisation_gap:234 - precision: OOF=0.9125 Test=0.7435 - Gap=-0.1691 [OVERFIT]
+[10441 ms] INFO - _eval_generalisation_gap:234 - f2: OOF=0.9810 Test=0.9352 - Gap=-0.0458 [OVERFIT]
+[10442 ms] INFO - _eval_generalisation_gap:234 - mcc: OOF=0.8517 Test=0.6546 - Gap=-0.1971 [OVERFIT]
+[10444 ms] INFO - _eval_fn_by_category:102 - FN breakdown by attack_cat:
+[10446 ms] INFO - _eval_fn_by_category:114 - Analysis: total=677  FN=0 FN_rate=0.0  median_score=0.8237031067886259
+[10447 ms] INFO - _eval_fn_by_category:114 - Backdoor: total=583  FN=0 FN_rate=0.0  median_score=0.8237031067886259
+[10447 ms] INFO - _eval_fn_by_category:114 - DoS: total=4089  FN=0 FN_rate=0.0  median_score=0.8818938481876721
+[10448 ms] INFO - _eval_fn_by_category:114 - Exploits: total=11132  FN=2 FN_rate=0.00017966223499818723  median_score=0.9272836699374578
+[10449 ms] INFO - _eval_fn_by_category:114 - Fuzzers: total=6062  FN=12 FN_rate=0.0019795447047175883  median_score=0.7052698042639721
+[10450 ms] INFO - _eval_fn_by_category:114 - Generic: total=18871  FN=1 FN_rate=5.2991362407924696e-05  median_score=0.8534406180526793
+[10450 ms] INFO - _eval_fn_by_category:114 - Reconnaissance: total=3496  FN=1 FN_rate=0.0002860411899312683  median_score=0.8786419919758114
+[10451 ms] INFO - _eval_fn_by_category:114 - Shellcode: total=378  FN=1 FN_rate=0.002645502645495647  median_score=0.8336503207236755
+[10451 ms] INFO - _eval_fn_by_category:114 - Worms: total=44  FN=0 FN_rate=0.0  median_score=0.9096745712408281
+[10530 ms] INFO - _eval_fn_by_category:128 - Figure: /ids/src/models/label/lgbm_fl/report/figures/fn_by_category.png
+[10536 ms] INFO - _extra_report:44 - ECE (raw model) = 0.039617
+[10610 ms] INFO - _extra_report:57 - Figure: /ids/src/models/label/lgbm_fl/report/figures/calibration.png
+[10611 ms] INFO - evaluate:302 - lgbm_fl: saved report to /ids/src/models/label/lgbm_fl/report/report.json

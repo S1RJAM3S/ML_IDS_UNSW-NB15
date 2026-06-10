@@ -102,7 +102,7 @@ class LGBMGBDTTrainer(CatTrainer):
         self.logger.info("Class distribution:")
         for cls, cnt in sorted(cnts.items()):
             min_fold_train = int(cnt * 0.9 * 0.9)  # 90% data, 90% train split in 10-fold
-            self.logger.info(f"{cls}: {cnt} - (balanced_weight={n_total/(self.n_classes*cnt):.1f} - min_fold_train~{min_fold_train})")
+            self.logger.info(f"{cls}: {cnt} - (balanced_weight={n_total/(self.n_classes*cnt)} - min_fold_train~{min_fold_train})")
 
         optuna.logging.set_verbosity(optuna.logging.WARNING)
 
@@ -121,13 +121,13 @@ class LGBMGBDTTrainer(CatTrainer):
             pr_auc = average_precision_score(y_bin, oof_probs, average='macro')
 
             preds = np.array(classes)[oof_probs.argmax(axis=1)]
-            self.logger.info(f"Trial {trial.number} - num_leaves={self.num_leaves} min_data={self.min_data_in_leaf} ff={self.feature_fraction:.1f} l1={self.lambda_l1:.1f} l2={self.lambda_l2:.1f} -> Macro PR-AUC={pr_auc:.6f}")
+            self.logger.info(f"Trial {trial.number} - num_leaves={self.num_leaves} min_data={self.min_data_in_leaf} ff={self.feature_fraction} l1={self.lambda_l1} l2={self.lambda_l2} -> Macro PR-AUC={pr_auc}")
             for cls in sorted(classes):
                 m = y_arr == cls
                 if m.sum() == 0:
                     continue
                 r = recall_score(y_arr[m], preds[m], average='micro', zero_division=0)
-                self.logger.info(f"{cls}: recall={r:.4f} (n={m.sum()})")
+                self.logger.info(f"{cls}: recall={r} (n={m.sum()})")
             return pr_auc
 
         study = optuna.create_study(direction='maximize', sampler=optuna.samplers.TPESampler(seed=42))
@@ -138,10 +138,10 @@ class LGBMGBDTTrainer(CatTrainer):
         self.feature_fraction = study.best_params['feature_fraction']
         self.lambda_l1 = study.best_params['lambda_l1']
         self.lambda_l2 = study.best_params['lambda_l2']
-        self.logger.info(f"Best params: {study.best_params} -> Macro PR-AUC={study.best_value:.6f}")
+        self.logger.info(f"Best params: {study.best_params} -> Macro PR-AUC={study.best_value}")
 
         oof_probs, mean_recall, classes = self._cv_loop(X_arr, y_arr)
-        self.logger.info(f"Mean OOF Macro Recall = {mean_recall:.4f}")
+        self.logger.info(f"Mean OOF Macro Recall = {mean_recall}")
 
         preds = np.array(classes)[oof_probs.argmax(axis=1)]
         per_cls = {}
@@ -150,7 +150,7 @@ class LGBMGBDTTrainer(CatTrainer):
             if m.sum() == 0:
                 continue
             r = recall_score(y_arr[m], preds[m], average='micro', zero_division=0)
-            self.logger.info(f"{cls}: recall={r:.4f}  (n={m.sum()})")
+            self.logger.info(f"{cls}: recall={r}  (n={m.sum()})")
             per_cls[cls] = float(r)
 
         sss = StratifiedShuffleSplit(n_splits=1, test_size=0.10, random_state=42)
@@ -174,7 +174,6 @@ class LGBMGBDTTrainer(CatTrainer):
             lambda_l2=self.lambda_l2,
         )
         m_final.fit(X_arr, y_arr)
-        self.logger.info("Final model trained on full dataset.")
 
         joblib.dump(m_final, ARTIFACTS_DIR / f'{name}.joblib')
         np.save(ARTIFACTS_DIR / f'{name}_oof.npy', oof_probs)
@@ -199,9 +198,12 @@ class LGBMGBDTTrainer(CatTrainer):
 
 
 if __name__ == '__main__':
+    label_path = PATH.parent.parent / 'label' / 'lgbm_fl' / 'artifacts'
+    with open(label_path / 'lgbm_fl_res.json', 'r') as f:
+        label_threshold = float(json.load(f)['threshold'])
     t = LGBMGBDTTrainer(artifacts_dir=ARTIFACTS_DIR, logger=logger)
     t.train(
         name='lgbm_gbdt',
-        label_oof_path=PATH.parent.parent / 'label' / 'lgbm_fl' / 'artifacts' / 'lgbm_fl_oof.npy',
-        label_threshold=0.2513065326633166,
+        label_oof_path = PATH.parent.parent / 'label' / 'lgbm_fl' / 'artifacts' / 'lgbm_fl_oof.npy',
+        label_threshold = label_threshold,
     )

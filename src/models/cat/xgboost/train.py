@@ -25,7 +25,7 @@ logger = make_logger(__name__, str(PATH / 'xgboost.log'))
 N_TRIALS = 10
 
 PARAMS = {
-    'n_estimators': 4000,
+    'n_estimators': 1000,
     'learning_rate': 0.05,
     'objective': 'multi:softprob',
     'tree_method': 'hist',
@@ -105,7 +105,7 @@ class XGBoostTrainer(CatTrainer):
         n_total = sum(cnts.values())
         for cls, cnt in sorted(cnts.items()):
             min_fold_train = int(cnt * 0.9 * 0.9)
-            self.logger.info(f"{cls}: {cnt} - (balanced_weight={n_total/(self.n_classes*cnt):.1f} - min_fold_train~{min_fold_train})")
+            self.logger.info(f"{cls}: {cnt} - (balanced_weight={n_total/(self.n_classes*cnt)} - min_fold_train~{min_fold_train})")
 
         optuna.logging.set_verbosity(optuna.logging.WARNING)
 
@@ -126,13 +126,13 @@ class XGBoostTrainer(CatTrainer):
             pred_ints = oof_probs.argmax(axis=1)
             preds = le.inverse_transform(pred_ints)
             
-            self.logger.info(f"Trial {trial.number} - max_depth={self.max_depth} subsample={self.subsample:.1f} colsample={self.colsample_bytree:.1f} min_child_w={self.min_child_weight} l2={self.reg_lambda:.2f} l1={self.reg_alpha:.1f} -> Macro PR-AUC={pr_auc:.6f}")
+            self.logger.info(f"Trial {trial.number} - max_depth={self.max_depth} subsample={self.subsample} colsample={self.colsample_bytree} min_child_w={self.min_child_weight} l2={self.reg_lambda} l1={self.reg_alpha} -> Macro PR-AUC={pr_auc}")
             for cls in sorted(string_classes):
                 m = y_arr == cls
                 if m.sum() == 0:
                     continue
                 r = recall_score(y_arr[m], preds[m], average='micro', zero_division=0)
-                self.logger.info(f"{cls}: recall={r:.4f} (n={m.sum()})")
+                self.logger.info(f"{cls}: recall={r} (n={m.sum()})")
             return pr_auc
 
         study = optuna.create_study(direction='maximize', sampler=optuna.samplers.TPESampler(seed=42))
@@ -143,10 +143,10 @@ class XGBoostTrainer(CatTrainer):
         self.min_child_weight = study.best_params['min_child_weight']
         self.reg_lambda = study.best_params['reg_lambda']
         self.reg_alpha = study.best_params['reg_alpha']
-        self.logger.info(f"Best params: {study.best_params} -> Macro PR-AUC={study.best_value:.6f}")
+        self.logger.info(f"Best params: {study.best_params} -> Macro PR-AUC={study.best_value}")
 
         oof_probs, mean_recall, classes = self._cv_loop(X_arr, y_encoded)
-        self.logger.info(f"Mean OOF Macro Recall = {mean_recall:.4f}")
+        self.logger.info(f"Mean OOF Macro Recall = {mean_recall}")
 
         pred_ints = oof_probs.argmax(axis=1)
         preds = le.inverse_transform(pred_ints)
@@ -157,10 +157,9 @@ class XGBoostTrainer(CatTrainer):
             if mask.sum() == 0:
                 continue
             r = recall_score(y_arr[mask], preds[mask], average='micro', zero_division=0)
-            self.logger.info(f"{cls}: recall={r:.4f}  (n={mask.sum()})")
+            self.logger.info(f"{cls}: recall={r}  (n={mask.sum()})")
             per_cls[cls] = float(r)
 
-        self.logger.info("Finding best_iteration via 10% hold-out...")
         sss = StratifiedShuffleSplit(n_splits=1, test_size=0.10, random_state=42)
         tr_idx, val_idx = next(sss.split(X_arr, y_encoded))
         
@@ -174,7 +173,7 @@ class XGBoostTrainer(CatTrainer):
         best_iter = probe.best_iteration
         if best_iter is None or best_iter <= 0:
             best_iter = PARAMS['n_estimators']
-            self.logger.info(f"Early stopping did not trigger — using n_estimators={best_iter}")
+            self.logger.info(f"Early stopping did not trigger - using n_estimators={best_iter}")
         else:
             self.logger.info(f"Early stopping: best_iteration = {best_iter}")
 
@@ -217,8 +216,11 @@ class XGBoostTrainer(CatTrainer):
 
 
 if __name__ == '__main__':
+    label_path = PATH.parent.parent / 'label' / 'lgbm_fl' / 'artifacts'
+    with open(label_path / 'lgbm_fl_res.json', 'r') as f:
+        label_threshold = float(json.load(f)['threshold'])
     t = XGBoostTrainer(artifacts_dir=ARTIFACTS_DIR, logger=logger)
     t.train(
         label_oof_path  = PATH.parent.parent / 'label' / 'lgbm_fl' / 'artifacts' / 'lgbm_fl_oof.npy',
-        label_threshold = 0.2513065326633166,
+        label_threshold = label_threshold,
     )

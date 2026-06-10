@@ -1,38 +1,42 @@
-[636 ms] INFO - load_meta_features:49 - Stage 1 filter: 130747 rows kept (44594 dropped)
-[675 ms] INFO - load_meta_features:67 - Meta-feature matrix: (130747, 30)  (3 models × 10 classes)
-[675 ms] INFO - train:75 - Classes: ['Analysis', 'Backdoor', 'DoS', 'Exploits', 'Fuzzers', 'Generic', 'Normal', 'Reconnaissance', 'Shellcode', 'Worms']
-[676 ms] INFO - train:76 - Class distribution:
-[736 ms] INFO - train:78 - Analysis: 1997
-[736 ms] INFO - train:78 - Backdoor: 1746
-[737 ms] INFO - train:78 - DoS: 12263
-[737 ms] INFO - train:78 - Exploits: 33388
-[737 ms] INFO - train:78 - Fuzzers: 18176
-[737 ms] INFO - train:78 - Generic: 39999
-[737 ms] INFO - train:78 - Normal: 11425
-[737 ms] INFO - train:78 - Reconnaissance: 10490
-[737 ms] INFO - train:78 - Shellcode: 1133
-[737 ms] INFO - train:78 - Worms: 130
-[26180 ms] INFO - train:97 - Fold 1/10 - Macro Recall = 0.5577679228362915
-[52181 ms] INFO - train:97 - Fold 2/10 - Macro Recall = 0.5899936910902309
-[77612 ms] INFO - train:97 - Fold 3/10 - Macro Recall = 0.5489145565808884
-[102500 ms] INFO - train:97 - Fold 4/10 - Macro Recall = 0.5383706785478208
-[127779 ms] INFO - train:97 - Fold 5/10 - Macro Recall = 0.5711192319012357
-[153032 ms] INFO - train:97 - Fold 6/10 - Macro Recall = 0.5546707759498836
-[178411 ms] INFO - train:97 - Fold 7/10 - Macro Recall = 0.5611443181946341
-[203858 ms] INFO - train:97 - Fold 8/10 - Macro Recall = 0.5623952972074139
-[228878 ms] INFO - train:97 - Fold 9/10 - Macro Recall = 0.5693856581294469
-[254364 ms] INFO - train:97 - Fold 10/10 - Macro Recall = 0.568430034330103
-[254366 ms] INFO - train:100 - Mean OOF Macro Recall: 0.5622192164767948
-[254371 ms] INFO - train:104 - Per-class OOF Recall:
-[254379 ms] INFO - train:110 - Analysis: 0.4727090635953931  (n=1997)
-[254386 ms] INFO - train:110 - Backdoor: 0.4238258877434135  (n=1746)
-[254418 ms] INFO - train:110 - DoS: 0.4715811791568132  (n=12263)
-[254480 ms] INFO - train:110 - Exploits: 0.4068827123517431  (n=33388)
-[254515 ms] INFO - train:110 - Fuzzers: 0.4061399647887324  (n=18176)
-[254591 ms] INFO - train:110 - Generic: 0.9777494437360934  (n=39999)
-[254613 ms] INFO - train:110 - Normal: 0.6134792122538293  (n=11425)
-[254633 ms] INFO - train:110 - Reconnaissance: 0.3566253574833174  (n=10490)
-[254636 ms] INFO - train:110 - Shellcode: 0.677846425419241  (n=1133)
-[254638 ms] INFO - train:110 - Worms: 0.8153846153846154  (n=130)
-[282389 ms] INFO - train:132 - RESULT: mean_oof_macro_recall=0.5622
-[282390 ms] INFO - train:133 - Per-class: {'Analysis': 0.4727090635953931, 'Backdoor': 0.4238258877434135, 'DoS': 0.4715811791568132, 'Exploits': 0.4068827123517431, 'Fuzzers': 0.4061399647887324, 'Generic': 0.9777494437360934, 'Normal': 0.6134792122538293, 'Reconnaissance': 0.3566253574833174, 'Shellcode': 0.677846425419241, 'Worms': 0.8153846153846154}
+[730 ms] INFO - load_meta_features:53 - Stage 1 filter: 130748 rows kept
+[806 ms] INFO - load_meta_features:59 - Hold-out for meta-training: 26150 samples
+[1567 ms] INFO - load_meta_features:70 - lgbm_gbdt: shape=(26150, 10)
+[2075 ms] INFO - load_meta_features:70 - balanced_rf: shape=(26150, 10)
+[2558 ms] INFO - load_meta_features:70 - xgboost: shape=(26150, 10)
+[2563 ms] INFO - load_meta_features:76 - Meta-feature matrix: (26150, 30)
+[2568 ms] INFO - train:83 - Classes: ['Analysis', 'Backdoor', 'DoS', 'Exploits', 'Fuzzers', 'Generic', 'Normal', 'Reconnaissance', 'Shellcode', 'Worms']
+[2568 ms] INFO - train:84 - Class distribution:
+[2581 ms] INFO - train:86 - Analysis: 398
+[2581 ms] INFO - train:86 - Backdoor: 349
+[2581 ms] INFO - train:86 - DoS: 2453
+[2581 ms] INFO - train:86 - Exploits: 6677
+[2581 ms] INFO - train:86 - Fuzzers: 3635
+[2581 ms] INFO - train:86 - Generic: 8000
+[2581 ms] INFO - train:86 - Normal: 2287
+[2581 ms] INFO - train:86 - Reconnaissance: 2098
+[2581 ms] INFO - train:86 - Shellcode: 227
+[2581 ms] INFO - train:86 - Worms: 26
+[3100 ms] INFO - train:109 - Fold 1/10 - Macro Recall = 0.5580274766585004
+[3821 ms] INFO - train:109 - Fold 2/10 - Macro Recall = 0.6092960464552037
+[4425 ms] INFO - train:109 - Fold 3/10 - Macro Recall = 0.5570738241716382
+[4982 ms] INFO - train:109 - Fold 4/10 - Macro Recall = 0.616800201147966
+[5611 ms] INFO - train:109 - Fold 5/10 - Macro Recall = 0.6191827418336922
+[6266 ms] INFO - train:109 - Fold 6/10 - Macro Recall = 0.5595656579366102
+[6928 ms] INFO - train:109 - Fold 7/10 - Macro Recall = 0.6342714783445017
+[7306 ms] INFO - train:109 - Fold 8/10 - Macro Recall = 0.612084619066248
+[7975 ms] INFO - train:109 - Fold 9/10 - Macro Recall = 0.6135855518981697
+[8633 ms] INFO - train:109 - Fold 10/10 - Macro Recall = 0.6147662520315897
+[8633 ms] INFO - train:112 - Mean OOF Macro Recall: 0.5994653849544119
+[8634 ms] INFO - train:116 - Per-class OOF Recall:
+[8636 ms] INFO - train:122 - Analysis: 0.30904522613065327  (n=398)
+[8638 ms] INFO - train:122 - Backdoor: 0.41260744985673353  (n=349)
+[8644 ms] INFO - train:122 - DoS: 0.31879331430900937  (n=2453)
+[8657 ms] INFO - train:122 - Exploits: 0.5274824022764715  (n=6677)
+[8665 ms] INFO - train:122 - Fuzzers: 0.5980742778541953  (n=3635)
+[8680 ms] INFO - train:122 - Generic: 0.95525  (n=8000)
+[8685 ms] INFO - train:122 - Normal: 0.6829908176650634  (n=2287)
+[8690 ms] INFO - train:122 - Reconnaissance: 0.5309818875119161  (n=2098)
+[8692 ms] INFO - train:122 - Shellcode: 0.7929515418502202  (n=227)
+[8693 ms] INFO - train:122 - Worms: 0.8846153846153846  (n=26)
+[9294 ms] INFO - train:146 - RESULT: mean_oof_macro_recall=0.5995
+[9294 ms] INFO - train:147 - Per-class: {'Analysis': 0.30904522613065327, 'Backdoor': 0.41260744985673353, 'DoS': 0.31879331430900937, 'Exploits': 0.5274824022764715, 'Fuzzers': 0.5980742778541953, 'Generic': 0.95525, 'Normal': 0.6829908176650634, 'Reconnaissance': 0.5309818875119161, 'Shellcode': 0.7929515418502202, 'Worms': 0.8846153846153846}

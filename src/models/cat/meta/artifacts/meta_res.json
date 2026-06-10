@@ -1,16 +1,16 @@
 {
-  "mean_oof_macro_recall": 0.5622192164767948,
+  "mean_oof_macro_recall": 0.5994653849544119,
   "per_class_oof_recall": {
-    "Analysis": 0.4727090635953931,
-    "Backdoor": 0.4238258877434135,
-    "DoS": 0.4715811791568132,
-    "Exploits": 0.4068827123517431,
-    "Fuzzers": 0.4061399647887324,
-    "Generic": 0.9777494437360934,
-    "Normal": 0.6134792122538293,
-    "Reconnaissance": 0.3566253574833174,
-    "Shellcode": 0.677846425419241,
-    "Worms": 0.8153846153846154
+    "Analysis": 0.30904522613065327,
+    "Backdoor": 0.41260744985673353,
+    "DoS": 0.31879331430900937,
+    "Exploits": 0.5274824022764715,
+    "Fuzzers": 0.5980742778541953,
+    "Generic": 0.95525,
+    "Normal": 0.6829908176650634,
+    "Reconnaissance": 0.5309818875119161,
+    "Shellcode": 0.7929515418502202,
+    "Worms": 0.8846153846153846
   },
   "classes": [
     "Analysis",
@@ -33,11 +33,16 @@
   "meta_features": 30,
   "n_splits": 10,
   "meta_params": {
+    "objective": "multiclass",
+    "num_class": 10,
     "class_weight": "balanced",
-    "penalty": "l2",
-    "C": 2.0,
-    "max_iter": 1000,
+    "max_depth": 2,
+    "num_leaves": 4,
+    "min_data_in_leaf": 100,
+    "learning_rate": 0.03,
+    "n_estimators": 50,
     "random_state": 42,
-    "n_jobs": -1
+    "n_jobs": -1,
+    "verbose": -1
   }
 }

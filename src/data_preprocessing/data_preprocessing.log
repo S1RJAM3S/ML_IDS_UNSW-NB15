@@ -1,162 +1,18 @@
-[1684 ms] INFO - audit:46 - Shape: (175341, 45)
-[1688 ms] INFO - audit:47 - Null counts (Should be 0): 0
-[1691 ms] INFO - audit:48 - attack_cat: 10
-[1733 ms] INFO - process:68 - Spearman correlation: 0.906898 -> Drop: False
-[1788 ms] INFO - process:104 - Engineered features: srv_diversity, dst_concentration
-[1904 ms] INFO - select:125 - Low variance (<0.01): ['tcprtt', 'synack', 'ackdat', 'tcp_seq_one_sided', 'win_asymmetry']
-[4221 ms] INFO - select:138 - Spearman pairs (>0.90): 63
-[4221 ms] INFO - select:140 - spkts - dpkts: 0.910312
-[4221 ms] INFO - select:140 - spkts - sbytes: 0.901268
-[4221 ms] INFO - select:140 - spkts - sloss: 0.923744
-[4221 ms] INFO - select:140 - spkts - dloss: 0.906646
-[4221 ms] INFO - select:140 - dpkts - dbytes: 0.989853
-[4221 ms] INFO - select:140 - dpkts - sloss: 0.932717
-[4221 ms] INFO - select:140 - dpkts - dloss: 0.956419
-[4221 ms] INFO - select:140 - dpkts - swin: 0.900488
-[4221 ms] INFO - select:140 - dpkts - dwin: 0.910657
-[4221 ms] INFO - select:140 - dpkts - bytes_per_pkt_dst: 0.954385
-[4221 ms] INFO - select:140 - dpkts - synack_ratio: 0.908423
-[4221 ms] INFO - select:140 - dbytes - sloss: 0.900808
-[4221 ms] INFO - select:140 - dbytes - dloss: 0.946843
-[4221 ms] INFO - select:140 - dbytes - bytes_per_pkt_dst: 0.981055
-[4221 ms] INFO - select:140 - rate - sinpkt: 0.950215
-[4221 ms] INFO - select:140 - dttl - dinpkt: 0.959559
-[4221 ms] INFO - select:140 - dttl - tcprtt: 0.924091
-[4221 ms] INFO - select:140 - dttl - synack: 0.923848
-[4221 ms] INFO - select:140 - dttl - ackdat: 0.924208
-[4221 ms] INFO - select:140 - dttl - ack_ratio: 0.920462
-[4221 ms] INFO - select:140 - sloss - dloss: 0.954988
-[4221 ms] INFO - select:140 - sloss - swin: 0.944651
-[4221 ms] INFO - select:140 - sloss - dwin: 0.938721
-[4221 ms] INFO - select:140 - sloss - synack_ratio: 0.923650
-[4221 ms] INFO - select:140 - dloss - swin: 0.932627
-[4221 ms] INFO - select:140 - dloss - dwin: 0.941848
-[4221 ms] INFO - select:140 - dloss - synack_ratio: 0.937983
-[4221 ms] INFO - select:140 - dinpkt - sjit: 0.916034
-[4221 ms] INFO - select:140 - dinpkt - djit: 0.936986
-[4221 ms] INFO - select:140 - dinpkt - tcprtt: 0.922512
-[4221 ms] INFO - select:140 - dinpkt - synack: 0.920925
-[4221 ms] INFO - select:140 - dinpkt - ackdat: 0.921404
-[4221 ms] INFO - select:140 - dinpkt - ack_ratio: 0.901104
-[4221 ms] INFO - select:140 - sjit - djit: 0.916434
-[4221 ms] INFO - select:140 - sjit - tcprtt: 0.902464
-[4221 ms] INFO - select:140 - sjit - synack: 0.900769
-[4221 ms] INFO - select:140 - sjit - ackdat: 0.901180
-[4221 ms] INFO - select:140 - djit - swin: 0.901115
-[4221 ms] INFO - select:140 - djit - dwin: 0.910509
-[4221 ms] INFO - select:140 - djit - ackdat: 0.900041
-[4221 ms] INFO - select:140 - swin - dwin: 0.990180
-[4221 ms] INFO - select:140 - swin - tcprtt: 0.933725
-[4221 ms] INFO - select:140 - swin - synack: 0.933723
-[4221 ms] INFO - select:140 - swin - ackdat: 0.933726
-[4221 ms] INFO - select:140 - swin - synack_ratio: 0.933745
-[4221 ms] INFO - select:140 - swin - ack_ratio: 0.933743
-[4221 ms] INFO - select:140 - dwin - tcprtt: 0.942980
-[4221 ms] INFO - select:140 - dwin - synack: 0.942986
-[4221 ms] INFO - select:140 - dwin - ackdat: 0.942971
-[4221 ms] INFO - select:140 - dwin - synack_ratio: 0.942999
-[4221 ms] INFO - select:140 - dwin - ack_ratio: 0.942967
-[4221 ms] INFO - select:140 - tcprtt - synack: 0.996785
-[4221 ms] INFO - select:140 - tcprtt - ackdat: 0.993672
-[4221 ms] INFO - select:140 - tcprtt - ack_ratio: 0.954123
-[4221 ms] INFO - select:140 - synack - ackdat: 0.984360
-[4221 ms] INFO - select:140 - synack - ack_ratio: 0.941579
-[4221 ms] INFO - select:140 - ackdat - ack_ratio: 0.973229
-[4221 ms] INFO - select:140 - trans_depth - ct_flw_http_mthd: 0.999620
-[4221 ms] INFO - select:140 - ct_srv_src - ct_srv_dst: 0.920212
-[4221 ms] INFO - select:140 - ct_state_ttl - bytes_per_pkt_dst: 0.901589
-[4221 ms] INFO - select:140 - bytes_ratio - pkts_ratio: 0.922079
-[4221 ms] INFO - select:140 - bytes_ratio - bytes_per_pkt_dst: 0.912655
-[4221 ms] INFO - select:140 - pkts_ratio - bytes_per_pkt_dst: 0.906902
-[30773 ms] INFO - select:148 - High VIF (>10): ['proto', 'state', 'spkts', 'dpkts', 'sbytes', 'dbytes', 'sttl', 'dttl', 'sloss', 'dloss', 'sinpkt', 'dinpkt', 'sjit', 'djit', 'swin', 'dwin', 'tcprtt', 'synack', 'ackdat', 'ct_srv_src', 'ct_state_ttl', 'ct_dst_ltm', 'ct_src_dport_ltm', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_src_ltm', 'ct_srv_dst', 'bytes_ratio', 'pkts_ratio', 'bytes_per_pkt_src', 'bytes_per_pkt_dst', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'win_asymmetry', 'dst_concentration']
-[95374 ms] INFO - select:155 - Low MI (0.1): ['is_ftp_login', 'tcp_seq_one_sided', 'ct_ftp_cmd']
-[147192 ms] INFO - select:171 - Low gain (0.05): NO!
-[206937 ms] INFO - select:179 - Near-zero permutation importance (binary): ['dloss', 'tcprtt', 'is_short', 'zero_win', 'service', 'ct_dst_ltm', 'ct_srv_src', 'synack', 'djit', 'sinpkt', 'ct_dst_src_ltm', 'bytes_per_pkt_dst', 'bytes_per_pkt_src', 'dur', 'dpkts', 'ct_dst_sport_ltm', 'response_body_len', 'proto', 'tcp_seq_established', 'is_ftp', 'ct_srv_dst', 'sbytes', 'pkts_ratio', 'dbytes', 'tcp_seq_one_sided', 'is_ftp_login', 'dst_concentration', 'is_tcp', 'dttl', 'bytes_ratio', 'rate', 'ct_src_dport_ltm', 'ct_ftp_cmd', 'state', 'swin', 'dwin', 'ct_src_ltm', 'is_sm_ips_ports', 'is_http', 'trans_depth', 'is_zero_dur']
-[219868 ms] INFO - select:192 - Low SHAP (0.05): NO!
-[219868 ms] INFO - select:208 - Dropping 32 features: ['ackdat', 'bytes_per_pkt_dst', 'bytes_per_pkt_src', 'bytes_ratio', 'ct_dst_ltm', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_ftp_cmd', 'ct_src_dport_ltm', 'ct_src_ltm', 'ct_srv_dst', 'ct_srv_src', 'dbytes', 'djit', 'dloss', 'dpkts', 'dst_concentration', 'dttl', 'dwin', 'is_ftp_login', 'pkts_ratio', 'proto', 'rate', 'sbytes', 'sinpkt', 'state', 'swin', 'synack', 'tcp_seq_one_sided', 'tcprtt', 'trans_depth', 'win_asymmetry']
-[219868 ms] INFO - select:211 - RFECV Pass 1 (binary recall - Stage 1 label model)...
-[245034 ms] INFO - select:228 - RFECV label - count: 17, removed: ['is_sm_ips_ports', 'tcp_seq_established', 'is_tcp', 'is_http', 'is_zero_dur', 'zero_win']
-[245034 ms] INFO - select:229 - selected_label: ['dur', 'service', 'spkts', 'sttl', 'sloss', 'dinpkt', 'sjit', 'response_body_len', 'ct_state_ttl', 'ct_flw_http_mthd', 'is_ftp', 'is_short', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'srv_diversity']
-[245034 ms] INFO - select:239 - RFECV Pass 2: offering ['proto', 'state'] as candidates; always-keeping []
-[245034 ms] INFO - select:241 - RFECV Pass 2 (multiclass macro recall - Stage 2 cat model)...
-[545165 ms] INFO - select:258 - RFECV cat   — count: 17, removed: ['is_sm_ips_ports', 'tcp_seq_established', 'is_tcp', 'is_ftp', 'is_zero_dur', 'is_short', 'zero_win', 'state']
-[545165 ms] INFO - select:265 - selected_cat (final): ['dur', 'service', 'spkts', 'sttl', 'sloss', 'dinpkt', 'sjit', 'response_body_len', 'ct_state_ttl', 'ct_flw_http_mthd', 'is_http', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'srv_diversity', 'proto']
-[545165 ms] INFO - select:268 - Union feature count: 19 — label: 17, cat: 17
-[545847 ms] INFO - audit:46 - Shape: (82332, 45)
-[545850 ms] INFO - audit:47 - Null counts (Should be 0): 0
-[545851 ms] INFO - audit:48 - attack_cat: 10
-[545878 ms] INFO - process:104 - Engineered features: srv_diversity, dst_concentration
-[546060 ms] INFO - main:438 - TRAIN RESULTS:
-{'X_train':              dur     spkts      sttl     sloss  ...  service_11  service_12  label  attack_cat
-0       0.220981  0.577833 -0.010417  0.000000  ...         0.0         0.0      0      Normal
-1       0.975524  1.097591 -1.000000  0.792481  ...         0.0         0.0      0      Normal
-2       1.881698  0.749222 -1.000000  0.500000  ...         0.0         0.0      0      Normal
-3       1.924816  1.000000 -1.000000  0.500000  ...         0.0         0.0      0      Normal
-4       0.722369  0.886074  0.000000  0.792481  ...         0.0         0.0      0      Normal
-...          ...       ...       ...       ...  ...         ...         ...    ...         ...
-175336 -0.003072  0.000000  0.000000  0.000000  ...         0.0         0.0      1     Generic
-175337  0.796856  0.886074  0.000000  0.792481  ...         0.0         0.0      1   Shellcode
-175338 -0.003072  0.000000  0.000000  0.000000  ...         0.0         0.0      1     Generic
-175339 -0.003072  0.000000  0.000000  0.000000  ...         0.0         0.0      1     Generic
-175340 -0.003072  0.000000  0.000000  0.000000  ...         0.0         0.0      1     Generic
-
-[175341 rows x 43 columns], 'y_label': 0         0
-1         0
-2         0
-3         0
-4         0
-         ..
-175336    1
-175337    1
-175338    1
-175339    1
-175340    1
-Name: label, Length: 175341, dtype: int64, 'y_cat': 0            Normal
-1            Normal
-2            Normal
-3            Normal
-4            Normal
-            ...    
-175336      Generic
-175337    Shellcode
-175338      Generic
-175339      Generic
-175340      Generic
-Name: attack_cat, Length: 175341, dtype: str, 'pipeline': Pipeline(), 'artifacts': {'is_drop': False, 'corr': 0.906898, 'selected_label': ['dur', 'service', 'spkts', 'sttl', 'sloss', 'dinpkt', 'sjit', 'response_body_len', 'ct_state_ttl', 'ct_flw_http_mthd', 'is_ftp', 'is_short', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'srv_diversity'], 'selected_cat': ['dur', 'service', 'spkts', 'sttl', 'sloss', 'dinpkt', 'sjit', 'response_body_len', 'ct_state_ttl', 'ct_flw_http_mthd', 'is_http', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'srv_diversity', 'proto'], 'selected_union': ['dur', 'service', 'spkts', 'sttl', 'sloss', 'dinpkt', 'sjit', 'response_body_len', 'ct_state_ttl', 'ct_flw_http_mthd', 'is_ftp', 'is_short', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'srv_diversity', 'is_http', 'proto'], 'selected_label_cols': ['dur', 'spkts', 'sttl', 'sloss', 'dinpkt', 'sjit', 'response_body_len', 'ct_state_ttl', 'ct_flw_http_mthd', 'is_ftp', 'is_short', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'srv_diversity', 'service_0', 'service_1', 'service_2', 'service_3', 'service_4', 'service_5', 'service_6', 'service_7', 'service_8', 'service_9', 'service_10', 'service_11', 'service_12'], 'selected_cat_cols': ['dur', 'spkts', 'sttl', 'sloss', 'dinpkt', 'sjit', 'response_body_len', 'ct_state_ttl', 'ct_flw_http_mthd', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'srv_diversity', 'is_http', 'proto_enc', 'proto_enc_Analysis', 'proto_enc_Backdoor', 'proto_enc_DoS', 'proto_enc_Exploits', 'proto_enc_Fuzzers', 'proto_enc_Generic', 'proto_enc_Normal', 'proto_enc_Reconnaissance', 'proto_enc_Shellcode', 'proto_enc_Worms', 'service_0', 'service_1', 'service_2', 'service_3', 'service_4', 'service_5', 'service_6', 'service_7', 'service_8', 'service_9', 'service_10', 'service_11', 'service_12']}, 'selected_label': ['dur', 'service', 'spkts', 'sttl', 'sloss', 'dinpkt', 'sjit', 'response_body_len', 'ct_state_ttl', 'ct_flw_http_mthd', 'is_ftp', 'is_short', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'srv_diversity'], 'selected_cat': ['dur', 'service', 'spkts', 'sttl', 'sloss', 'dinpkt', 'sjit', 'response_body_len', 'ct_state_ttl', 'ct_flw_http_mthd', 'is_http', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'srv_diversity', 'proto']}
-[546081 ms] INFO - main:439 - TEST RESULTS:
-{'X_test':             dur     spkts      sttl  sloss  ...  service_11  service_12  label  attack_cat
-0     -0.003068  0.000000  0.000000    0.0  ...         0.0         0.0      0      Normal
-1     -0.003074  0.000000  0.000000    0.0  ...         0.0         0.0      0      Normal
-2     -0.003080  0.000000  0.000000    0.0  ...         0.0         0.0      0      Normal
-3     -0.003078  0.000000  0.000000    0.0  ...         0.0         0.0      0      Normal
-4     -0.003070  0.000000  0.000000    0.0  ...         0.0         0.0      0      Normal
-...         ...       ...       ...    ...  ...         ...         ...    ...         ...
-82327 -0.003080  0.000000  0.000000    0.0  ...         0.0         0.0      0      Normal
-82328  1.452643  1.327055  0.000000    1.5  ...         0.0         0.0      0      Normal
-82329 -0.003089 -0.276516 -1.322917    0.0  ...         0.0         0.0      0      Normal
-82330 -0.003089 -0.276516 -1.322917    0.0  ...         0.0         0.0      0      Normal
-82331 -0.003072  0.000000  0.000000    0.0  ...         0.0         0.0      0      Normal
-
-[82332 rows x 43 columns], 'y_label': 0        0
-1        0
-2        0
-3        0
-4        0
-        ..
-82327    0
-82328    0
-82329    0
-82330    0
-82331    0
-Name: label, Length: 82332, dtype: int64, 'y_cat': 0        Normal
-1        Normal
-2        Normal
-3        Normal
-4        Normal
-          ...  
-82327    Normal
-82328    Normal
-82329    Normal
-82330    Normal
-82331    Normal
-Name: attack_cat, Length: 82332, dtype: str}
+[1125 ms] INFO - main:285 - Starting Data Preprocessing Pipeline...
+[1442 ms] INFO - audit:47 - Shape: (175341, 45)
+[1447 ms] INFO - audit:48 - Null counts (Should be 0): 0
+[1449 ms] INFO - audit:49 - attack_cat classes: 10
+[1526 ms] INFO - process:71 - Spearman correlation (rate): 0.9068982012442013 -> Drop: False
+[1570 ms] INFO - process:101 - Engineered robust behavioural features, removed protocol dependencies.
+[1600 ms] INFO - select:115 - Low variance (<0.01): ['tcprtt', 'synack', 'ackdat', 'tcp_seq_one_sided', 'win_asymmetry']
+[3109 ms] INFO - select:126 - Highly correlated Spearman pairs (>0.90): 65
+[19458 ms] INFO - select:134 - High VIF (>10): ['spkts', 'dpkts', 'sbytes', 'dbytes', 'sttl', 'dttl', 'sloss', 'dloss', 'sinpkt', 'dinpkt', 'sjit', 'djit', 'swin', 'dwin', 'tcprtt', 'synack', 'ackdat', 'ct_srv_src', 'ct_state_ttl', 'ct_dst_ltm', 'ct_src_dport_ltm', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_src_ltm', 'ct_srv_dst', 'bytes_ratio', 'pkts_ratio', 'bytes_per_pkt_src', 'bytes_per_pkt_dst', 'jitter_ratio', 'interpacket_ratio', 'synack_ratio', 'ack_ratio', 'win_asymmetry', 'dst_concentration']
+[172976 ms] INFO - select:178 - Dropping 28 weak/collinear features: ['ackdat', 'bytes_per_pkt_dst', 'bytes_per_pkt_src', 'bytes_ratio', 'ct_dst_ltm', 'ct_dst_sport_ltm', 'ct_dst_src_ltm', 'ct_ftp_cmd', 'ct_src_dport_ltm', 'ct_src_ltm', 'ct_srv_dst', 'ct_srv_src', 'dbytes', 'dloss', 'dpkts', 'dst_concentration', 'dttl', 'dwin', 'is_ftp_login', 'pkts_ratio', 'sbytes', 'sjit', 'sloss', 'swin', 'synack', 'tcp_seq_one_sided', 'tcprtt', 'win_asymmetry']
+[172976 ms] INFO - select:181 - Running RFECV Pass 1 (Stage 1 Binary)...
+[190095 ms] INFO - select:192 - Running RFECV Pass 2 (Stage 2 Multi-class)...
+[374207 ms] INFO - audit:47 - Shape: (82332, 45)
+[374209 ms] INFO - audit:48 - Null counts (Should be 0): 0
+[374211 ms] INFO - audit:49 - attack_cat classes: 10
+[374248 ms] INFO - process:101 - Engineered robust behavioural features, removed protocol dependencies.
+[374304 ms] INFO - main:288 - TRAIN COMPLETED: {'X_train_shape': (175341, 20), 'selected_label_count': 18, 'selected_cat_count': 15, 'union_count': 18}
+[374304 ms] INFO - main:289 - TEST COMPLETED: {'X_test_shape': (82332, 20)}

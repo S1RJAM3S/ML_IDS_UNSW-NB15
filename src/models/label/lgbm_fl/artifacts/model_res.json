@@ -1,1 +1,0 @@
-{"threshold": 0.01, "oof_recall": 1.0, "oof_precision": 0.6806223302022916, "oof_f2": 0.9142032005270375, "oof_mcc": 0.0, "mean_fold_recall": 1.0, "train_attack_rate": 0.6806223302022916, "n_splits": 10, "recall_target": 0.98, "precision_target": 0.9}
