@@ -17,7 +17,7 @@ import framework.base_train as bt
 
 warnings.filterwarnings('ignore')
 
-PATH          = Path(__file__).parent
+PATH = Path(__file__).parent
 ARTIFACTS_DIR = PATH / 'artifacts'
 ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
 logger = make_logger(__name__, str(PATH / 'lgbm_gbdt.log'))

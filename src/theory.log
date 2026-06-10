@@ -1,0 +1,84 @@
+[1950 ms] INFO - <module>:30 - Adversarial Train vs Test ROC-AUC: 0.7463874331989963
+[1950 ms] INFO - <module>:56 - CLASS-SPECIFIC ADVERSARIAL VALIDATION
+[2113 ms] INFO - <module>:60 - Class [Analysis] -> Train vs Test Adversarial AUC: 0.8938837569567961
+[2378 ms] INFO - <module>:60 - Class [Generic] -> Train vs Test Adversarial AUC: 0.7775243067820558
+[2397 ms] INFO - <module>:60 - Class [Worms] -> Train vs Test Adversarial AUC: 0.6028846153846155
+[2609 ms] INFO - <module>:60 - Class [Exploits] -> Train vs Test Adversarial AUC: 0.7481928337375956
+[2609 ms] INFO - prove_structural_overlap:63 - OVERLAP AUDIT
+[2882 ms] INFO - prove_structural_overlap:81 - Can we separate Test [Analysis] from Train [Generic]? ROC-AUC: 0.922844483813541
+[3077 ms] INFO - prove_structural_overlap:81 - Can we separate Test [Analysis] from Train [Exploits]? ROC-AUC: 0.9486281835553148
+[3077 ms] INFO - prove_extrapolation_blindspot:86 - STRUCTURAL BOUNDARY PROOF FOR [Analysis]
+[3079 ms] INFO - prove_extrapolation_blindspot:96 - Auditing 15 numerical feature boundaries...
+[3081 ms] INFO - prove_extrapolation_blindspot:111 - 0 key features are completely out-of-bounds.
+[3081 ms] INFO - extract_hard_numerical_proof:116 - DATA FORENSIC AUDIT: MULTI-VARIABLE INTERSECTION PROOF
+[4606 ms] INFO - extract_hard_numerical_proof:125 - Top 3 decision-making features identified by model: ['srv_diversity', 'interpacket_ratio', 'spkts']
+
+[4606 ms] INFO - extract_hard_numerical_proof:128 - FEATURE METRIC: srv_diversity
+[4615 ms] INFO - extract_hard_numerical_proof:140 -       Train [Analysis] (What it learned)  Test [Analysis] (What it saw)  Train [Generic] (Where it went)
+0.10                        0.000000e+00                   0.000000e+00                     0.000000e+00
+0.25                        0.000000e+00                   0.000000e+00                     0.000000e+00
+0.50                        0.000000e+00                   0.000000e+00                     0.000000e+00
+0.75                        5.000000e-01                   0.000000e+00                     4.350000e-02
+0.90                        5.000000e+08                   3.076923e+08                     2.857143e+07
+[4622 ms] INFO - extract_hard_numerical_proof:128 - FEATURE METRIC: interpacket_ratio
+[4628 ms] INFO - extract_hard_numerical_proof:140 -       Train [Analysis] (What it learned)  Test [Analysis] (What it saw)  Train [Generic] (Where it went)
+0.10                             -0.0495                         0.8160                           0.8881
+0.25                             -0.0427                         0.9070                           0.8881
+0.50                              0.9216                         0.9437                           0.9525
+0.75                              0.9602                         0.9671                           0.9602
+0.90                              0.9602                         0.9734                           0.9602
+[4633 ms] INFO - extract_hard_numerical_proof:128 - FEATURE METRIC: spkts
+[4638 ms] INFO - extract_hard_numerical_proof:140 -       Train [Analysis] (What it learned)  Test [Analysis] (What it saw)  Train [Generic] (Where it went)
+0.10                              0.0000                         0.0000                              0.0
+0.25                              0.0000                         0.0000                              0.0
+0.50                              0.0000                         0.0000                              0.0
+0.75                              0.8861                         0.0000                              0.0
+0.90                              0.8861                         0.3484                              0.0
+[4644 ms] INFO - audit_all_collapsing_classes:145 - GLOBAL DATA FORENSIC AUDIT: MINORITY SIGNATURE HIJACKING
+[7346 ms] INFO - audit_all_collapsing_classes:162 - AUDITING TARGET COLLAPSE: [Backdoor] -> Blended into [Generic]
+[7346 ms] INFO - audit_all_collapsing_classes:165 - Feature Focus: dur
+[7353 ms] INFO - audit_all_collapsing_classes:176 -       Train [Backdoor]  Test [Backdoor]  Train [Generic]
+0.25           -0.0031          -0.0031          -0.0031
+0.50           -0.0031          -0.0031          -0.0031
+0.75            0.4061          -0.0031          -0.0031
+[7357 ms] INFO - audit_all_collapsing_classes:165 - Feature Focus: sttl
+[7363 ms] INFO - audit_all_collapsing_classes:176 -       Train [Backdoor]  Test [Backdoor]  Train [Generic]
+0.25               0.0              0.0              0.0
+0.50               0.0              0.0              0.0
+0.75               0.0              0.0              0.0
+[7367 ms] INFO - audit_all_collapsing_classes:162 - AUDITING TARGET COLLAPSE: [DoS] -> Blended into [Exploits]
+[7367 ms] INFO - audit_all_collapsing_classes:165 - Feature Focus: dur
+[7374 ms] INFO - audit_all_collapsing_classes:176 -       Train [DoS]  Test [DoS]  Train [Exploits]
+0.25      -0.0031     -0.0031           -0.0031
+0.50      -0.0031     -0.0031            0.7717
+0.75       0.4182      0.6673            1.6860
+[7378 ms] INFO - audit_all_collapsing_classes:165 - Feature Focus: sttl
+[7384 ms] INFO - audit_all_collapsing_classes:176 -       Train [DoS]  Test [DoS]  Train [Exploits]
+0.25          0.0         0.0              -1.0
+0.50          0.0         0.0               0.0
+0.75          0.0         0.0               0.0
+[7389 ms] INFO - audit_all_collapsing_classes:162 - AUDITING TARGET COLLAPSE: [Worms] -> Blended into [Generic]
+[7389 ms] INFO - audit_all_collapsing_classes:165 - Feature Focus: dur
+[7394 ms] INFO - audit_all_collapsing_classes:176 -       Train [Worms]  Test [Worms]  Train [Generic]
+0.25         0.4621        0.4315          -0.0031
+0.50         0.8518        0.8522          -0.0031
+0.75         1.5884        1.3407          -0.0031
+[7398 ms] INFO - audit_all_collapsing_classes:165 - Feature Focus: sttl
+[7403 ms] INFO - audit_all_collapsing_classes:176 -       Train [Worms]  Test [Worms]  Train [Generic]
+0.25            0.0           0.0              0.0
+0.50            0.0           0.0              0.0
+0.75            0.0           0.0              0.0
+[7408 ms] INFO - prove_dataset_artifact_leakage:181 - LAB INFRASTRUCTURE LEAKAGE AUDIT - ANALYSIS ATTACK
+[7408 ms] INFO - prove_dataset_artifact_leakage:190 - NETWORK INFRASTRUCTURE ARTIFACT: sttl
+[7414 ms] INFO - prove_dataset_artifact_leakage:199 - Train [Normal Background] top values: {-1.1614583333333333: 0.7045535714285714, 0.0: 0.2005357142857143}
+[7415 ms] INFO - prove_dataset_artifact_leakage:200 - Train [Synthetic Attacks] top values: {0.0: 0.8673716493074467, -1.0: 0.12999723481452308}
+[7415 ms] INFO - prove_dataset_artifact_leakage:201 - Test [Failing Analysis] top values: {0.0: 0.914327917282127, -1.0: 0.08567208271787297}
+[7415 ms] INFO - prove_total_structural_divergence:207 - STRUCTURAL ALIGNMENT AUDIT FOR [Analysis]
+[7417 ms] INFO - prove_total_structural_divergence:217 - Analyzing pure behavioral feature space dimensions: 14 columns
+[7417 ms] INFO - prove_total_structural_divergence:218 - Train samples: 2000 - Test samples: 677
+[7510 ms] INFO - prove_total_structural_divergence:229 - STRUCTURAL SHAPE METRICS (ANOMALY SCORE QUANTILES)
+[7511 ms] INFO - prove_total_structural_divergence:230 - Train [Analysis] Internal Space: Median = -0.3985289505381353, 10th Pct = -0.5391506648206037
+[7511 ms] INFO - prove_total_structural_divergence:231 - Test  [Analysis] Internal Space: Median = -0.3850138272301092, 10th Pct = -0.5305235213972344
+[7511 ms] INFO - prove_total_structural_divergence:236 - 1.9202363367799113% of the Test [Analysis] records fall entirely outside the multi-dimensional shape learned from the training set.
+[11226 ms] INFO - <module>:259 - LightGBM [Analysis] Recall: 0.0
+[11392 ms] INFO - <module>:260 - Linear [Analysis] Recall: 0.0
